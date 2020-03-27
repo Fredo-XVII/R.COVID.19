@@ -12,7 +12,8 @@
 #>' @examples
 #'
 #' @importFrom  magrittr %>%
-#' @importFrom  tidyr pivot_longer last_col
+#' @importFrom  tidyr pivot_longer
+#' @importFrom  dplyr last
 #' @importFrom  readr read_csv
 #' @importFrom  rlang .data
 #'
@@ -26,7 +27,7 @@ covid19_deaths_wide <- readr::read_csv(url(url_deaths))
 
 covid19_deaths <- covid19_deaths_wide %>%
   tidyr::pivot_longer(
-    cols = .data$`1/22/20`:tidyr::last_col(colnames(covid19_deaths_wide)),
+    cols = .data$`1/22/20`:dplyr::last(colnames(covid19_deaths_wide)),
     names_to = "greg_d",
     values_to = "deaths_cases"
   )

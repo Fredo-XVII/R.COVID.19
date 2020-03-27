@@ -2,8 +2,8 @@
 
 export(covid19_confirmed)
 export(covid19_deaths)
+importFrom(dplyr,last)
 importFrom(magrittr,"%>%")
 importFrom(readr,read_csv)
 importFrom(rlang,.data)
-importFrom(tidyr,last_col)
 importFrom(tidyr,pivot_longer)
