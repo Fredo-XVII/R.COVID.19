@@ -23,38 +23,47 @@ usethis::use_readme_rmd()
 
 usethis::use_news_md()
 
+
 #usethis::use_git()
 #usethis::use_github()
 
 #usethis::use_mit_license("Alfredo G Marquez")
 #usethis::use_gpl3_license()
 #usethis::use_apl2_license()
-#usethis::use_cc0_license()
+usethis::use_cc0_license("Alfredo G Marquez")
 
 #usethis::use_travis()
 #usethis::use_appveyor()
 #usethis::use_coverage(type = c("codecov"))
 #usethis::use_badge(badge_name,href,src)
 
+# Add Packages
+
+usethis::use_package("magrittr", type = "Import")
+
+usethis::use_package( "tidyr", type = "Import")
+
+usethis::use_package( "readr", type = "Import")
+
+usethis::use_package( "dplyr", type = "Import")
+
+usethis::use_package( "roxygen2", type = "Suggests")
+
+usethis::use_package( "rlang", type = "Import")
+
+# Add Functions
+
+usethis::use_r("covid19_confirmed")
+
+usethis::use_r("covid19_deaths")
+
+usethis::use_data_raw()
+
 # After adding roxygen2 params to function in R folder
 
 roxygen2::roxygenise()
 
 devtools::load_all()
-
-# Add Packages
-
-usethis::use_package("dplyr")
-
-usethis::use_package( "tidyverse", type = "Import")
-
-# Add Functions
-
-usethis::use_r("function_name")
-
-usethis::use_r("function_name")
-
-usethis::use_data_raw()
 
 # Build Tests
 

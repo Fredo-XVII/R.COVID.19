@@ -1,3 +1,6 @@
 ^R\.COVID\.19\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
+^pkg_dev$
+^LICENSE\.md$
+^LICENSE$

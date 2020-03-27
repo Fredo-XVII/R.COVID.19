@@ -8,6 +8,17 @@ Authors@R:
            email = "alfredo.g.marquez@gmail.com",
            comment = c(ORCID = "0000-0001-7044-8167"))
 Description: What the package does (one paragraph).
-License: CCO
+License: CC0 
 Encoding: UTF-8
 LazyData: true
+Depends:
+    R (>= 3.0.0)
+Imports: 
+    magrittr,
+    readr,
+    dplyr,
+    rlang,
+    tidyr
+Suggests: 
+    roxygen2
+RoxygenNote: 7.0.2
