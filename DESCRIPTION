@@ -1,13 +1,13 @@
 Package: R.COVID.19
-Title: What the Package Does (One Line, Title Case)
+Title: Gathers COVID19 Data from John Hopkins University
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Alfredo G",
+           family = "Marquez",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           email = "alfredo.g.marquez@gmail.com",
+           comment = c(ORCID = "0000-0001-7044-8167"))
 Description: What the package does (one paragraph).
-License: What license it uses
+License: CCO
 Encoding: UTF-8
 LazyData: true
