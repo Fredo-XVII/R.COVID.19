@@ -9,13 +9,18 @@
 
 <!-- badges: end -->
 
-The goal of R.COVID.19 is to simply aquire data for the disease COVID
-19. The sources for the data is listed below.
+The goal of R.COVID.19 is to simply aquire data for the disease COVID 19
+from sources that make readily available. No promises are made to the
+validaty of the data as their are many people at the sources working on
+that. Because these functions link to the sources, they should update as
+the sources update. If data is not being generated, please open an issue
+so that I can look into the broken link. The sources for the data is
+listed below.
 
 ## Installation
 
 You can install the released version of R.COVID.19 from
-[CRAN](https://CRAN.R-project.org) with:
+[CRAN](https://CRAN.R-project.org) with: (NOT YET ON CRAN)
 
 ``` r
 #install.packages("R.COVID.19")
@@ -45,6 +50,11 @@ library(tidyverse)
 #> x dplyr::lag()    masks stats::lag()
 ```
 
+### John Hopkins University Data
+
+source: [GITHUB](https://github.com/CSSEGISandData/COVID-19) table:
+csse\_covid\_19\_time\_series
+
 ``` r
 confirmed <- R.COVID.19::covid19_confirmed()
 #> Parsed with column specification:
@@ -54,6 +64,7 @@ confirmed <- R.COVID.19::covid19_confirmed()
 #>   `Country/Region` = col_character()
 #> )
 #> See spec(...) for full column specifications.
+
 deaths <- R.COVID.19::covid19_deaths()
 #> Parsed with column specification:
 #> cols(
@@ -62,7 +73,9 @@ deaths <- R.COVID.19::covid19_deaths()
 #>   `Country/Region` = col_character()
 #> )
 #> See spec(...) for full column specifications.
-combo <- confirmed %>% left_join(deaths)
+
+combo <- confirmed %>% left_join(deaths) %>% 
+  dplyr::mutate(mortality_rate = round((.$deaths_cases / .$confirmed_cases)*100,2))
 #> Joining, by = c("Province/State", "Country/Region", "Lat", "Long", "greg_d")
 
 knitr::kable(combo %>% filter(`Country/Region` == "US") %>% tail(10), format = "html") %>% 
@@ -117,6 +130,12 @@ deaths\_cases
 
 </th>
 
+<th style="text-align:right;">
+
+mortality\_rate
+
+</th>
+
 </tr>
 
 </thead>
@@ -167,6 +186,12 @@ US
 
 </td>
 
+<td style="text-align:right;">
+
+1.52
+
+</td>
+
 </tr>
 
 <tr>
@@ -210,6 +235,12 @@ US
 <td style="text-align:right;">
 
 200
+
+</td>
+
+<td style="text-align:right;">
+
+1.46
 
 </td>
 
@@ -259,6 +290,12 @@ US
 
 </td>
 
+<td style="text-align:right;">
+
+1.28
+
+</td>
+
 </tr>
 
 <tr>
@@ -302,6 +339,12 @@ US
 <td style="text-align:right;">
 
 307
+
+</td>
+
+<td style="text-align:right;">
+
+1.20
 
 </td>
 
@@ -351,6 +394,12 @@ US
 
 </td>
 
+<td style="text-align:right;">
+
+1.25
+
+</td>
+
 </tr>
 
 <tr>
@@ -394,6 +443,12 @@ US
 <td style="text-align:right;">
 
 557
+
+</td>
+
+<td style="text-align:right;">
+
+1.27
 
 </td>
 
@@ -443,6 +498,12 @@ US
 
 </td>
 
+<td style="text-align:right;">
+
+1.31
+
+</td>
+
 </tr>
 
 <tr>
@@ -486,6 +547,12 @@ US
 <td style="text-align:right;">
 
 942
+
+</td>
+
+<td style="text-align:right;">
+
+1.43
 
 </td>
 
@@ -535,6 +602,12 @@ US
 
 </td>
 
+<td style="text-align:right;">
+
+1.44
+
+</td>
+
 </tr>
 
 <tr>
@@ -581,11 +654,21 @@ US
 
 </td>
 
+<td style="text-align:right;">
+
+1.56
+
+</td>
+
 </tr>
 
 </tbody>
 
 </table>
+
+### Data from The New York Times, based on reports from state and local health agencies.
+
+source: [GITHUB](https://github.com/nytimes/covid-19-data)
 
 ``` r
 us_co_cases <- R.COVID.19::covid19_us_co() %>% 
