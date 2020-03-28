@@ -4,3 +4,4 @@
 ^pkg_dev$
 ^LICENSE\.md$
 ^LICENSE$
+^\.travis\.yml$

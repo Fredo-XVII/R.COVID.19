@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 # R.COVID.19
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.org/Fredo-XVII/R.COVID.19.svg?branch=master)](https://travis-ci.org/Fredo-XVII/R.COVID.19)
 <!-- badges: end -->
 
 The goal of R.COVID.19 is to ...
