@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 <!-- [![Travis build status](https://travis-ci.org/Fredo-XVII/R.COVID.19.svg?branch=master)](https://travis-ci.org/Fredo-XVII/R.COVID.19) -->
 <!-- badges: end -->
 
-The goal of R.COVID.19 is to ...
+The goal of R.COVID.19 is to simply aquire data for the disease COVID 19.  The sources for the data is listed below.
 
 ## Installation
 
@@ -40,10 +40,13 @@ And the development version from [GitHub](https://github.com/) with:
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
+```{r libraries}
 library(R.COVID.19)
 library(tidyverse)
+```
 
+
+```{r John_Hopkins_Data}
 confirmed <- R.COVID.19::covid19_confirmed()
 deaths <- R.COVID.19::covid19_deaths()
 combo <- confirmed %>% left_join(deaths)
@@ -52,4 +55,10 @@ knitr::kable(combo %>% filter(`Country/Region` == "US") %>% tail(10), format = "
   kableExtra::kable_styling(bootstrap_options = c("striped"))
 ```
 
+```{r NY_Times_Data}
+us_co_cases <- R.COVID.19::covid19_us_co() %>% 
+  dplyr::mutate(mortality_rate = round((.$deaths / .$cases)*100,2))
+knitr::kable(us_co_cases %>% filter(state == "New York") %>% tail(10), format = "html") %>% 
+  kableExtra::kable_styling(bootstrap_options = "striped")
+```
 
