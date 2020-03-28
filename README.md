@@ -9,7 +9,8 @@
 
 <!-- badges: end -->
 
-The goal of R.COVID.19 is to …
+The goal of R.COVID.19 is to simply aquire data for the disease COVID
+19. The sources for the data is listed below.
 
 ## Installation
 
@@ -42,7 +43,9 @@ library(tidyverse)
 #> -- Conflicts ------------------------------------- tidyverse_conflicts() --
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
+```
 
+``` r
 confirmed <- R.COVID.19::covid19_confirmed()
 #> Parsed with column specification:
 #> cols(
@@ -575,6 +578,473 @@ US
 <td style="text-align:right;">
 
 1581
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+``` r
+us_co_cases <- R.COVID.19::covid19_us_co() %>% 
+  dplyr::mutate(mortality_rate = round((.$deaths / .$cases)*100,2))
+#> Parsed with column specification:
+#> cols(
+#>   date = col_date(format = ""),
+#>   state = col_character(),
+#>   fips = col_character(),
+#>   cases = col_double(),
+#>   deaths = col_double()
+#> )
+knitr::kable(us_co_cases %>% filter(state == "New York") %>% tail(10), format = "html") %>% 
+  kableExtra::kable_styling(bootstrap_options = "striped")
+```
+
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+date
+
+</th>
+
+<th style="text-align:left;">
+
+state
+
+</th>
+
+<th style="text-align:left;">
+
+fips
+
+</th>
+
+<th style="text-align:right;">
+
+cases
+
+</th>
+
+<th style="text-align:right;">
+
+deaths
+
+</th>
+
+<th style="text-align:right;">
+
+mortality\_rate
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-18
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+2382
+
+</td>
+
+<td style="text-align:right;">
+
+27
+
+</td>
+
+<td style="text-align:right;">
+
+1.13
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-19
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+4152
+
+</td>
+
+<td style="text-align:right;">
+
+30
+
+</td>
+
+<td style="text-align:right;">
+
+0.72
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-20
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+7102
+
+</td>
+
+<td style="text-align:right;">
+
+57
+
+</td>
+
+<td style="text-align:right;">
+
+0.80
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-21
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+10356
+
+</td>
+
+<td style="text-align:right;">
+
+80
+
+</td>
+
+<td style="text-align:right;">
+
+0.77
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-22
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+15168
+
+</td>
+
+<td style="text-align:right;">
+
+122
+
+</td>
+
+<td style="text-align:right;">
+
+0.80
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-23
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+20875
+
+</td>
+
+<td style="text-align:right;">
+
+159
+
+</td>
+
+<td style="text-align:right;">
+
+0.76
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-24
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+25665
+
+</td>
+
+<td style="text-align:right;">
+
+218
+
+</td>
+
+<td style="text-align:right;">
+
+0.85
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-25
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+33066
+
+</td>
+
+<td style="text-align:right;">
+
+325
+
+</td>
+
+<td style="text-align:right;">
+
+0.98
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-26
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+38987
+
+</td>
+
+<td style="text-align:right;">
+
+432
+
+</td>
+
+<td style="text-align:right;">
+
+1.11
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-27
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+44635
+
+</td>
+
+<td style="text-align:right;">
+
+535
+
+</td>
+
+<td style="text-align:right;">
+
+1.20
 
 </td>
 

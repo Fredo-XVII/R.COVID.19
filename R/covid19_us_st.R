@@ -20,8 +20,8 @@
 
 covid19_us_co <- function() {
   # Get confirmed cases
-  url_confirmed <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
-  covid19_us_st <- readr::read_csv(url(url_confirmed)) %>%
+  url_states <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
+  covid19_us_st <- readr::read_csv(url(url_states)) %>%
     dplyr::arrange(.data$state,.data$date)
 
   return(invisible(covid19_us_st))
