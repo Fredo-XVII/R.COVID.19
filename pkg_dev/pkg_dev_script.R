@@ -57,6 +57,10 @@ usethis::use_r("covid19_confirmed")
 
 usethis::use_r("covid19_deaths")
 
+usethis::use_r("covid19_us_co")
+
+usethis::use_r("covid19_us_st")
+
 usethis::use_data_raw()
 
 # After adding roxygen2 params to function in R folder
