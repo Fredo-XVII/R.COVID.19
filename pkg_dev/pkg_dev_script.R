@@ -90,6 +90,9 @@ pkgdown::build_site()
 # Buildignore: Add directory
 usethis::use_build_ignore("docs")
 
+# CRAN
+devtools::check_win_devel() # checks for the development version of R.
+
 # Functions Roxygen format
 #' @title
 #'

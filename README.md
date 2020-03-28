@@ -12,10 +12,14 @@
 The goal of R.COVID.19 is to simply aquire data for the disease COVID 19
 from sources that make readily available. No promises are made to the
 validaty of the data as their are many people at the sources working on
-that. Because these functions link to the sources, they should update as
-the sources update. If data is not being generated, please open an issue
-so that I can look into the broken link. The sources for the data is
-listed below.
+that. Because these functions link to the sources, the data should
+update as the sources update. If data is not being generated, please
+open an issue so that I can look into the broken link. The sources for
+the data is listed below.
+
+Finally, the John Hopkins data was transposed to be tidy, instead of
+having dates as columns in a wide dataset. The NY Times data was already
+in a tidy format.
 
 ## Installation
 
