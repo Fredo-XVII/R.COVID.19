@@ -2,6 +2,8 @@
 
 export(covid19_confirmed)
 export(covid19_deaths)
+export(covid19_us_co)
+importFrom(dplyr,arrange)
 importFrom(dplyr,last)
 importFrom(magrittr,"%>%")
 importFrom(readr,read_csv)
