@@ -33,7 +33,7 @@ usethis::use_news_md()
 usethis::use_cc0_license("Alfredo G Marquez")
 
 usethis::use_travis()
-#usethis::use_appveyor()
+usethis::use_appveyor()
 #usethis::use_coverage(type = c("codecov"))
 #usethis::use_badge(badge_name,href,src)
 
@@ -50,6 +50,8 @@ usethis::use_package( "dplyr", type = "Import")
 usethis::use_package( "roxygen2", type = "Suggests")
 
 usethis::use_package( "rlang", type = "Import")
+
+usethis::use_package( "kableExtra", type = "Suggests")
 
 # Add Functions
 

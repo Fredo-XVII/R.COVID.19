@@ -1,4 +1,9 @@
 # Testing Script
+
+# Install from git hub
+devtools::install_github("Fredo-XVII/R.COVID.19") #passes personal computer install.
+
+# Libraries
 library(R.COVID.19)
 library(tidyverse)
 

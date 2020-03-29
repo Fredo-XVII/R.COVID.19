@@ -20,5 +20,6 @@ Imports:
     rlang,
     tidyr
 Suggests: 
-    roxygen2
+    roxygen2,
+    kableExtra
 RoxygenNote: 7.0.2

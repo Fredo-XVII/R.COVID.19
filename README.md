@@ -5,17 +5,19 @@
 
 <!-- badges: start -->
 
-<!-- [![Travis build status](https://travis-ci.org/Fredo-XVII/R.COVID.19.svg?branch=master)](https://travis-ci.org/Fredo-XVII/R.COVID.19) -->
-
+[![Travis build
+status](https://travis-ci.org/Fredo-XVII/R.COVID.19.svg?branch=master)](https://travis-ci.org/Fredo-XVII/R.COVID.19)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/Fredo-XVII/R.COVID.19?branch=master&svg=true)](https://ci.appveyor.com/project/Fredo-XVII/R.COVID.19)
 <!-- badges: end -->
 
 The goal of R.COVID.19 is to simply aquire data for the disease COVID 19
-from sources that make readily available. No promises are made to the
-validaty of the data as their are many people at the sources working on
-that. Because these functions link to the sources, the data should
-update as the sources update. If data is not being generated, please
-open an issue so that I can look into the broken link. The sources for
-the data is listed below.
+from sources that make the data readily available. No promises are made
+to the validaty of the data as their are many people at the sources
+working on that. Because these functions link to the sources, the data
+should update as the sources update. If data is not being generated,
+please open an issue so that I can look into the broken link. The
+sources for the data is listed below.
 
 Finally, the John Hopkins data was transposed to be tidy, instead of
 having dates as columns in a wide dataset. The NY Times data was already
@@ -27,37 +29,32 @@ You can install the released version of R.COVID.19 from
 [CRAN](https://CRAN.R-project.org) with: (NOT YET ON CRAN)
 
 ``` r
-#install.packages("R.COVID.19")
+install.packages("R.COVID.19")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-# devtools::install_github("Fredo-XVII/R.COVID.19")
+install.packages("devtools")
+devtools::install_github("Fredo-XVII/R.COVID.19")
 ```
 
 ## Examples
 
-This is a basic example which shows you how to solve a common problem:
+Load libraries:
 
 ``` r
 library(R.COVID.19)
-library(tidyverse)
-#> -- Attaching packages ---------------------------------- tidyverse 1.3.0 --
-#> v ggplot2 3.3.0     v purrr   0.3.3
-#> v tibble  2.1.3     v dplyr   0.8.4
-#> v tidyr   1.0.2     v stringr 1.4.0
-#> v readr   1.3.1     v forcats 0.5.0
-#> -- Conflicts ------------------------------------- tidyverse_conflicts() --
-#> x dplyr::filter() masks stats::filter()
-#> x dplyr::lag()    masks stats::lag()
+library(magrittr)
 ```
 
 ### John Hopkins University Data
 
-source: [GITHUB](https://github.com/CSSEGISandData/COVID-19) table:
-csse\_covid\_19\_time\_series
+  - source: [GITHUB](https://github.com/CSSEGISandData/COVID-19)
+
+  - table: csse\_covid\_19\_time\_series
+
+<!-- end list -->
 
 ``` r
 confirmed <- R.COVID.19::covid19_confirmed()
@@ -78,11 +75,11 @@ deaths <- R.COVID.19::covid19_deaths()
 #> )
 #> See spec(...) for full column specifications.
 
-combo <- confirmed %>% left_join(deaths) %>% 
+combo <- confirmed %>% dplyr::left_join(deaths) %>% 
   dplyr::mutate(mortality_rate = round((.$deaths_cases / .$confirmed_cases)*100,2))
 #> Joining, by = c("Province/State", "Country/Region", "Lat", "Long", "greg_d")
 
-knitr::kable(combo %>% filter(`Country/Region` == "US") %>% tail(10), format = "html") %>% 
+knitr::kable(combo %>% dplyr::filter(`Country/Region` == "US") %>% tail(10), format = "html") %>% 
   kableExtra::kable_styling(bootstrap_options = c("striped"))
 ```
 
@@ -145,58 +142,6 @@ mortality\_rate
 </thead>
 
 <tbody>
-
-<tr>
-
-<td style="text-align:left;">
-
-NA
-
-</td>
-
-<td style="text-align:left;">
-
-US
-
-</td>
-
-<td style="text-align:right;">
-
-37.0902
-
-</td>
-
-<td style="text-align:right;">
-
-\-95.7129
-
-</td>
-
-<td style="text-align:left;">
-
-3/18/20
-
-</td>
-
-<td style="text-align:right;">
-
-7783
-
-</td>
-
-<td style="text-align:right;">
-
-118
-
-</td>
-
-<td style="text-align:right;">
-
-1.52
-
-</td>
-
-</tr>
 
 <tr>
 
@@ -666,13 +611,67 @@ US
 
 </tr>
 
+<tr>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+37.0902
+
+</td>
+
+<td style="text-align:right;">
+
+\-95.7129
+
+</td>
+
+<td style="text-align:left;">
+
+3/28/20
+
+</td>
+
+<td style="text-align:right;">
+
+121478
+
+</td>
+
+<td style="text-align:right;">
+
+2026
+
+</td>
+
+<td style="text-align:right;">
+
+1.67
+
+</td>
+
+</tr>
+
 </tbody>
 
 </table>
 
 ### Data from The New York Times, based on reports from state and local health agencies.
 
-source: [GITHUB](https://github.com/nytimes/covid-19-data)
+  - source: [GITHUB](https://github.com/nytimes/covid-19-data)
+
+<!-- end list -->
 
 ``` r
 us_co_cases <- R.COVID.19::covid19_us_co() %>% 
@@ -685,7 +684,7 @@ us_co_cases <- R.COVID.19::covid19_us_co() %>%
 #>   cases = col_double(),
 #>   deaths = col_double()
 #> )
-knitr::kable(us_co_cases %>% filter(state == "New York") %>% tail(10), format = "html") %>% 
+knitr::kable(us_co_cases %>% dplyr::filter(state == "New York") %>% tail(10), format = "html") %>% 
   kableExtra::kable_styling(bootstrap_options = "striped")
 ```
 

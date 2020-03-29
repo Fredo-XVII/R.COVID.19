@@ -17,10 +17,11 @@ knitr::opts_chunk$set(
 # R.COVID.19
 
 <!-- badges: start -->
-<!-- [![Travis build status](https://travis-ci.org/Fredo-XVII/R.COVID.19.svg?branch=master)](https://travis-ci.org/Fredo-XVII/R.COVID.19) -->
+[![Travis build status](https://travis-ci.org/Fredo-XVII/R.COVID.19.svg?branch=master)](https://travis-ci.org/Fredo-XVII/R.COVID.19)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/Fredo-XVII/R.COVID.19?branch=master&svg=true)](https://ci.appveyor.com/project/Fredo-XVII/R.COVID.19)
 <!-- badges: end -->
 
-The goal of R.COVID.19 is to simply aquire data for the disease COVID 19 from sources that make readily available. No promises are made to the validaty of the data as their are many people at the sources working on that. Because these functions link to the sources, the data should update as the sources update. If data is not being generated, please open an issue so that I can look into the broken link.  The sources for the data is listed below.
+The goal of R.COVID.19 is to simply aquire data for the disease COVID 19 from sources that make the data readily available. No promises are made to the validaty of the data as their are many people at the sources working on that. Because these functions link to the sources, the data should update as the sources update. If data is not being generated, please open an issue so that I can look into the broken link.  The sources for the data is listed below.
 
 Finally, the John Hopkins data was transposed to be tidy, instead of having dates as columns in a wide dataset.  The NY Times data was already in a tidy format.
 
@@ -28,48 +29,51 @@ Finally, the John Hopkins data was transposed to be tidy, instead of having date
 
 You can install the released version of R.COVID.19 from [CRAN](https://CRAN.R-project.org) with: (NOT YET ON CRAN)
 
-``` r
-#install.packages("R.COVID.19")
+```{r, eval=FALSE}
+install.packages("R.COVID.19")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
 
-``` r
-# install.packages("devtools")
-# devtools::install_github("Fredo-XVII/R.COVID.19")
+```{r, eval=FALSE}
+install.packages("devtools")
+devtools::install_github("Fredo-XVII/R.COVID.19")
 ```
+
 ## Examples
-
-This is a basic example which shows you how to solve a common problem:
-
+Load libraries:
 ```{r libraries}
 library(R.COVID.19)
-library(tidyverse)
+library(magrittr)
 ```
 
 
 ### John Hopkins University Data
-source: [GITHUB](https://github.com/CSSEGISandData/COVID-19)
-table: csse_covid_19_time_series
+  - source: [GITHUB](https://github.com/CSSEGISandData/COVID-19)
+  
+  - table: csse_covid_19_time_series
+  
 ```{r John_Hopkins_Data}
 confirmed <- R.COVID.19::covid19_confirmed()
 
 deaths <- R.COVID.19::covid19_deaths()
 
-combo <- confirmed %>% left_join(deaths) %>% 
+combo <- confirmed %>% dplyr::left_join(deaths) %>% 
   dplyr::mutate(mortality_rate = round((.$deaths_cases / .$confirmed_cases)*100,2))
 
-knitr::kable(combo %>% filter(`Country/Region` == "US") %>% tail(10), format = "html") %>% 
+knitr::kable(combo %>% dplyr::filter(`Country/Region` == "US") %>% tail(10), format = "html") %>% 
   kableExtra::kable_styling(bootstrap_options = c("striped"))
 ```
 
 
 ### Data from The New York Times, based on reports from state and local health agencies.
-source: [GITHUB](https://github.com/nytimes/covid-19-data)
+
+  - source: [GITHUB](https://github.com/nytimes/covid-19-data)
+  
 ```{r NY_Times_Data}
 us_co_cases <- R.COVID.19::covid19_us_co() %>% 
   dplyr::mutate(mortality_rate = round((.$deaths / .$cases)*100,2))
-knitr::kable(us_co_cases %>% filter(state == "New York") %>% tail(10), format = "html") %>% 
+knitr::kable(us_co_cases %>% dplyr::filter(state == "New York") %>% tail(10), format = "html") %>% 
   kableExtra::kable_styling(bootstrap_options = "striped")
 ```
 
