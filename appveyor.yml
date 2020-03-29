@@ -22,7 +22,7 @@ environment:
   # see https://github.com/krlmlr/r-appveyor#readme for details
   USE_RTOOLS: true
   R_REMOTES_STANDALONE: true
-  R_VERSION: devel
+  #R_VERSION: devel
   PKGTYPE: binary  #both
   R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
 
