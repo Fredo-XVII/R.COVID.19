@@ -14,3 +14,6 @@ combo <- confirmed %>% left_join(deaths)
 combo %>% filter(`Country/Region` == "US") %>% View()
 
 us_co_cases <- R.COVID.19::covid19_us_co()
+
+# tidycensus
+

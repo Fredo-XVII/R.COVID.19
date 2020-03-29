@@ -53,6 +53,8 @@ usethis::use_package( "rlang", type = "Import")
 
 usethis::use_package( "kableExtra", type = "Suggests")
 
+usethis::use_package( "remotes", type = "Import") #appveyor build
+
 # Add Functions
 
 usethis::use_r("covid19_confirmed")

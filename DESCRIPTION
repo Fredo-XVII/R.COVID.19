@@ -18,7 +18,8 @@ Imports:
     readr,
     dplyr,
     rlang,
-    tidyr
+    tidyr,
+    remotes
 Suggests: 
     roxygen2,
     kableExtra
