@@ -23,6 +23,7 @@ environment:
   USE_RTOOLS: true
   # R_REMOTES_STANDALONE: true
   R_VERSION: devel
+  PKGTYPE: both
 
 # Adapt as necessary starting from here
 
