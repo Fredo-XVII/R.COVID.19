@@ -9,7 +9,10 @@
 #'
 #>' @return
 #'
-#>' @examples
+#' @examples
+#' \dontrun{
+#' confirmed <- R.COVID.19::covid19_confirmed()
+#' }
 #'
 #' @importFrom  magrittr %>%
 #' @importFrom  tidyr pivot_longer

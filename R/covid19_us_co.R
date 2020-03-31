@@ -9,7 +9,10 @@
 #'
 #>' @return
 #'
-#>' @examples
+#' @examples
+#' \dontrun{
+#' confirmed <- R.COVID.19::covid19_us_co()
+#' }
 #'
 #' @importFrom readr read_csv
 #' @importFrom dplyr arrange
