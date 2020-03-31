@@ -10,8 +10,8 @@ init:
 install:
   ps: Bootstrap
 
-cache:
-  - C:\RLibrary
+#cache:
+ # - C:\RLibrary
 
 #platform: x64
 
@@ -23,7 +23,7 @@ environment:
   #USE_RTOOLS: true
   #R_REMOTES_STANDALONE: true
   R_VERSION: devel
-  PKGTYPE: both
+  PKGTYPE: binary
   #R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
 
 # Adapt as necessary starting from here
