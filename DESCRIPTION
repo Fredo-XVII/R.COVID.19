@@ -22,5 +22,6 @@ Imports:
 Suggests: 
     roxygen2,
     kableExtra,
-    covr
+    covr,
+    remotes
 RoxygenNote: 7.1.0
