@@ -9,6 +9,8 @@
 status](https://travis-ci.org/Fredo-XVII/R.COVID.19.svg?branch=master)](https://travis-ci.org/Fredo-XVII/R.COVID.19)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/Fredo-XVII/R.COVID.19?branch=master&svg=true)](https://ci.appveyor.com/project/Fredo-XVII/R.COVID.19)
+[![Codecov test
+coverage](https://codecov.io/gh/Fredo-XVII/R.COVID.19/branch/master/graph/badge.svg)](https://codecov.io/gh/Fredo-XVII/R.COVID.19?branch=master)
 <!-- badges: end -->
 
 The goal of R.COVID.19 is to simply aquire data for the disease COVID 19
@@ -142,110 +144,6 @@ mortality\_rate
 </thead>
 
 <tbody>
-
-<tr>
-
-<td style="text-align:left;">
-
-NA
-
-</td>
-
-<td style="text-align:left;">
-
-US
-
-</td>
-
-<td style="text-align:right;">
-
-37.0902
-
-</td>
-
-<td style="text-align:right;">
-
-\-95.7129
-
-</td>
-
-<td style="text-align:left;">
-
-3/19/20
-
-</td>
-
-<td style="text-align:right;">
-
-13677
-
-</td>
-
-<td style="text-align:right;">
-
-200
-
-</td>
-
-<td style="text-align:right;">
-
-1.46
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-NA
-
-</td>
-
-<td style="text-align:left;">
-
-US
-
-</td>
-
-<td style="text-align:right;">
-
-37.0902
-
-</td>
-
-<td style="text-align:right;">
-
-\-95.7129
-
-</td>
-
-<td style="text-align:left;">
-
-3/20/20
-
-</td>
-
-<td style="text-align:right;">
-
-19100
-
-</td>
-
-<td style="text-align:right;">
-
-244
-
-</td>
-
-<td style="text-align:right;">
-
-1.28
-
-</td>
-
-</tr>
 
 <tr>
 
@@ -663,6 +561,110 @@ US
 
 </tr>
 
+<tr>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+37.0902
+
+</td>
+
+<td style="text-align:right;">
+
+\-95.7129
+
+</td>
+
+<td style="text-align:left;">
+
+3/29/20
+
+</td>
+
+<td style="text-align:right;">
+
+140886
+
+</td>
+
+<td style="text-align:right;">
+
+2467
+
+</td>
+
+<td style="text-align:right;">
+
+1.75
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+37.0902
+
+</td>
+
+<td style="text-align:right;">
+
+\-95.7129
+
+</td>
+
+<td style="text-align:left;">
+
+3/30/20
+
+</td>
+
+<td style="text-align:right;">
+
+161807
+
+</td>
+
+<td style="text-align:right;">
+
+2978
+
+</td>
+
+<td style="text-align:right;">
+
+1.84
+
+</td>
+
+</tr>
+
 </tbody>
 
 </table>
@@ -735,86 +737,6 @@ mortality\_rate
 </thead>
 
 <tbody>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-03-18
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36
-
-</td>
-
-<td style="text-align:right;">
-
-2382
-
-</td>
-
-<td style="text-align:right;">
-
-27
-
-</td>
-
-<td style="text-align:right;">
-
-1.13
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-03-19
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36
-
-</td>
-
-<td style="text-align:right;">
-
-4152
-
-</td>
-
-<td style="text-align:right;">
-
-30
-
-</td>
-
-<td style="text-align:right;">
-
-0.72
-
-</td>
-
-</tr>
 
 <tr>
 
@@ -1131,6 +1053,86 @@ New York
 <td style="text-align:right;">
 
 1.20
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-28
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+53363
+
+</td>
+
+<td style="text-align:right;">
+
+782
+
+</td>
+
+<td style="text-align:right;">
+
+1.47
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-29
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+59568
+
+</td>
+
+<td style="text-align:right;">
+
+965
+
+</td>
+
+<td style="text-align:right;">
+
+1.62
 
 </td>
 
