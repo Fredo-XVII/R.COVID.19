@@ -102,6 +102,7 @@ usethis::use_build_ignore("pkg_dev")
 devtools::check_win_devel() # checks for the development version of R.
 usethis::use_cran_comments()
 devtools::submit_cran()
+# if accepted, need to tag
 
 # Functions Roxygen format
 #' @title
