@@ -97,6 +97,7 @@ usethis::use_build_ignore("docs")
 
 # CRAN
 devtools::check_win_devel() # checks for the development version of R.
+usethis::use_cran_comments()
 
 # Functions Roxygen format
 #' @title
