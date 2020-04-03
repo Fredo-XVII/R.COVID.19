@@ -36,6 +36,7 @@ usethis::use_travis()
 usethis::use_appveyor()
 usethis::use_coverage(type = c("codecov"))
 covr::codecov(token = Sys.getenv("CODECOV_TOKEN"))
+usethis::use_cran_badge()
 #usethis::use_badge(badge_name,href,src)
 
 # Add Packages

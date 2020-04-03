@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.org/Fredo-XVII/R.COVID.19.svg?branch=master)](https://travis-ci.org/Fredo-XVII/R.COVID.19)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/Fredo-XVII/R.COVID.19?branch=master&svg=true)](https://ci.appveyor.com/project/Fredo-XVII/R.COVID.19)
 [![Codecov test coverage](https://codecov.io/gh/Fredo-XVII/R.COVID.19/branch/master/graph/badge.svg)](https://codecov.io/gh/Fredo-XVII/R.COVID.19?branch=master)
+[![CRAN status](https://www.r-pkg.org/badges/version/R.COVID.19)](https://CRAN.R-project.org/package=R.COVID.19)
 <!-- badges: end -->
 
 The goal of R.COVID.19 is to simply aquire data for the disease COVID 19 from sources that make the data readily available. No promises are made to the validaty of the data as their are many people at the sources working on that. Because these functions link to the sources, the data should update as the sources update. If data is not being generated, please open an issue so that I can look into the broken link.  The sources for the data is listed below.
