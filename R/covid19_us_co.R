@@ -1,13 +1,12 @@
 # Functions Roxygen format
-#' @title COVID19 Confirmed Counts US counties
+#' @title COVID19 Counts for US Counties
 #'
-#' @description confirmed counts
+#' @description This functions pulls death COVID-19 confirmed and death data
+#'   for US counties from The New York Times GitHub repository downloads it.
+#'   No data is stored within the package, so the data should continuously
+#'   update over time as long as the links do not change.
 #'
-#' @details grabs the wide makes it long
-#'
-#>' @param
-#'
-#>' @return
+#' @return A datarame/tibble
 #'
 #' @examples
 #' \dontrun{

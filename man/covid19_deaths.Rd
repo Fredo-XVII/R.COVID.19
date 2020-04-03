@@ -2,13 +2,22 @@
 % Please edit documentation in R/covid19_deaths.R
 \name{covid19_deaths}
 \alias{covid19_deaths}
-\title{COVID19 Death Counts}
+\title{COVID19 US Death Counts}
 \usage{
 covid19_deaths()
 }
-\description{
-death counts
+\value{
+A datarame/tibble
 }
-\details{
-grabs the wide makes it long
+\description{
+This functions pulls death COVID-19 data from John Hopkins
+  GitHub repository downloads it and transpose it so that it is tidy.  No
+  data is stored within the package, so the data should continuously update
+  over time as long as the links do not change.
+}
+\examples{
+\dontrun{
+confirmed <- R.COVID.19::covid19_deaths()
+}
+
 }

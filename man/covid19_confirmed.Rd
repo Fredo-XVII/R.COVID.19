@@ -2,13 +2,22 @@
 % Please edit documentation in R/covid19_confirmed.R
 \name{covid19_confirmed}
 \alias{covid19_confirmed}
-\title{COVID19 Confirmed Counts}
+\title{COVID19 US Confirmed Counts}
 \usage{
 covid19_confirmed()
 }
-\description{
-confirmed counts
+\value{
+A datarame/tibble
 }
-\details{
-grabs the wide makes it long
+\description{
+This functions pulls confirmed COVID-19 data from John Hopkins
+  GitHub repository downloads it and transpose it so that it is tidy.  No
+  data is stored within the package, so the data should continuously update
+  over time as long as the links do not change.
+}
+\examples{
+\dontrun{
+confirmed <- R.COVID.19::covid19_confirmed()
+}
+
 }

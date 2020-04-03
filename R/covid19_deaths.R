@@ -1,13 +1,12 @@
 # Functions Roxygen format
-#' @title COVID19 Death Counts
+#' @title COVID19 US Death Counts
 #'
-#' @description death counts
+#' @description This functions pulls death COVID-19 data from John Hopkins
+#'   GitHub repository downloads it and transpose it so that it is tidy.  No
+#'   data is stored within the package, so the data should continuously update
+#'   over time as long as the links do not change.
 #'
-#' @details grabs the wide makes it long
-#'
-#> @param
-#'
-#>' @return
+#' @return A datarame/tibble
 #'
 #' @examples
 #' \dontrun{

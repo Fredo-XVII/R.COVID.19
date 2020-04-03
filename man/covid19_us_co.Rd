@@ -2,19 +2,35 @@
 % Please edit documentation in R/covid19_us_co.R, R/covid19_us_st.R
 \name{covid19_us_co}
 \alias{covid19_us_co}
-\title{COVID19 Confirmed Counts US counties}
+\title{COVID19 Counts for US Counties}
 \usage{
 covid19_us_co()
 
 covid19_us_co()
 }
-\description{
-confirmed counts
+\value{
+A datarame/tibble
 
-confirmed counts
+A datarame/tibble
 }
-\details{
-grabs the wide makes it long
+\description{
+This functions pulls death COVID-19 confirmed and death data
+  for US counties from The New York Times GitHub repository downloads it.
+  No data is stored within the package, so the data should continuously
+  update over time as long as the links do not change.
 
-grabs the wide makes it long
+This functions pulls death COVID-19 confirmed and death data
+  for US states from The New York Times GitHub repository downloads it.
+  No data is stored within the package, so the data should continuously
+  update over time as long as the links do not change.
+}
+\examples{
+\dontrun{
+confirmed <- R.COVID.19::covid19_us_co()
+}
+
+\dontrun{
+confirmed <- R.COVID.19::covid19_us_co()
+}
+
 }

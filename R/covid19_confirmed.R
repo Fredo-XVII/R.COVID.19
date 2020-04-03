@@ -1,13 +1,12 @@
 # Functions Roxygen format
-#' @title COVID19 Confirmed Counts
+#' @title COVID19 US Confirmed Counts
 #'
-#' @description confirmed counts
+#' @description This functions pulls confirmed COVID-19 data from John Hopkins
+#'   GitHub repository downloads it and transpose it so that it is tidy.  No
+#'   data is stored within the package, so the data should continuously update
+#'   over time as long as the links do not change.
 #'
-#' @details grabs the wide makes it long
-#'
-#>' @param
-#'
-#>' @return
+#' @return A datarame/tibble
 #'
 #' @examples
 #' \dontrun{
