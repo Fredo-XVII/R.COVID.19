@@ -24,7 +24,7 @@
 
 country_confirmed_daily <- function() {
 # Get confirmed cases
-url_confirmed <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_country_confirmed_daily_global.csv"
+url_confirmed <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
 covid19_confirm_wide <- readr::read_csv(url(url_confirmed))
 
 # From wide to long

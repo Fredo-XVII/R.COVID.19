@@ -56,9 +56,9 @@ library(magrittr)
   - table: csse_covid_19_time_series
   
 ```{r John_Hopkins_Data}
-confirmed <- R.COVID.19::covid19_confirmed()
+confirmed <- R.COVID.19::country_confirmed_daily()
 
-deaths <- R.COVID.19::covid19_deaths()
+deaths <- R.COVID.19::country_deaths_daily()
 
 combo <- confirmed %>% dplyr::left_join(deaths) %>% 
   dplyr::mutate(mortality_rate = round((.$deaths_cases / .$confirmed_cases)*100,2))
@@ -72,8 +72,15 @@ knitr::kable(combo %>% dplyr::filter(`Country/Region` == "US") %>% tail(10), for
 
   - source: [GITHUB](https://github.com/nytimes/covid-19-data)
   
-```{r NY_Times_Data}
-us_co_cases <- R.COVID.19::covid19_us_co() %>% 
+```{r NY_Times_Data_Counties}
+us_co_cases <- R.COVID.19::us_counties_daily() %>% 
+  dplyr::mutate(mortality_rate = round((.$deaths / .$cases)*100,2))
+knitr::kable(us_co_cases %>% dplyr::filter(state == "New York") %>% tail(10), format = "html") %>% 
+  kableExtra::kable_styling(bootstrap_options = "striped")
+```
+
+```{r}
+us_st_cases <- R.COVID.19::us_states_daily() %>% 
   dplyr::mutate(mortality_rate = round((.$deaths / .$cases)*100,2))
 knitr::kable(us_co_cases %>% dplyr::filter(state == "New York") %>% tail(10), format = "html") %>% 
   kableExtra::kable_styling(bootstrap_options = "striped")

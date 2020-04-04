@@ -61,7 +61,7 @@ library(magrittr)
 <!-- end list -->
 
 ``` r
-confirmed <- R.COVID.19::covid19_confirmed()
+confirmed <- R.COVID.19::country_confirmed_daily()
 #> Parsed with column specification:
 #> cols(
 #>   .default = col_double(),
@@ -70,7 +70,7 @@ confirmed <- R.COVID.19::covid19_confirmed()
 #> )
 #> See spec(...) for full column specifications.
 
-deaths <- R.COVID.19::covid19_deaths()
+deaths <- R.COVID.19::country_deaths_daily()
 #> Parsed with column specification:
 #> cols(
 #>   .default = col_double(),
@@ -146,58 +146,6 @@ mortality\_rate
 </thead>
 
 <tbody>
-
-<tr>
-
-<td style="text-align:left;">
-
-NA
-
-</td>
-
-<td style="text-align:left;">
-
-US
-
-</td>
-
-<td style="text-align:right;">
-
-37.0902
-
-</td>
-
-<td style="text-align:right;">
-
-\-95.7129
-
-</td>
-
-<td style="text-align:left;">
-
-3/24/20
-
-</td>
-
-<td style="text-align:right;">
-
-53740
-
-</td>
-
-<td style="text-align:right;">
-
-706
-
-</td>
-
-<td style="text-align:right;">
-
-1.31
-
-</td>
-
-</tr>
 
 <tr>
 
@@ -667,6 +615,58 @@ US
 
 </tr>
 
+<tr>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+37.0902
+
+</td>
+
+<td style="text-align:right;">
+
+\-95.7129
+
+</td>
+
+<td style="text-align:left;">
+
+4/3/20
+
+</td>
+
+<td style="text-align:right;">
+
+275586
+
+</td>
+
+<td style="text-align:right;">
+
+7087
+
+</td>
+
+<td style="text-align:right;">
+
+2.57
+
+</td>
+
+</tr>
+
 </tbody>
 
 </table>
@@ -678,11 +678,12 @@ US
 <!-- end list -->
 
 ``` r
-us_co_cases <- R.COVID.19::covid19_us_co() %>% 
+us_co_cases <- R.COVID.19::us_counties_daily() %>% 
   dplyr::mutate(mortality_rate = round((.$deaths / .$cases)*100,2))
 #> Parsed with column specification:
 #> cols(
 #>   date = col_date(format = ""),
+#>   county = col_character(),
 #>   state = col_character(),
 #>   fips = col_character(),
 #>   cases = col_double(),
@@ -701,6 +702,12 @@ knitr::kable(us_co_cases %>% dplyr::filter(state == "New York") %>% tail(10), fo
 <th style="text-align:left;">
 
 date
+
+</th>
+
+<th style="text-align:left;">
+
+county
 
 </th>
 
@@ -744,117 +751,43 @@ mortality\_rate
 
 <td style="text-align:left;">
 
-2020-03-23
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36
-
-</td>
-
-<td style="text-align:right;">
-
-20875
-
-</td>
-
-<td style="text-align:right;">
-
-159
-
-</td>
-
-<td style="text-align:right;">
-
-0.76
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-03-24
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36
-
-</td>
-
-<td style="text-align:right;">
-
-25665
-
-</td>
-
-<td style="text-align:right;">
-
-218
-
-</td>
-
-<td style="text-align:right;">
-
-0.85
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
 2020-03-25
 
 </td>
 
 <td style="text-align:left;">
 
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36
+36121
 
 </td>
 
 <td style="text-align:right;">
 
-33066
+4
 
 </td>
 
 <td style="text-align:right;">
 
-325
+0
 
 </td>
 
 <td style="text-align:right;">
 
-0.98
+0.00
 
 </td>
 
@@ -870,31 +803,37 @@ New York
 
 <td style="text-align:left;">
 
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36
+36121
 
 </td>
 
 <td style="text-align:right;">
 
-38987
+7
 
 </td>
 
 <td style="text-align:right;">
 
-432
+0
 
 </td>
 
 <td style="text-align:right;">
 
-1.11
+0.00
 
 </td>
 
@@ -910,31 +849,37 @@ New York
 
 <td style="text-align:left;">
 
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36
+36121
 
 </td>
 
 <td style="text-align:right;">
 
-44635
+7
 
 </td>
 
 <td style="text-align:right;">
 
-535
+0
 
 </td>
 
 <td style="text-align:right;">
 
-1.20
+0.00
 
 </td>
 
@@ -950,31 +895,37 @@ New York
 
 <td style="text-align:left;">
 
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36
+36121
 
 </td>
 
 <td style="text-align:right;">
 
-53363
+7
 
 </td>
 
 <td style="text-align:right;">
 
-782
+0
 
 </td>
 
 <td style="text-align:right;">
 
-1.47
+0.00
 
 </td>
 
@@ -990,31 +941,37 @@ New York
 
 <td style="text-align:left;">
 
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36
+36121
 
 </td>
 
 <td style="text-align:right;">
 
-59568
+8
 
 </td>
 
 <td style="text-align:right;">
 
-965
+0
 
 </td>
 
 <td style="text-align:right;">
 
-1.62
+0.00
 
 </td>
 
@@ -1030,31 +987,37 @@ New York
 
 <td style="text-align:left;">
 
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36
+36121
 
 </td>
 
 <td style="text-align:right;">
 
-67174
+8
 
 </td>
 
 <td style="text-align:right;">
 
-1224
+0
 
 </td>
 
 <td style="text-align:right;">
 
-1.82
+0.00
 
 </td>
 
@@ -1070,31 +1033,37 @@ New York
 
 <td style="text-align:left;">
 
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36
+36121
 
 </td>
 
 <td style="text-align:right;">
 
-75832
+9
 
 </td>
 
 <td style="text-align:right;">
 
-1550
+1
 
 </td>
 
 <td style="text-align:right;">
 
-2.04
+11.11
 
 </td>
 
@@ -1110,31 +1079,662 @@ New York
 
 <td style="text-align:left;">
 
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36
+36121
 
 </td>
 
 <td style="text-align:right;">
 
-83889
+10
 
 </td>
 
 <td style="text-align:right;">
 
-1941
+1
 
 </td>
 
 <td style="text-align:right;">
 
-2.31
+10.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-02
+
+</td>
+
+<td style="text-align:left;">
+
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36121
+
+</td>
+
+<td style="text-align:right;">
+
+15
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+6.67
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-02
+
+</td>
+
+<td style="text-align:left;">
+
+Yates
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36123
+
+</td>
+
+<td style="text-align:right;">
+
+2
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+``` r
+us_st_cases <- R.COVID.19::us_states_daily() %>% 
+  dplyr::mutate(mortality_rate = round((.$deaths / .$cases)*100,2))
+#> Parsed with column specification:
+#> cols(
+#>   date = col_date(format = ""),
+#>   state = col_character(),
+#>   fips = col_character(),
+#>   cases = col_double(),
+#>   deaths = col_double()
+#> )
+knitr::kable(us_co_cases %>% dplyr::filter(state == "New York") %>% tail(10), format = "html") %>% 
+  kableExtra::kable_styling(bootstrap_options = "striped")
+```
+
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+date
+
+</th>
+
+<th style="text-align:left;">
+
+county
+
+</th>
+
+<th style="text-align:left;">
+
+state
+
+</th>
+
+<th style="text-align:left;">
+
+fips
+
+</th>
+
+<th style="text-align:right;">
+
+cases
+
+</th>
+
+<th style="text-align:right;">
+
+deaths
+
+</th>
+
+<th style="text-align:right;">
+
+mortality\_rate
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-25
+
+</td>
+
+<td style="text-align:left;">
+
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36121
+
+</td>
+
+<td style="text-align:right;">
+
+4
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-26
+
+</td>
+
+<td style="text-align:left;">
+
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36121
+
+</td>
+
+<td style="text-align:right;">
+
+7
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-27
+
+</td>
+
+<td style="text-align:left;">
+
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36121
+
+</td>
+
+<td style="text-align:right;">
+
+7
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-28
+
+</td>
+
+<td style="text-align:left;">
+
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36121
+
+</td>
+
+<td style="text-align:right;">
+
+7
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-29
+
+</td>
+
+<td style="text-align:left;">
+
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36121
+
+</td>
+
+<td style="text-align:right;">
+
+8
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-30
+
+</td>
+
+<td style="text-align:left;">
+
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36121
+
+</td>
+
+<td style="text-align:right;">
+
+8
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-03-31
+
+</td>
+
+<td style="text-align:left;">
+
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36121
+
+</td>
+
+<td style="text-align:right;">
+
+9
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+11.11
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-01
+
+</td>
+
+<td style="text-align:left;">
+
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36121
+
+</td>
+
+<td style="text-align:right;">
+
+10
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+10.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-02
+
+</td>
+
+<td style="text-align:left;">
+
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36121
+
+</td>
+
+<td style="text-align:right;">
+
+15
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+6.67
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-02
+
+</td>
+
+<td style="text-align:left;">
+
+Yates
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36123
+
+</td>
+
+<td style="text-align:right;">
+
+2
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
 
 </td>
 
