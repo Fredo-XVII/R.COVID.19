@@ -17,6 +17,10 @@ This is a resubmission. In this version I have:
 
 * win_build note:
 * DESCRIPTION FILE mispellings are accurate.
+*  COVID 
+*  GitHub 
+*  JHU 
+*  NYT
 
 
 ## Test environments
