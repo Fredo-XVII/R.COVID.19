@@ -24,7 +24,7 @@ This is a resubmission. In this version I have:
 
 
 ## Test environments
-* local OS X install, R 3.6.3
+* local OS Windows install, R 3.6.3
 * ubuntu 14.04 (on travis-ci), R 3.6.3
 * win-builder (devel and release)
 
