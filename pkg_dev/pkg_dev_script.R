@@ -99,8 +99,9 @@ usethis::use_build_ignore(".Rhistory")
 usethis::use_build_ignore("pkg_dev")
 
 # CRAN
-devtools::check_win_devel() # checks for the development version of R.
 usethis::use_cran_comments()
+devtools::check_win_release() # checks for the current version of R.
+devtools::check_win_devel() # checks for the development version of R.
 devtools::submit_cran()
 # if accepted, need to tag
 

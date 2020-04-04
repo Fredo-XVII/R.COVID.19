@@ -1,7 +1,7 @@
 Package: R.COVID.19
 Type: Package
 Title: COVID-19 Totals for Countries as well as US States and Counties
-Version: 0.0.1.0
+Version: 0.0.1.1
 Authors@R: 
     person(given = "Alfredo G",
            family = "Marquez",

@@ -23,6 +23,9 @@ This is a resubmission. In this version I have:
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
+-- R CMD check results --------------------------------- R.COVID.19 0.0.1.1 ----
+Duration: 32s
 
-* This is a new release.
+0 errors v | 0 warnings v | 0 notes v
+
+* This is a new release, re-submission.
