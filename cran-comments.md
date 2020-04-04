@@ -15,6 +15,9 @@ This is a resubmission. In this version I have:
 * Comment on naming convention: thank you!
 * I mimicked the naming convention from covid19us
 
+* win_build note:
+* DESCRIPTION FILE mispellings are accurate.
+
 
 ## Test environments
 * local OS X install, R 3.6.3
