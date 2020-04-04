@@ -1,5 +1,5 @@
 # Functions Roxygen format
-#' @title COVID19 Counts for US Counties
+#' @title COVID-19 Counts for US Counties
 #'
 #' @description This functions pulls death COVID-19 confirmed and death data
 #'   for US counties from The New York Times GitHub repository downloads it.
@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' confirmed <- R.COVID.19::covid19_us_co()
+#' confirmed <- R.COVID.19::us_counties_daily()
 #' }
 #'
 #' @importFrom readr read_csv
@@ -20,11 +20,11 @@
 #' @export
 
 
-covid19_us_co <- function() {
+us_counties_daily <- function() {
   # Get confirmed cases
   url_counties <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
-  covid19_us_co <- readr::read_csv(url(url_counties)) %>%
+  covid_df <- readr::read_csv(url(url_counties)) %>%
     dplyr::arrange(.data$state,.data$county,.data$date)
 
-  return(invisible(covid19_us_co))
+  return(invisible(covid_df))
 }

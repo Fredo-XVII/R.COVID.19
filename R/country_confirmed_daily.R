@@ -1,5 +1,5 @@
 # Functions Roxygen format
-#' @title COVID19 US Confirmed Counts
+#' @title COVID-19 Country Confirmed Counts
 #'
 #' @description This functions pulls confirmed COVID-19 data from John Hopkins
 #'   GitHub repository downloads it and transpose it so that it is tidy.  No
@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' confirmed <- R.COVID.19::covid19_confirmed()
+#' confirmed <- R.COVID.19::country_confirmed_daily()
 #' }
 #'
 #' @importFrom  magrittr %>%
@@ -22,18 +22,18 @@
 #' @export
 
 
-covid19_confirmed <- function() {
+country_confirmed_daily <- function() {
 # Get confirmed cases
-url_confirmed <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
+url_confirmed <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_country_confirmed_daily_global.csv"
 covid19_confirm_wide <- readr::read_csv(url(url_confirmed))
 
 # From wide to long
-covid19_confirmed <- covid19_confirm_wide %>%
+covid19_df <- covid19_confirm_wide %>%
   tidyr::pivot_longer(
     cols = .data$`1/22/20`:dplyr::last(colnames(covid19_confirm_wide)),
     names_to = "greg_d",
     values_to = "confirmed_cases"
   )
 
- return(invisible(covid19_confirmed))
+ return(invisible(covid19_df))
 }

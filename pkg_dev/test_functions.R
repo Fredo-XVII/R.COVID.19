@@ -7,8 +7,8 @@ devtools::install_github("Fredo-XVII/R.COVID.19") #passes personal computer inst
 library(R.COVID.19)
 library(tidyverse)
 
-confirmed <- R.COVID.19::covid19_confirmed()
-deaths <- R.COVID.19::covid19_deaths()
+confirmed <- R.COVID.19::country_confirmed_daily()
+deaths <- R.COVID.19::country_deaths_daily()
 
 combo <- confirmed %>% left_join(deaths)
 combo %>% filter(`Country/Region` == "US") %>% View()
@@ -28,3 +28,6 @@ ggplot(tarr, aes(fill = estimate, color = estimate)) +
   scale_fill_viridis(option = "magma") +
   scale_color_viridis(options = "magma")
 vt <- get_acs(geography = "county", variables = "B19013_001", state = "VT")
+
+
+
