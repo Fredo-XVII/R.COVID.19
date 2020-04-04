@@ -2,7 +2,7 @@
 % Please edit documentation in R/us_states_daily.R
 \name{us_states_daily}
 \alias{us_states_daily}
-\title{COVID-19 Counts for US States}
+\title{COVID-19 Counts for US States from The New York Times}
 \usage{
 us_states_daily()
 }

@@ -1,7 +1,8 @@
 # Functions Roxygen format
-#' @title COVID-19 Country Death Counts
+#' @title COVID-19 Global Death Counts from John Hopkins
 #'
-#' @description This functions pulls death COVID-19 data from John Hopkins
+#' @description
+#'   This functions pulls global deaths COVID-19 data from John Hopkins
 #'   GitHub repository downloads it and transpose it so that it is tidy.  No
 #'   data is stored within the package, so the data should continuously update
 #'   over time as long as the links do not change.
@@ -10,7 +11,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' confirmed <- R.COVID.19::country_deaths_daily()
+#' confirmed <- R.COVID.19::global_deaths_daily()
 #' }
 #'
 #' @importFrom  magrittr %>%
@@ -22,7 +23,7 @@
 #' @export
 
 
-country_deaths_daily <- function() {
+global_deaths_daily <- function() {
 # Get death cases
 url_deaths <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv"
 covid19_deaths_wide <- readr::read_csv(url(url_deaths))

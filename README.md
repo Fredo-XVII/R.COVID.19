@@ -24,8 +24,8 @@ please open an issue so that I can look into the broken link. The
 sources for the data is listed below.
 
 Finally, the John Hopkins data was transposed to be tidy, instead of
-having dates as columns in a wide dataset. The NY Times data was already
-in a tidy format.
+having dates as columns in a wide dataset. The New York Times data was
+already in a tidy format.
 
 ## Installation
 
@@ -45,23 +45,30 @@ devtools::install_github("Fredo-XVII/R.COVID.19")
 
 ## Examples
 
-Load libraries:
+**Load libraries:**
 
 ``` r
 library(R.COVID.19)
+library(dplyr)
+#> 
+#> Attaching package: 'dplyr'
+#> The following objects are masked from 'package:stats':
+#> 
+#>     filter, lag
+#> The following objects are masked from 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
 library(magrittr)
 ```
 
-### John Hopkins University Data
+### COVID-19 data from John Hopkins University Data
 
   - source: [GITHUB](https://github.com/CSSEGISandData/COVID-19)
 
-  - table: csse\_covid\_19\_time\_series
-
-<!-- end list -->
+**Global COVID-19 Data:**
 
 ``` r
-confirmed <- R.COVID.19::country_confirmed_daily()
+confirmed <- R.COVID.19::global_confirmed_daily()
 #> Parsed with column specification:
 #> cols(
 #>   .default = col_double(),
@@ -70,7 +77,7 @@ confirmed <- R.COVID.19::country_confirmed_daily()
 #> )
 #> See spec(...) for full column specifications.
 
-deaths <- R.COVID.19::country_deaths_daily()
+deaths <- R.COVID.19::global_deaths_daily()
 #> Parsed with column specification:
 #> cols(
 #>   .default = col_double(),
@@ -79,8 +86,20 @@ deaths <- R.COVID.19::country_deaths_daily()
 #> )
 #> See spec(...) for full column specifications.
 
-combo <- confirmed %>% dplyr::left_join(deaths) %>% 
+recovered <- R.COVID.19::global_recovered_daily()
+#> Parsed with column specification:
+#> cols(
+#>   .default = col_double(),
+#>   `Province/State` = col_character(),
+#>   `Country/Region` = col_character()
+#> )
+#> See spec(...) for full column specifications.
+
+combo <- confirmed %>% 
+  dplyr::left_join(deaths) %>%
+  dplyr::left_join(recovered) %>% 
   dplyr::mutate(mortality_rate = round((.$deaths_cases / .$confirmed_cases)*100,2))
+#> Joining, by = c("Province/State", "Country/Region", "Lat", "Long", "greg_d")
 #> Joining, by = c("Province/State", "Country/Region", "Lat", "Long", "greg_d")
 
 knitr::kable(combo %>% dplyr::filter(`Country/Region` == "US") %>% tail(10), format = "html") %>% 
@@ -132,6 +151,12 @@ confirmed\_cases
 <th style="text-align:right;">
 
 deaths\_cases
+
+</th>
+
+<th style="text-align:right;">
+
+recovered\_cases
 
 </th>
 
@@ -193,6 +218,12 @@ US
 
 <td style="text-align:right;">
 
+361
+
+</td>
+
+<td style="text-align:right;">
+
 1.43
 
 </td>
@@ -240,6 +271,12 @@ US
 <td style="text-align:right;">
 
 1209
+
+</td>
+
+<td style="text-align:right;">
+
+681
 
 </td>
 
@@ -297,6 +334,12 @@ US
 
 <td style="text-align:right;">
 
+869
+
+</td>
+
+<td style="text-align:right;">
+
 1.56
 
 </td>
@@ -344,6 +387,12 @@ US
 <td style="text-align:right;">
 
 2026
+
+</td>
+
+<td style="text-align:right;">
+
+1072
 
 </td>
 
@@ -401,6 +450,12 @@ US
 
 <td style="text-align:right;">
 
+2665
+
+</td>
+
+<td style="text-align:right;">
+
 1.75
 
 </td>
@@ -448,6 +503,12 @@ US
 <td style="text-align:right;">
 
 2978
+
+</td>
+
+<td style="text-align:right;">
+
+5644
 
 </td>
 
@@ -505,6 +566,12 @@ US
 
 <td style="text-align:right;">
 
+7024
+
+</td>
+
+<td style="text-align:right;">
+
 2.06
 
 </td>
@@ -552,6 +619,12 @@ US
 <td style="text-align:right;">
 
 4757
+
+</td>
+
+<td style="text-align:right;">
+
+8474
 
 </td>
 
@@ -609,6 +682,12 @@ US
 
 <td style="text-align:right;">
 
+9001
+
+</td>
+
+<td style="text-align:right;">
+
 2.43
 
 </td>
@@ -661,6 +740,12 @@ US
 
 <td style="text-align:right;">
 
+9707
+
+</td>
+
+<td style="text-align:right;">
+
 2.57
 
 </td>
@@ -671,11 +756,668 @@ US
 
 </table>
 
-### Data from The New York Times, based on reports from state and local health agencies.
+<br></br>
+
+**US COVID-19 Data with Geographic Data:**
+
+``` r
+us_confirmed <- R.COVID.19::us_geo_confirmed_daily()
+#> Parsed with column specification:
+#> cols(
+#>   .default = col_double(),
+#>   iso2 = col_character(),
+#>   iso3 = col_character(),
+#>   Admin2 = col_character(),
+#>   Province_State = col_character(),
+#>   Country_Region = col_character(),
+#>   Combined_Key = col_character()
+#> )
+#> See spec(...) for full column specifications.
+
+us_deaths <- R.COVID.19::us_geo_deaths_daily()
+#> Parsed with column specification:
+#> cols(
+#>   .default = col_double(),
+#>   iso2 = col_character(),
+#>   iso3 = col_character(),
+#>   Admin2 = col_character(),
+#>   Province_State = col_character(),
+#>   Country_Region = col_character(),
+#>   Combined_Key = col_character()
+#> )
+#> See spec(...) for full column specifications.
+
+combo <- us_confirmed %>% dplyr::left_join(us_deaths) %>% 
+  dplyr::mutate(mortality_rate = round((.$deaths_cases / .$confirmed_cases)*100,2))
+#> Joining, by = c("UID", "iso2", "iso3", "code3", "FIPS", "Admin2", "Province_State", "Country_Region", "Lat", "Long_", "Combined_Key", "greg_d")
+
+knitr::kable(combo %>% 
+               dplyr::filter(Province_State == "New York", Admin2 == "New York") %>% 
+               tail(5), format = "html") %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"))
+```
+
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+
+<thead>
+
+<tr>
+
+<th style="text-align:right;">
+
+UID
+
+</th>
+
+<th style="text-align:left;">
+
+iso2
+
+</th>
+
+<th style="text-align:left;">
+
+iso3
+
+</th>
+
+<th style="text-align:right;">
+
+code3
+
+</th>
+
+<th style="text-align:right;">
+
+FIPS
+
+</th>
+
+<th style="text-align:left;">
+
+Admin2
+
+</th>
+
+<th style="text-align:left;">
+
+Province\_State
+
+</th>
+
+<th style="text-align:left;">
+
+Country\_Region
+
+</th>
+
+<th style="text-align:right;">
+
+Lat
+
+</th>
+
+<th style="text-align:right;">
+
+Long\_
+
+</th>
+
+<th style="text-align:left;">
+
+Combined\_Key
+
+</th>
+
+<th style="text-align:left;">
+
+greg\_d
+
+</th>
+
+<th style="text-align:right;">
+
+confirmed\_cases
+
+</th>
+
+<th style="text-align:right;">
+
+Population
+
+</th>
+
+<th style="text-align:right;">
+
+deaths\_cases
+
+</th>
+
+<th style="text-align:right;">
+
+mortality\_rate
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:right;">
+
+84036061
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:left;">
+
+USA
+
+</td>
+
+<td style="text-align:right;">
+
+840
+
+</td>
+
+<td style="text-align:right;">
+
+36061
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+40.76727
+
+</td>
+
+<td style="text-align:right;">
+
+\-73.97153
+
+</td>
+
+<td style="text-align:left;">
+
+New York City, New York, US
+
+</td>
+
+<td style="text-align:left;">
+
+3/30/20
+
+</td>
+
+<td style="text-align:right;">
+
+37453
+
+</td>
+
+<td style="text-align:right;">
+
+5803210
+
+</td>
+
+<td style="text-align:right;">
+
+790
+
+</td>
+
+<td style="text-align:right;">
+
+2.11
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:right;">
+
+84036061
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:left;">
+
+USA
+
+</td>
+
+<td style="text-align:right;">
+
+840
+
+</td>
+
+<td style="text-align:right;">
+
+36061
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+40.76727
+
+</td>
+
+<td style="text-align:right;">
+
+\-73.97153
+
+</td>
+
+<td style="text-align:left;">
+
+New York City, New York, US
+
+</td>
+
+<td style="text-align:left;">
+
+3/31/20
+
+</td>
+
+<td style="text-align:right;">
+
+43119
+
+</td>
+
+<td style="text-align:right;">
+
+5803210
+
+</td>
+
+<td style="text-align:right;">
+
+932
+
+</td>
+
+<td style="text-align:right;">
+
+2.16
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:right;">
+
+84036061
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:left;">
+
+USA
+
+</td>
+
+<td style="text-align:right;">
+
+840
+
+</td>
+
+<td style="text-align:right;">
+
+36061
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+40.76727
+
+</td>
+
+<td style="text-align:right;">
+
+\-73.97153
+
+</td>
+
+<td style="text-align:left;">
+
+New York City, New York, US
+
+</td>
+
+<td style="text-align:left;">
+
+4/1/20
+
+</td>
+
+<td style="text-align:right;">
+
+47439
+
+</td>
+
+<td style="text-align:right;">
+
+5803210
+
+</td>
+
+<td style="text-align:right;">
+
+1139
+
+</td>
+
+<td style="text-align:right;">
+
+2.40
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:right;">
+
+84036061
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:left;">
+
+USA
+
+</td>
+
+<td style="text-align:right;">
+
+840
+
+</td>
+
+<td style="text-align:right;">
+
+36061
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+40.76727
+
+</td>
+
+<td style="text-align:right;">
+
+\-73.97153
+
+</td>
+
+<td style="text-align:left;">
+
+New York City, New York, US
+
+</td>
+
+<td style="text-align:left;">
+
+4/2/20
+
+</td>
+
+<td style="text-align:right;">
+
+51809
+
+</td>
+
+<td style="text-align:right;">
+
+5803210
+
+</td>
+
+<td style="text-align:right;">
+
+1397
+
+</td>
+
+<td style="text-align:right;">
+
+2.70
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:right;">
+
+84036061
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:left;">
+
+USA
+
+</td>
+
+<td style="text-align:right;">
+
+840
+
+</td>
+
+<td style="text-align:right;">
+
+36061
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+40.76727
+
+</td>
+
+<td style="text-align:right;">
+
+\-73.97153
+
+</td>
+
+<td style="text-align:left;">
+
+New York City, New York, US
+
+</td>
+
+<td style="text-align:left;">
+
+4/3/20
+
+</td>
+
+<td style="text-align:right;">
+
+57159
+
+</td>
+
+<td style="text-align:right;">
+
+5803210
+
+</td>
+
+<td style="text-align:right;">
+
+1584
+
+</td>
+
+<td style="text-align:right;">
+
+2.77
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<br></br>
+
+-----
+
+### COVID-19 data from The New York Times, based on reports from state and local health agencies.
 
   - source: [GITHUB](https://github.com/nytimes/covid-19-data)
 
-<!-- end list -->
+**US COVID-19 County Data with Geographic Data:**
 
 ``` r
 us_co_cases <- R.COVID.19::us_counties_daily() %>% 
@@ -751,98 +1493,6 @@ mortality\_rate
 
 <td style="text-align:left;">
 
-2020-03-25
-
-</td>
-
-<td style="text-align:left;">
-
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36121
-
-</td>
-
-<td style="text-align:right;">
-
-4
-
-</td>
-
-<td style="text-align:right;">
-
-0
-
-</td>
-
-<td style="text-align:right;">
-
-0.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-03-26
-
-</td>
-
-<td style="text-align:left;">
-
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36121
-
-</td>
-
-<td style="text-align:right;">
-
-7
-
-</td>
-
-<td style="text-align:right;">
-
-0
-
-</td>
-
-<td style="text-align:right;">
-
-0.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
 2020-03-27
 
 </td>
@@ -1165,7 +1815,99 @@ New York
 
 <td style="text-align:left;">
 
+2020-04-03
+
+</td>
+
+<td style="text-align:left;">
+
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36121
+
+</td>
+
+<td style="text-align:right;">
+
+15
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+6.67
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
 2020-04-02
+
+</td>
+
+<td style="text-align:left;">
+
+Yates
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36123
+
+</td>
+
+<td style="text-align:right;">
+
+2
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-03
 
 </td>
 
@@ -1211,6 +1953,10 @@ New York
 
 </table>
 
+<br></br>
+
+**US COVID-19 State Data with Geographic Data:**
+
 ``` r
 us_st_cases <- R.COVID.19::us_states_daily() %>% 
   dplyr::mutate(mortality_rate = round((.$deaths / .$cases)*100,2))
@@ -1222,7 +1968,7 @@ us_st_cases <- R.COVID.19::us_states_daily() %>%
 #>   cases = col_double(),
 #>   deaths = col_double()
 #> )
-knitr::kable(us_co_cases %>% dplyr::filter(state == "New York") %>% tail(10), format = "html") %>% 
+knitr::kable(us_st_cases %>% dplyr::filter(state == "New York") %>% tail(10), format = "html") %>% 
   kableExtra::kable_styling(bootstrap_options = "striped")
 ```
 
@@ -1235,12 +1981,6 @@ knitr::kable(us_co_cases %>% dplyr::filter(state == "New York") %>% tail(10), fo
 <th style="text-align:left;">
 
 date
-
-</th>
-
-<th style="text-align:left;">
-
-county
 
 </th>
 
@@ -1290,37 +2030,31 @@ mortality\_rate
 
 <td style="text-align:left;">
 
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36121
+36
 
 </td>
 
 <td style="text-align:right;">
 
-4
+33066
 
 </td>
 
 <td style="text-align:right;">
 
-0
+325
 
 </td>
 
 <td style="text-align:right;">
 
-0.00
+0.98
 
 </td>
 
@@ -1336,37 +2070,31 @@ New York
 
 <td style="text-align:left;">
 
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36121
+36
 
 </td>
 
 <td style="text-align:right;">
 
-7
+38987
 
 </td>
 
 <td style="text-align:right;">
 
-0
+432
 
 </td>
 
 <td style="text-align:right;">
 
-0.00
+1.11
 
 </td>
 
@@ -1382,37 +2110,31 @@ New York
 
 <td style="text-align:left;">
 
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36121
+36
 
 </td>
 
 <td style="text-align:right;">
 
-7
+44635
 
 </td>
 
 <td style="text-align:right;">
 
-0
+535
 
 </td>
 
 <td style="text-align:right;">
 
-0.00
+1.20
 
 </td>
 
@@ -1428,37 +2150,31 @@ New York
 
 <td style="text-align:left;">
 
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36121
+36
 
 </td>
 
 <td style="text-align:right;">
 
-7
+53363
 
 </td>
 
 <td style="text-align:right;">
 
-0
+782
 
 </td>
 
 <td style="text-align:right;">
 
-0.00
+1.47
 
 </td>
 
@@ -1474,37 +2190,31 @@ New York
 
 <td style="text-align:left;">
 
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36121
+36
 
 </td>
 
 <td style="text-align:right;">
 
-8
+59568
 
 </td>
 
 <td style="text-align:right;">
 
-0
+965
 
 </td>
 
 <td style="text-align:right;">
 
-0.00
+1.62
 
 </td>
 
@@ -1520,37 +2230,31 @@ New York
 
 <td style="text-align:left;">
 
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36121
+36
 
 </td>
 
 <td style="text-align:right;">
 
-8
+67174
 
 </td>
 
 <td style="text-align:right;">
 
-0
+1224
 
 </td>
 
 <td style="text-align:right;">
 
-0.00
+1.82
 
 </td>
 
@@ -1566,37 +2270,31 @@ New York
 
 <td style="text-align:left;">
 
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36121
+36
 
 </td>
 
 <td style="text-align:right;">
 
-9
+75832
 
 </td>
 
 <td style="text-align:right;">
 
-1
+1550
 
 </td>
 
 <td style="text-align:right;">
 
-11.11
+2.04
 
 </td>
 
@@ -1612,37 +2310,31 @@ New York
 
 <td style="text-align:left;">
 
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36121
+36
 
 </td>
 
 <td style="text-align:right;">
 
-10
+83889
 
 </td>
 
 <td style="text-align:right;">
 
-1
+1941
 
 </td>
 
 <td style="text-align:right;">
 
-10.00
+2.31
 
 </td>
 
@@ -1658,37 +2350,31 @@ New York
 
 <td style="text-align:left;">
 
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
 New York
 
 </td>
 
 <td style="text-align:left;">
 
-36121
+36
 
 </td>
 
 <td style="text-align:right;">
 
-15
+92770
 
 </td>
 
 <td style="text-align:right;">
 
-1
+2653
 
 </td>
 
 <td style="text-align:right;">
 
-6.67
+2.86
 
 </td>
 
@@ -1698,13 +2384,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-02
-
-</td>
-
-<td style="text-align:left;">
-
-Yates
+2020-04-03
 
 </td>
 
@@ -1716,25 +2396,25 @@ New York
 
 <td style="text-align:left;">
 
-36123
+36
 
 </td>
 
 <td style="text-align:right;">
 
-2
+102870
 
 </td>
 
 <td style="text-align:right;">
 
-0
+2935
 
 </td>
 
 <td style="text-align:right;">
 
-0.00
+2.85
 
 </td>
 

@@ -59,13 +59,19 @@ usethis::use_package( "remotes", type = "Import") #appveyor build
 
 # Add Functions
 
-usethis::use_r("covid19_confirmed")
+usethis::use_r("global_confirmed_daily") # JHU
 
-usethis::use_r("covid19_deaths")
+usethis::use_r("global_deaths_daily") # JHU
 
-usethis::use_r("covid19_us_co")
+usethis::use_r("global_recovered_daily") # JHU
 
-usethis::use_r("covid19_us_st")
+usethis::use_r("us_geo_confirmed_daily") # JHU
+
+usethis::use_r("us_geo_deaths_daily") # JHU
+
+usethis::use_r("us_counties_daily") # NYT
+
+usethis::use_r("us_states_daily") # NYT
 
 usethis::use_data_raw()
 

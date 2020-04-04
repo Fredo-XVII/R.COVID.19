@@ -1,7 +1,7 @@
 Package: R.COVID.19
 Type: Package
-Title: COVID-19 Daily Totals for Countries as well as US States and Counties
-Version: 0.0.1.1
+Title: COVID-19 Daily Global Counts and US Counts
+Version: 0.1.0
 Authors@R: 
     person(given = "Alfredo G",
            family = "Marquez",
@@ -13,8 +13,9 @@ URL: https://github.com/Fredo-XVII/R.COVID.19
 BugReports: https://github.com/Fredo-XVII/R.COVID.19/issues
 Description: A light weight package that collects COVID-19 data from John Hopkins
     University (JHU) and The New York Times (NYT) GitHub repositories.  The JHU 
-    provides daily totals for countries.  The NYT provides daily data at the
-    state and county levels for the US only.  All the data is in a tidy format.
+    provides global daily totals, and separate data for the US.  The NYT provides
+    daily data at the state and county levels for the US only.  All the data is in 
+    a tidy format.
 License: CC0 
 Encoding: UTF-8
 LazyData: true

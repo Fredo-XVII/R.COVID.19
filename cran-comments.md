@@ -1,4 +1,26 @@
-## Resubmission
+## Resubmission 2020-04-04
+This is a resubmission. In this version I have:
+* Fixed package title to title case.
+
+## Test environments
+* local OS Windows install, R 3.6.3
+* ubuntu 14.04 (on travis-ci), R 3.6.3
+* win-builder (devel and release)
+
+## R CMD check results
+
+-- R CMD check results --------------------------------- R.COVID.19 0.0.1.2 ----
+Duration: 37s
+
+0 errors v | 0 warnings v | 0 notes v
+
+R CMD check succeeded
+
+* This is a new release, re-submission.
+
+
+
+## Resubmission 2020-04-03
 This is a resubmission. In this version I have:
 
 * Fixed Note: The Date field is not in ISO 8601 yyyy-mm-dd format. 
@@ -30,9 +52,11 @@ This is a resubmission. In this version I have:
 
 ## R CMD check results
 
--- R CMD check results --------------------------------- R.COVID.19 0.0.1.1 ----
-Duration: 32s
+-- R CMD check results --------------------------------- R.COVID.19 0.0.1.2 ----
+Duration: 34.5s
 
 0 errors v | 0 warnings v | 0 notes v
+
+R CMD check succeeded
 
 * This is a new release, re-submission.

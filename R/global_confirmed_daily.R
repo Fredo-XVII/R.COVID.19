@@ -1,7 +1,8 @@
 # Functions Roxygen format
-#' @title COVID-19 Country Confirmed Counts
+#' @title COVID-19 Global Confirmed Counts from John Hopkins
 #'
-#' @description This functions pulls confirmed COVID-19 data from John Hopkins
+#' @description
+#'   This functions pulls global confirmed COVID-19 data from John Hopkins
 #'   GitHub repository downloads it and transpose it so that it is tidy.  No
 #'   data is stored within the package, so the data should continuously update
 #'   over time as long as the links do not change.
@@ -10,7 +11,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' confirmed <- R.COVID.19::country_confirmed_daily()
+#' confirmed <- R.COVID.19::global_confirmed_daily()
 #' }
 #'
 #' @importFrom  magrittr %>%
@@ -22,7 +23,7 @@
 #' @export
 
 
-country_confirmed_daily <- function() {
+global_confirmed_daily <- function() {
 # Get confirmed cases
 url_confirmed <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
 covid19_confirm_wide <- readr::read_csv(url(url_confirmed))

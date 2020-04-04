@@ -1,5 +1,5 @@
 # Functions Roxygen format
-#' @title COVID-19 Counts for US States
+#' @title COVID-19 Counts for US States from The New York Times
 #'
 #' @description This functions pulls death COVID-19 confirmed and death data
 #'   for US states from The New York Times GitHub repository downloads it.

@@ -25,7 +25,7 @@ knitr::opts_chunk$set(
 
 The goal of R.COVID.19 is to simply aquire data for the disease COVID 19 from sources that make the data readily available. No promises are made to the validaty of the data as their are many people at the sources working on that. Because these functions link to the sources, the data should update as the sources update. If data is not being generated, please open an issue so that I can look into the broken link.  The sources for the data is listed below.
 
-Finally, the John Hopkins data was transposed to be tidy, instead of having dates as columns in a wide dataset.  The NY Times data was already in a tidy format.
+Finally, the John Hopkins data was transposed to be tidy, instead of having dates as columns in a wide dataset.  The New York Times data was already in a tidy format.
 
 ## Installation
 
@@ -43,46 +43,76 @@ devtools::install_github("Fredo-XVII/R.COVID.19")
 ```
 
 ## Examples
-Load libraries:
-```{r libraries}
+**Load libraries:**
+```{r libraries, results='hide', warning=FALSE}
 library(R.COVID.19)
+library(dplyr)
 library(magrittr)
 ```
 
 
-### John Hopkins University Data
+### COVID-19 data from John Hopkins University Data
+
   - source: [GITHUB](https://github.com/CSSEGISandData/COVID-19)
   
-  - table: csse_covid_19_time_series
-  
-```{r John_Hopkins_Data}
-confirmed <- R.COVID.19::country_confirmed_daily()
+**Global COVID-19 Data:**
+```{r John_Hopkins_Global, warning=FALSE}
+confirmed <- R.COVID.19::global_confirmed_daily()
 
-deaths <- R.COVID.19::country_deaths_daily()
+deaths <- R.COVID.19::global_deaths_daily()
 
-combo <- confirmed %>% dplyr::left_join(deaths) %>% 
+recovered <- R.COVID.19::global_recovered_daily()
+
+combo <- confirmed %>% 
+  dplyr::left_join(deaths) %>%
+  dplyr::left_join(recovered) %>% 
   dplyr::mutate(mortality_rate = round((.$deaths_cases / .$confirmed_cases)*100,2))
 
 knitr::kable(combo %>% dplyr::filter(`Country/Region` == "US") %>% tail(10), format = "html") %>% 
   kableExtra::kable_styling(bootstrap_options = c("striped"))
 ```
+<br></br>
 
 
-### Data from The New York Times, based on reports from state and local health agencies.
+**US COVID-19 Data with Geographic Data:**
+```{r John_Hopkins_US, warning=FALSE }
+us_confirmed <- R.COVID.19::us_geo_confirmed_daily()
+
+us_deaths <- R.COVID.19::us_geo_deaths_daily()
+
+combo <- us_confirmed %>% dplyr::left_join(us_deaths) %>% 
+  dplyr::mutate(mortality_rate = round((.$deaths_cases / .$confirmed_cases)*100,2))
+
+knitr::kable(combo %>% 
+               dplyr::filter(Province_State == "New York", Admin2 == "New York") %>% 
+               tail(5), format = "html") %>% 
+  kableExtra::kable_styling(bootstrap_options = c("striped"))
+```
+<br></br>
+
+-----
+
+
+### COVID-19 data from The New York Times, based on reports from state and local health agencies.
 
   - source: [GITHUB](https://github.com/nytimes/covid-19-data)
-  
+
+**US COVID-19 County Data with Geographic Data:** 
 ```{r NY_Times_Data_Counties}
 us_co_cases <- R.COVID.19::us_counties_daily() %>% 
   dplyr::mutate(mortality_rate = round((.$deaths / .$cases)*100,2))
 knitr::kable(us_co_cases %>% dplyr::filter(state == "New York") %>% tail(10), format = "html") %>% 
   kableExtra::kable_styling(bootstrap_options = "striped")
 ```
+<br></br>
 
+
+
+**US COVID-19 State Data with Geographic Data:**
 ```{r}
 us_st_cases <- R.COVID.19::us_states_daily() %>% 
   dplyr::mutate(mortality_rate = round((.$deaths / .$cases)*100,2))
-knitr::kable(us_co_cases %>% dplyr::filter(state == "New York") %>% tail(10), format = "html") %>% 
+knitr::kable(us_st_cases %>% dplyr::filter(state == "New York") %>% tail(10), format = "html") %>% 
   kableExtra::kable_styling(bootstrap_options = "striped")
 ```
 
