@@ -53,6 +53,8 @@ usethis::use_package( "roxygen2", type = "Suggests")
 
 usethis::use_package( "rlang", type = "Import")
 
+usethis::use_package( "sf", type = "Import")
+
 usethis::use_package( "kableExtra", type = "Suggests")
 
 usethis::use_package( "remotes", type = "Import") #appveyor build
@@ -72,6 +74,10 @@ usethis::use_r("us_geo_deaths_daily") # JHU
 usethis::use_r("us_counties_daily") # NYT
 
 usethis::use_r("us_states_daily") # NYT
+
+usethis::use_r("pub_hlth_status_by_cnty") # ESRI Open Data
+
+usethis::use_r("pub_hlth_status_by_cnty_shp") # ESRI Open Data
 
 usethis::use_data_raw()
 

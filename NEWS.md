@@ -1,4 +1,8 @@
-# R.COVID.19 0.0.1.2
+# R.COVID.19 0.1.1
+* Added a function for public health status by county for the US
+* Added a function for public health status by county with shapefile for the US
+
+# R.COVID.19 0.1.0
 * Add new US data from John Hopkins, 2 new functions, which includes geographic
 * data for mapping such as FIPS codes, etc.
 * Add new Global recovery data from John Hopkins, 1 new function.
