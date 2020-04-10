@@ -13,6 +13,8 @@ status](https://ci.appveyor.com/api/projects/status/github/Fredo-XVII/R.COVID.19
 coverage](https://codecov.io/gh/Fredo-XVII/R.COVID.19/branch/master/graph/badge.svg)](https://codecov.io/gh/Fredo-XVII/R.COVID.19?branch=master)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/R.COVID.19)](https://CRAN.R-project.org/package=R.COVID.19)
+[![Github All
+Releases](https://img.shields.io/github/downloads/Fredo-XVII/R.COVID.19/total.svg)]()
 <!-- badges: end -->
 
 The goal of R.COVID.19 is to simply aquire data for the disease COVID 19
@@ -200,354 +202,6 @@ US
 
 <td style="text-align:left;">
 
-3/25/20
-
-</td>
-
-<td style="text-align:right;">
-
-65778
-
-</td>
-
-<td style="text-align:right;">
-
-942
-
-</td>
-
-<td style="text-align:right;">
-
-361
-
-</td>
-
-<td style="text-align:right;">
-
-1.43
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-NA
-
-</td>
-
-<td style="text-align:left;">
-
-US
-
-</td>
-
-<td style="text-align:right;">
-
-37.0902
-
-</td>
-
-<td style="text-align:right;">
-
-\-95.7129
-
-</td>
-
-<td style="text-align:left;">
-
-3/26/20
-
-</td>
-
-<td style="text-align:right;">
-
-83836
-
-</td>
-
-<td style="text-align:right;">
-
-1209
-
-</td>
-
-<td style="text-align:right;">
-
-681
-
-</td>
-
-<td style="text-align:right;">
-
-1.44
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-NA
-
-</td>
-
-<td style="text-align:left;">
-
-US
-
-</td>
-
-<td style="text-align:right;">
-
-37.0902
-
-</td>
-
-<td style="text-align:right;">
-
-\-95.7129
-
-</td>
-
-<td style="text-align:left;">
-
-3/27/20
-
-</td>
-
-<td style="text-align:right;">
-
-101657
-
-</td>
-
-<td style="text-align:right;">
-
-1581
-
-</td>
-
-<td style="text-align:right;">
-
-869
-
-</td>
-
-<td style="text-align:right;">
-
-1.56
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-NA
-
-</td>
-
-<td style="text-align:left;">
-
-US
-
-</td>
-
-<td style="text-align:right;">
-
-37.0902
-
-</td>
-
-<td style="text-align:right;">
-
-\-95.7129
-
-</td>
-
-<td style="text-align:left;">
-
-3/28/20
-
-</td>
-
-<td style="text-align:right;">
-
-121478
-
-</td>
-
-<td style="text-align:right;">
-
-2026
-
-</td>
-
-<td style="text-align:right;">
-
-1072
-
-</td>
-
-<td style="text-align:right;">
-
-1.67
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-NA
-
-</td>
-
-<td style="text-align:left;">
-
-US
-
-</td>
-
-<td style="text-align:right;">
-
-37.0902
-
-</td>
-
-<td style="text-align:right;">
-
-\-95.7129
-
-</td>
-
-<td style="text-align:left;">
-
-3/29/20
-
-</td>
-
-<td style="text-align:right;">
-
-140886
-
-</td>
-
-<td style="text-align:right;">
-
-2467
-
-</td>
-
-<td style="text-align:right;">
-
-2665
-
-</td>
-
-<td style="text-align:right;">
-
-1.75
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-NA
-
-</td>
-
-<td style="text-align:left;">
-
-US
-
-</td>
-
-<td style="text-align:right;">
-
-37.0902
-
-</td>
-
-<td style="text-align:right;">
-
-\-95.7129
-
-</td>
-
-<td style="text-align:left;">
-
-3/30/20
-
-</td>
-
-<td style="text-align:right;">
-
-161807
-
-</td>
-
-<td style="text-align:right;">
-
-2978
-
-</td>
-
-<td style="text-align:right;">
-
-5644
-
-</td>
-
-<td style="text-align:right;">
-
-1.84
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-NA
-
-</td>
-
-<td style="text-align:left;">
-
-US
-
-</td>
-
-<td style="text-align:right;">
-
-37.0902
-
-</td>
-
-<td style="text-align:right;">
-
-\-95.7129
-
-</td>
-
-<td style="text-align:left;">
-
 3/31/20
 
 </td>
@@ -670,7 +324,7 @@ US
 
 <td style="text-align:right;">
 
-243453
+243762
 
 </td>
 
@@ -747,6 +401,354 @@ US
 <td style="text-align:right;">
 
 2.57
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+37.0902
+
+</td>
+
+<td style="text-align:right;">
+
+\-95.7129
+
+</td>
+
+<td style="text-align:left;">
+
+4/4/20
+
+</td>
+
+<td style="text-align:right;">
+
+308853
+
+</td>
+
+<td style="text-align:right;">
+
+8407
+
+</td>
+
+<td style="text-align:right;">
+
+14652
+
+</td>
+
+<td style="text-align:right;">
+
+2.72
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+37.0902
+
+</td>
+
+<td style="text-align:right;">
+
+\-95.7129
+
+</td>
+
+<td style="text-align:left;">
+
+4/5/20
+
+</td>
+
+<td style="text-align:right;">
+
+337072
+
+</td>
+
+<td style="text-align:right;">
+
+9619
+
+</td>
+
+<td style="text-align:right;">
+
+17448
+
+</td>
+
+<td style="text-align:right;">
+
+2.85
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+37.0902
+
+</td>
+
+<td style="text-align:right;">
+
+\-95.7129
+
+</td>
+
+<td style="text-align:left;">
+
+4/6/20
+
+</td>
+
+<td style="text-align:right;">
+
+366667
+
+</td>
+
+<td style="text-align:right;">
+
+10783
+
+</td>
+
+<td style="text-align:right;">
+
+19581
+
+</td>
+
+<td style="text-align:right;">
+
+2.94
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+37.0902
+
+</td>
+
+<td style="text-align:right;">
+
+\-95.7129
+
+</td>
+
+<td style="text-align:left;">
+
+4/7/20
+
+</td>
+
+<td style="text-align:right;">
+
+396223
+
+</td>
+
+<td style="text-align:right;">
+
+12722
+
+</td>
+
+<td style="text-align:right;">
+
+21763
+
+</td>
+
+<td style="text-align:right;">
+
+3.21
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+37.0902
+
+</td>
+
+<td style="text-align:right;">
+
+\-95.7129
+
+</td>
+
+<td style="text-align:left;">
+
+4/8/20
+
+</td>
+
+<td style="text-align:right;">
+
+429052
+
+</td>
+
+<td style="text-align:right;">
+
+14695
+
+</td>
+
+<td style="text-align:right;">
+
+23559
+
+</td>
+
+<td style="text-align:right;">
+
+3.42
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+NA
+
+</td>
+
+<td style="text-align:left;">
+
+US
+
+</td>
+
+<td style="text-align:right;">
+
+37.0902
+
+</td>
+
+<td style="text-align:right;">
+
+\-95.7129
+
+</td>
+
+<td style="text-align:left;">
+
+4/9/20
+
+</td>
+
+<td style="text-align:right;">
+
+461437
+
+</td>
+
+<td style="text-align:right;">
+
+16478
+
+</td>
+
+<td style="text-align:right;">
+
+25410
+
+</td>
+
+<td style="text-align:right;">
+
+3.57
 
 </td>
 
@@ -975,31 +977,31 @@ New York City, New York, US
 
 <td style="text-align:left;">
 
-3/30/20
+4/5/20
 
 </td>
 
 <td style="text-align:right;">
 
-37453
+67551
 
 </td>
 
 <td style="text-align:right;">
 
-5803210
+NA
 
 </td>
 
 <td style="text-align:right;">
 
-790
+NA
 
 </td>
 
 <td style="text-align:right;">
 
-2.11
+NA
 
 </td>
 
@@ -1075,31 +1077,31 @@ New York City, New York, US
 
 <td style="text-align:left;">
 
-3/31/20
+4/6/20
 
 </td>
 
 <td style="text-align:right;">
 
-43119
+72181
 
 </td>
 
 <td style="text-align:right;">
 
-5803210
+NA
 
 </td>
 
 <td style="text-align:right;">
 
-932
+NA
 
 </td>
 
 <td style="text-align:right;">
 
-2.16
+NA
 
 </td>
 
@@ -1175,31 +1177,31 @@ New York City, New York, US
 
 <td style="text-align:left;">
 
-4/1/20
+4/7/20
 
 </td>
 
 <td style="text-align:right;">
 
-47439
+76876
 
 </td>
 
 <td style="text-align:right;">
 
-5803210
+NA
 
 </td>
 
 <td style="text-align:right;">
 
-1139
+NA
 
 </td>
 
 <td style="text-align:right;">
 
-2.40
+NA
 
 </td>
 
@@ -1275,31 +1277,31 @@ New York City, New York, US
 
 <td style="text-align:left;">
 
-4/2/20
+4/8/20
 
 </td>
 
 <td style="text-align:right;">
 
-51809
+81803
 
 </td>
 
 <td style="text-align:right;">
 
-5803210
+NA
 
 </td>
 
 <td style="text-align:right;">
 
-1397
+NA
 
 </td>
 
 <td style="text-align:right;">
 
-2.70
+NA
 
 </td>
 
@@ -1375,31 +1377,31 @@ New York City, New York, US
 
 <td style="text-align:left;">
 
-4/3/20
+4/9/20
 
 </td>
 
 <td style="text-align:right;">
 
-57159
+87028
 
 </td>
 
 <td style="text-align:right;">
 
-5803210
+NA
 
 </td>
 
 <td style="text-align:right;">
 
-1584
+NA
 
 </td>
 
 <td style="text-align:right;">
 
-2.77
+NA
 
 </td>
 
@@ -1493,7 +1495,7 @@ mortality\_rate
 
 <td style="text-align:left;">
 
-2020-03-27
+2020-04-06
 
 </td>
 
@@ -1517,7 +1519,99 @@ New York
 
 <td style="text-align:right;">
 
-7
+23
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+4.35
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-07
+
+</td>
+
+<td style="text-align:left;">
+
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36121
+
+</td>
+
+<td style="text-align:right;">
+
+23
+
+</td>
+
+<td style="text-align:right;">
+
+1
+
+</td>
+
+<td style="text-align:right;">
+
+4.35
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-08
+
+</td>
+
+<td style="text-align:left;">
+
+Wyoming
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36121
+
+</td>
+
+<td style="text-align:right;">
+
+27
 
 </td>
 
@@ -1530,328 +1624,6 @@ New York
 <td style="text-align:right;">
 
 0.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-03-28
-
-</td>
-
-<td style="text-align:left;">
-
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36121
-
-</td>
-
-<td style="text-align:right;">
-
-7
-
-</td>
-
-<td style="text-align:right;">
-
-0
-
-</td>
-
-<td style="text-align:right;">
-
-0.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-03-29
-
-</td>
-
-<td style="text-align:left;">
-
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36121
-
-</td>
-
-<td style="text-align:right;">
-
-8
-
-</td>
-
-<td style="text-align:right;">
-
-0
-
-</td>
-
-<td style="text-align:right;">
-
-0.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-03-30
-
-</td>
-
-<td style="text-align:left;">
-
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36121
-
-</td>
-
-<td style="text-align:right;">
-
-8
-
-</td>
-
-<td style="text-align:right;">
-
-0
-
-</td>
-
-<td style="text-align:right;">
-
-0.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-03-31
-
-</td>
-
-<td style="text-align:left;">
-
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36121
-
-</td>
-
-<td style="text-align:right;">
-
-9
-
-</td>
-
-<td style="text-align:right;">
-
-1
-
-</td>
-
-<td style="text-align:right;">
-
-11.11
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-04-01
-
-</td>
-
-<td style="text-align:left;">
-
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36121
-
-</td>
-
-<td style="text-align:right;">
-
-10
-
-</td>
-
-<td style="text-align:right;">
-
-1
-
-</td>
-
-<td style="text-align:right;">
-
-10.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-04-02
-
-</td>
-
-<td style="text-align:left;">
-
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36121
-
-</td>
-
-<td style="text-align:right;">
-
-15
-
-</td>
-
-<td style="text-align:right;">
-
-1
-
-</td>
-
-<td style="text-align:right;">
-
-6.67
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-04-03
-
-</td>
-
-<td style="text-align:left;">
-
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36121
-
-</td>
-
-<td style="text-align:right;">
-
-15
-
-</td>
-
-<td style="text-align:right;">
-
-1
-
-</td>
-
-<td style="text-align:right;">
-
-6.67
 
 </td>
 
@@ -1908,6 +1680,236 @@ New York
 <td style="text-align:left;">
 
 2020-04-03
+
+</td>
+
+<td style="text-align:left;">
+
+Yates
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36123
+
+</td>
+
+<td style="text-align:right;">
+
+2
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-04
+
+</td>
+
+<td style="text-align:left;">
+
+Yates
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36123
+
+</td>
+
+<td style="text-align:right;">
+
+2
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-05
+
+</td>
+
+<td style="text-align:left;">
+
+Yates
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36123
+
+</td>
+
+<td style="text-align:right;">
+
+2
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-06
+
+</td>
+
+<td style="text-align:left;">
+
+Yates
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36123
+
+</td>
+
+<td style="text-align:right;">
+
+2
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-07
+
+</td>
+
+<td style="text-align:left;">
+
+Yates
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36123
+
+</td>
+
+<td style="text-align:right;">
+
+2
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0.00
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-08
 
 </td>
 
@@ -2019,206 +2021,6 @@ mortality\_rate
 </thead>
 
 <tbody>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-03-25
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36
-
-</td>
-
-<td style="text-align:right;">
-
-33066
-
-</td>
-
-<td style="text-align:right;">
-
-325
-
-</td>
-
-<td style="text-align:right;">
-
-0.98
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-03-26
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36
-
-</td>
-
-<td style="text-align:right;">
-
-38987
-
-</td>
-
-<td style="text-align:right;">
-
-432
-
-</td>
-
-<td style="text-align:right;">
-
-1.11
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-03-27
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36
-
-</td>
-
-<td style="text-align:right;">
-
-44635
-
-</td>
-
-<td style="text-align:right;">
-
-535
-
-</td>
-
-<td style="text-align:right;">
-
-1.20
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-03-28
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36
-
-</td>
-
-<td style="text-align:right;">
-
-53363
-
-</td>
-
-<td style="text-align:right;">
-
-782
-
-</td>
-
-<td style="text-align:right;">
-
-1.47
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-03-29
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36
-
-</td>
-
-<td style="text-align:right;">
-
-59568
-
-</td>
-
-<td style="text-align:right;">
-
-965
-
-</td>
-
-<td style="text-align:right;">
-
-1.62
-
-</td>
-
-</tr>
 
 <tr>
 
@@ -2415,6 +2217,206 @@ New York
 <td style="text-align:right;">
 
 2.85
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-04
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+114996
+
+</td>
+
+<td style="text-align:right;">
+
+3568
+
+</td>
+
+<td style="text-align:right;">
+
+3.10
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-05
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+122911
+
+</td>
+
+<td style="text-align:right;">
+
+4161
+
+</td>
+
+<td style="text-align:right;">
+
+3.39
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-06
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+130703
+
+</td>
+
+<td style="text-align:right;">
+
+4758
+
+</td>
+
+<td style="text-align:right;">
+
+3.64
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-07
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+140081
+
+</td>
+
+<td style="text-align:right;">
+
+5563
+
+</td>
+
+<td style="text-align:right;">
+
+3.97
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-08
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36
+
+</td>
+
+<td style="text-align:right;">
+
+149401
+
+</td>
+
+<td style="text-align:right;">
+
+6268
+
+</td>
+
+<td style="text-align:right;">
+
+4.20
 
 </td>
 
