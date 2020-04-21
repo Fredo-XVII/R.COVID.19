@@ -5,13 +5,13 @@ cache: packages
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get -y install libudunits2-dev
+  - sudo apt-get -y install libudunits2-dev #package units dependency
 
 r_packages:
   - covr
 
-#after_success:
- # - Rscript -e 'library(covr); codecov()'
+after_success:
+  - Rscript -e 'library(covr); codecov()'
 
 notifications:
   email:
