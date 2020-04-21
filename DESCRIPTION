@@ -15,7 +15,8 @@ Description: A light weight package that collects COVID-19 data from John Hopkin
     University (JHU) and The New York Times (NYT) GitHub repositories.  The JHU 
     provides global daily totals, and separate data for the US.  The NYT provides
     daily data at the state and county levels for the US only.  Public health status
-    by county is provided by ESRI open data.  All the data is in a tidy format.
+    by county is provided by ESRI open data.  Other sources also included not listed 
+    here.  All the data is in a tidy format.
 License: CC0 
 Encoding: UTF-8
 LazyData: true
@@ -27,7 +28,12 @@ Imports:
     dplyr,
     rlang,
     tidyr,
-    sf
+    sf,
+    purrr,
+    rvest,
+    tibble,
+    xml2,
+    stringr
 Suggests: 
     roxygen2,
     kableExtra,

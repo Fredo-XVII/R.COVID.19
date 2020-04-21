@@ -16,8 +16,10 @@
 #' @importFrom  magrittr %>%
 #' @importFrom  purrr map_df
 #' @importFrom  dplyr last mutate
-#' @importFrom  rvest read_html html_table html_nodes
+#' @importFrom  rvest html_table html_nodes
+#' @importFrom  xml2 read_html
 #' @importFrom  tibble as_tibble
+#' @importFrom  stringr str_match str_replace
 #'
 #' @export
 
@@ -27,7 +29,7 @@ finra_shelter_in_place <- function() {
   url_dates <- url("https://www.finra.org/rules-guidance/key-topics/covid-19/shelter-in-place")
   webpage <- read_html(url_dates)
   tbls <- rvest::html_nodes(webpage, "table")
-  df <- rvest::html_table(tbls[1]) %>% purrr::map_df(.f = as.data.frame)
+  df <- rvest::html_table(tbls[1]) %>% map_df(.f = as.data.frame)
 
   # Clean Data
   names(df) <- c("state", "order", "order_beg_d", "order_end_org")
