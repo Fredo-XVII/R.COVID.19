@@ -17,3 +17,6 @@ notifications:
   email:
     on_success: change
     on_failure: change
+
+# Current Issue
+# checking for gdal-config... no
