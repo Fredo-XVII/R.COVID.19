@@ -1,3 +1,8 @@
+# R.COVID.19 0.1.2
+* Added a function for shelter in place orders on FINRA website: finra_shelter_in_place()
+* Fixed minor comment edits and added @details to function documentation
+* Added pkgdown site
+
 # R.COVID.19 0.1.1
 * Added a function for public health status by county for the US
 * Added a function for public health status by county with shapefile for the US

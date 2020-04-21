@@ -14,9 +14,12 @@ This functions pulls dates for shelter in place order by states with notes
   and start date and end dates, as well as, extention dates from the FINRA
   COVID-19 website. No Parameters
 }
-\examples{
-\dontrun{
-stay_orders <- R.COVID.19::finra_shelter_in_place()
+\details{
+Website: https://www.finra.org/rules-guidance/key-topics/covid-19/shelter-in-place
 }
+\examples{
+stay_orders <- R.COVID.19::finra_shelter_in_place()
+head(stay_orders)
+
 
 }

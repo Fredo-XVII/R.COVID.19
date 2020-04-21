@@ -6,12 +6,15 @@
 #'   and start date and end dates, as well as, extention dates from the FINRA
 #'   COVID-19 website. No Parameters
 #'
+#' @details
+#'   Website: https://www.finra.org/rules-guidance/key-topics/covid-19/shelter-in-place
+#'
 #' @return A dataframe/tibble
 #'
 #' @examples
-#' \dontrun{
 #' stay_orders <- R.COVID.19::finra_shelter_in_place()
-#' }
+#' head(stay_orders)
+#'
 #'
 #' @importFrom  magrittr %>%
 #' @importFrom  purrr map_df
