@@ -79,7 +79,9 @@ usethis::use_r("pub_hlth_status_by_cnty") # ESRI Open Data
 
 usethis::use_r("pub_hlth_status_by_cnty_shp") # ESRI Open Data
 
-usethis::use_data_raw()
+usethis::use_r("finra_shelter_in_place") # ESRI Open Data
+
+#usethis::use_data_raw()
 
 # After adding roxygen2 params to function in R folder
 
