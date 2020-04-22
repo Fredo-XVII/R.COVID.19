@@ -8,9 +8,11 @@
 #'   over time as long as the links do not change.
 #'
 #' @details
-#'   Website: https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv
+#'   Website:
+#'    - https://github.com/CSSEGISandData/COVID-19
+#'    - https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv
 #'
-#' @return A datarame/tibble
+#' @return A dataframe/tibble
 #'
 #' @examples
 #' recovered <- R.COVID.19::global_recovered_daily()

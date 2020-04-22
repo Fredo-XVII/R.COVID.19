@@ -7,7 +7,9 @@
 #'   update over time as long as the links do not change.
 #'
 #' @details
-#'   Website: https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv
+#'   Website:
+#'     - https://github.com/nytimes/covid-19-data
+#'     - https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv
 #'
 #' @return A dataframe/tibble
 #'
