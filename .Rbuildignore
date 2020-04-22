@@ -10,3 +10,4 @@
 ^cran-comments\.md$
 ^\.Rhistory$
 ^CRAN-RELEASE$
+^docs$
