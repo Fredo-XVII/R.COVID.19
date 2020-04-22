@@ -27,12 +27,13 @@ sources for the data is listed below.
 
 Finally, the John Hopkins data was transposed to be tidy, instead of
 having dates as columns in a wide dataset. The New York Times data was
-already in a tidy format.
+already in a tidy format. See package site for information of other
+functions and sources of data.
 
 ## Installation
 
 You can install the released version of R.COVID.19 from
-[CRAN](https://CRAN.R-project.org) with: (NOT YET ON CRAN)
+[CRAN](https://CRAN.R-project.org) with: (NOT ON CRAN)
 
 ``` r
 install.packages("R.COVID.19")
@@ -202,31 +203,31 @@ US
 
 <td style="text-align:left;">
 
-3/31/20
+4/12/20
 
 </td>
 
 <td style="text-align:right;">
 
-188172
+555313
 
 </td>
 
 <td style="text-align:right;">
 
-3873
+22019
 
 </td>
 
 <td style="text-align:right;">
 
-7024
+32988
 
 </td>
 
 <td style="text-align:right;">
 
-2.06
+3.97
 
 </td>
 
@@ -260,31 +261,31 @@ US
 
 <td style="text-align:left;">
 
-4/1/20
+4/13/20
 
 </td>
 
 <td style="text-align:right;">
 
-213372
+580619
 
 </td>
 
 <td style="text-align:right;">
 
-4757
+23528
 
 </td>
 
 <td style="text-align:right;">
 
-8474
+43482
 
 </td>
 
 <td style="text-align:right;">
 
-2.23
+4.05
 
 </td>
 
@@ -318,31 +319,31 @@ US
 
 <td style="text-align:left;">
 
-4/2/20
+4/14/20
 
 </td>
 
 <td style="text-align:right;">
 
-243762
+607670
 
 </td>
 
 <td style="text-align:right;">
 
-5926
+25831
 
 </td>
 
 <td style="text-align:right;">
 
-9001
+47763
 
 </td>
 
 <td style="text-align:right;">
 
-2.43
+4.25
 
 </td>
 
@@ -376,31 +377,31 @@ US
 
 <td style="text-align:left;">
 
-4/3/20
+4/15/20
 
 </td>
 
 <td style="text-align:right;">
 
-275586
+636350
 
 </td>
 
 <td style="text-align:right;">
 
-7087
+28325
 
 </td>
 
 <td style="text-align:right;">
 
-9707
+52096
 
 </td>
 
 <td style="text-align:right;">
 
-2.57
+4.45
 
 </td>
 
@@ -434,31 +435,31 @@ US
 
 <td style="text-align:left;">
 
-4/4/20
+4/16/20
 
 </td>
 
 <td style="text-align:right;">
 
-308853
+667592
 
 </td>
 
 <td style="text-align:right;">
 
-8407
+32916
 
 </td>
 
 <td style="text-align:right;">
 
-14652
+54703
 
 </td>
 
 <td style="text-align:right;">
 
-2.72
+4.93
 
 </td>
 
@@ -492,31 +493,31 @@ US
 
 <td style="text-align:left;">
 
-4/5/20
+4/17/20
 
 </td>
 
 <td style="text-align:right;">
 
-337072
+699706
 
 </td>
 
 <td style="text-align:right;">
 
-9619
+36773
 
 </td>
 
 <td style="text-align:right;">
 
-17448
+58545
 
 </td>
 
 <td style="text-align:right;">
 
-2.85
+5.26
 
 </td>
 
@@ -550,31 +551,31 @@ US
 
 <td style="text-align:left;">
 
-4/6/20
+4/18/20
 
 </td>
 
 <td style="text-align:right;">
 
-366667
+732197
 
 </td>
 
 <td style="text-align:right;">
 
-10783
+38664
 
 </td>
 
 <td style="text-align:right;">
 
-19581
+64840
 
 </td>
 
 <td style="text-align:right;">
 
-2.94
+5.28
 
 </td>
 
@@ -608,31 +609,31 @@ US
 
 <td style="text-align:left;">
 
-4/7/20
+4/19/20
 
 </td>
 
 <td style="text-align:right;">
 
-396223
+759086
 
 </td>
 
 <td style="text-align:right;">
 
-12722
+40661
 
 </td>
 
 <td style="text-align:right;">
 
-21763
+70337
 
 </td>
 
 <td style="text-align:right;">
 
-3.21
+5.36
 
 </td>
 
@@ -666,31 +667,31 @@ US
 
 <td style="text-align:left;">
 
-4/8/20
+4/20/20
 
 </td>
 
 <td style="text-align:right;">
 
-429052
+784326
 
 </td>
 
 <td style="text-align:right;">
 
-14695
+42094
 
 </td>
 
 <td style="text-align:right;">
 
-23559
+72329
 
 </td>
 
 <td style="text-align:right;">
 
-3.42
+5.37
 
 </td>
 
@@ -724,31 +725,31 @@ US
 
 <td style="text-align:left;">
 
-4/9/20
+4/21/20
 
 </td>
 
 <td style="text-align:right;">
 
-461437
+823786
 
 </td>
 
 <td style="text-align:right;">
 
-16478
+44845
 
 </td>
 
 <td style="text-align:right;">
 
-25410
+75204
 
 </td>
 
 <td style="text-align:right;">
 
-3.57
+5.44
 
 </td>
 
@@ -977,31 +978,31 @@ New York City, New York, US
 
 <td style="text-align:left;">
 
-4/5/20
+4/17/20
 
 </td>
 
 <td style="text-align:right;">
 
-67551
+127352
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+5803210
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+13202
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+10.37
 
 </td>
 
@@ -1077,31 +1078,31 @@ New York City, New York, US
 
 <td style="text-align:left;">
 
-4/6/20
+4/18/20
 
 </td>
 
 <td style="text-align:right;">
 
-72181
+135572
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+5803210
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+13202
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+9.74
 
 </td>
 
@@ -1177,31 +1178,31 @@ New York City, New York, US
 
 <td style="text-align:left;">
 
-4/7/20
+4/19/20
 
 </td>
 
 <td style="text-align:right;">
 
-76876
+138700
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+5803210
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+14451
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+10.42
 
 </td>
 
@@ -1277,31 +1278,31 @@ New York City, New York, US
 
 <td style="text-align:left;">
 
-4/8/20
+4/20/20
 
 </td>
 
 <td style="text-align:right;">
 
-81803
+141235
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+5803210
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+14604
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+10.34
 
 </td>
 
@@ -1377,31 +1378,31 @@ New York City, New York, US
 
 <td style="text-align:left;">
 
-4/9/20
+4/21/20
 
 </td>
 
 <td style="text-align:right;">
 
-87028
+144190
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+5803210
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+14887
 
 </td>
 
 <td style="text-align:right;">
 
-NA
+10.32
 
 </td>
 
@@ -1495,145 +1496,7 @@ mortality\_rate
 
 <td style="text-align:left;">
 
-2020-04-06
-
-</td>
-
-<td style="text-align:left;">
-
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36121
-
-</td>
-
-<td style="text-align:right;">
-
-23
-
-</td>
-
-<td style="text-align:right;">
-
-1
-
-</td>
-
-<td style="text-align:right;">
-
-4.35
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-04-07
-
-</td>
-
-<td style="text-align:left;">
-
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36121
-
-</td>
-
-<td style="text-align:right;">
-
-23
-
-</td>
-
-<td style="text-align:right;">
-
-1
-
-</td>
-
-<td style="text-align:right;">
-
-4.35
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-04-08
-
-</td>
-
-<td style="text-align:left;">
-
-Wyoming
-
-</td>
-
-<td style="text-align:left;">
-
-New York
-
-</td>
-
-<td style="text-align:left;">
-
-36121
-
-</td>
-
-<td style="text-align:right;">
-
-27
-
-</td>
-
-<td style="text-align:right;">
-
-0
-
-</td>
-
-<td style="text-align:right;">
-
-0.00
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-2020-04-02
+2020-04-11
 
 </td>
 
@@ -1669,7 +1532,7 @@ New York
 
 <td style="text-align:right;">
 
-0.00
+0
 
 </td>
 
@@ -1679,7 +1542,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-03
+2020-04-12
 
 </td>
 
@@ -1703,7 +1566,7 @@ New York
 
 <td style="text-align:right;">
 
-2
+3
 
 </td>
 
@@ -1715,7 +1578,7 @@ New York
 
 <td style="text-align:right;">
 
-0.00
+0
 
 </td>
 
@@ -1725,7 +1588,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-04
+2020-04-13
 
 </td>
 
@@ -1749,7 +1612,7 @@ New York
 
 <td style="text-align:right;">
 
-2
+4
 
 </td>
 
@@ -1761,7 +1624,7 @@ New York
 
 <td style="text-align:right;">
 
-0.00
+0
 
 </td>
 
@@ -1771,7 +1634,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-05
+2020-04-14
 
 </td>
 
@@ -1795,7 +1658,7 @@ New York
 
 <td style="text-align:right;">
 
-2
+6
 
 </td>
 
@@ -1807,7 +1670,7 @@ New York
 
 <td style="text-align:right;">
 
-0.00
+0
 
 </td>
 
@@ -1817,7 +1680,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-06
+2020-04-15
 
 </td>
 
@@ -1841,7 +1704,7 @@ New York
 
 <td style="text-align:right;">
 
-2
+6
 
 </td>
 
@@ -1853,7 +1716,7 @@ New York
 
 <td style="text-align:right;">
 
-0.00
+0
 
 </td>
 
@@ -1863,7 +1726,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-07
+2020-04-16
 
 </td>
 
@@ -1887,7 +1750,7 @@ New York
 
 <td style="text-align:right;">
 
-2
+7
 
 </td>
 
@@ -1899,7 +1762,7 @@ New York
 
 <td style="text-align:right;">
 
-0.00
+0
 
 </td>
 
@@ -1909,7 +1772,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-08
+2020-04-17
 
 </td>
 
@@ -1933,7 +1796,7 @@ New York
 
 <td style="text-align:right;">
 
-2
+8
 
 </td>
 
@@ -1945,7 +1808,145 @@ New York
 
 <td style="text-align:right;">
 
-0.00
+0
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-18
+
+</td>
+
+<td style="text-align:left;">
+
+Yates
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36123
+
+</td>
+
+<td style="text-align:right;">
+
+9
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-19
+
+</td>
+
+<td style="text-align:left;">
+
+Yates
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36123
+
+</td>
+
+<td style="text-align:right;">
+
+9
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+2020-04-20
+
+</td>
+
+<td style="text-align:left;">
+
+Yates
+
+</td>
+
+<td style="text-align:left;">
+
+New York
+
+</td>
+
+<td style="text-align:left;">
+
+36123
+
+</td>
+
+<td style="text-align:right;">
+
+10
+
+</td>
+
+<td style="text-align:right;">
+
+0
+
+</td>
+
+<td style="text-align:right;">
+
+0
 
 </td>
 
@@ -2026,7 +2027,7 @@ mortality\_rate
 
 <td style="text-align:left;">
 
-2020-03-30
+2020-04-11
 
 </td>
 
@@ -2044,19 +2045,19 @@ New York
 
 <td style="text-align:right;">
 
-67174
+180458
 
 </td>
 
 <td style="text-align:right;">
 
-1224
+8627
 
 </td>
 
 <td style="text-align:right;">
 
-1.82
+4.78
 
 </td>
 
@@ -2066,7 +2067,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-03-31
+2020-04-12
 
 </td>
 
@@ -2084,19 +2085,19 @@ New York
 
 <td style="text-align:right;">
 
-75832
+188694
 
 </td>
 
 <td style="text-align:right;">
 
-1550
+9385
 
 </td>
 
 <td style="text-align:right;">
 
-2.04
+4.97
 
 </td>
 
@@ -2106,7 +2107,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-01
+2020-04-13
 
 </td>
 
@@ -2124,19 +2125,19 @@ New York
 
 <td style="text-align:right;">
 
-83889
+195031
 
 </td>
 
 <td style="text-align:right;">
 
-1941
+10056
 
 </td>
 
 <td style="text-align:right;">
 
-2.31
+5.16
 
 </td>
 
@@ -2146,7 +2147,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-02
+2020-04-14
 
 </td>
 
@@ -2164,19 +2165,19 @@ New York
 
 <td style="text-align:right;">
 
-92770
+202208
 
 </td>
 
 <td style="text-align:right;">
 
-2653
+10834
 
 </td>
 
 <td style="text-align:right;">
 
-2.86
+5.36
 
 </td>
 
@@ -2186,7 +2187,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-03
+2020-04-15
 
 </td>
 
@@ -2204,19 +2205,19 @@ New York
 
 <td style="text-align:right;">
 
-102870
+213779
 
 </td>
 
 <td style="text-align:right;">
 
-2935
+11586
 
 </td>
 
 <td style="text-align:right;">
 
-2.85
+5.42
 
 </td>
 
@@ -2226,7 +2227,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-04
+2020-04-16
 
 </td>
 
@@ -2244,19 +2245,19 @@ New York
 
 <td style="text-align:right;">
 
-114996
+222284
 
 </td>
 
 <td style="text-align:right;">
 
-3568
+12192
 
 </td>
 
 <td style="text-align:right;">
 
-3.10
+5.48
 
 </td>
 
@@ -2266,7 +2267,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-05
+2020-04-17
 
 </td>
 
@@ -2284,19 +2285,19 @@ New York
 
 <td style="text-align:right;">
 
-122911
+229642
 
 </td>
 
 <td style="text-align:right;">
 
-4161
+12822
 
 </td>
 
 <td style="text-align:right;">
 
-3.39
+5.58
 
 </td>
 
@@ -2306,7 +2307,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-06
+2020-04-18
 
 </td>
 
@@ -2324,19 +2325,19 @@ New York
 
 <td style="text-align:right;">
 
-130703
+236763
 
 </td>
 
 <td style="text-align:right;">
 
-4758
+13362
 
 </td>
 
 <td style="text-align:right;">
 
-3.64
+5.64
 
 </td>
 
@@ -2346,7 +2347,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-07
+2020-04-19
 
 </td>
 
@@ -2364,19 +2365,19 @@ New York
 
 <td style="text-align:right;">
 
-140081
+242817
 
 </td>
 
 <td style="text-align:right;">
 
-5563
+13869
 
 </td>
 
 <td style="text-align:right;">
 
-3.97
+5.71
 
 </td>
 
@@ -2386,7 +2387,7 @@ New York
 
 <td style="text-align:left;">
 
-2020-04-08
+2020-04-20
 
 </td>
 
@@ -2404,19 +2405,19 @@ New York
 
 <td style="text-align:right;">
 
-149401
+247543
 
 </td>
 
 <td style="text-align:right;">
 
-6268
+14347
 
 </td>
 
 <td style="text-align:right;">
 
-4.20
+5.80
 
 </td>
 
