@@ -6,12 +6,14 @@
 #'   No data is stored within the package, so the data should continuously
 #'   update over time as long as the links do not change.
 #'
-#' @return A datarame/tibble
+#' @details
+#'   Website: https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv
+#'
+#' @return A dataframe/tibble
 #'
 #' @examples
-#' \dontrun{
-#' confirmed <- R.COVID.19::us_counties_daily()
-#' }
+#' confirmed_daily <- R.COVID.19::us_counties_daily()
+#' head(confirmed_daily)
 #'
 #' @importFrom readr read_csv
 #' @importFrom dplyr arrange
@@ -22,8 +24,8 @@
 
 us_counties_daily <- function() {
   # Get confirmed cases
-  url_counties <- "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
-  covid_df <- readr::read_csv(url(url_counties)) %>%
+  url_counties <- url("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv")
+  covid_df <- readr::read_csv(url_counties) %>%
     dplyr::arrange(.data$state,.data$county,.data$date)
 
   return(invisible(covid_df))
