@@ -7,17 +7,18 @@
 pub_hlth_status_by_cnty()
 }
 \value{
-A datarame/tibble
+A dataframe/tibble
 }
 \description{
 This functions pulls the public health status by county in the US as of the
   current date.  The data comes from ESRI open data website.  The data is 1 row per
   county.
-  source: https://coronavirus-disasterresponse.hub.arcgis.com/datasets/97792521be744711a291d10ecef33a61/data?geometry=76.921%2C-16.701%2C-109.056%2C72.161
+}
+\details{
+Website: https://coronavirus-disasterresponse.hub.arcgis.com/datasets/97792521be744711a291d10ecef33a61/data?geometry=76.921%2C-16.701%2C-109.056%2C72.161
 }
 \examples{
-\dontrun{
 pub_status_cnty <- R.COVID.19::pub_hlth_status_by_cnty()
-}
+head(pub_status_cnty)
 
 }

@@ -37,9 +37,9 @@
 
 <meta property="og:title" content="COVID-19 Public Health Status by County shapefiles from ESRI — pub_hlth_status_by_cnty_shp" />
 <meta property="og:description" content="This functions pulls the public health status by county in the US as of the
-  current date with the shapefiles.  The data comes from ESRI open data website.
-  The data is 1 row per county.
-  source: https://coronavirus-disasterresponse.hub.arcgis.com/datasets/97792521be744711a291d10ecef33a61/data?geometry=76.921" />
+  current date with the shapefiles, which are saved to the current working
+  directory.  The data comes from ESRI open data website.  The data is 1 row
+  per county." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -118,9 +118,9 @@
 
     <div class="ref-description">
     <p>This functions pulls the public health status by county in the US as of the
-  current date with the shapefiles.  The data comes from ESRI open data website.
-  The data is 1 row per county.
-  source: https://coronavirus-disasterresponse.hub.arcgis.com/datasets/97792521be744711a291d10ecef33a61/data?geometry=76.921<!-- %2C-16.701%2C-109.056%2C72.161 --></p>
+  current date with the shapefiles, which are saved to the current working
+  directory.  The data comes from ESRI open data website.  The data is 1 row
+  per county.</p>
     </div>
 
     <pre class="usage"><span class='fu'>pub_hlth_status_by_cnty_shp</span>()</pre>
@@ -128,17 +128,86 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A datarame/tibble</p>
+    <p>A dataframe/tibble.  This functions has side effects in that it downloads
+shapefiles corresponding to the counties to the current working directory.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>Website: https://coronavirus-disasterresponse.hub.arcgis.com/datasets/97792521be744711a291d10ecef33a61/data?geometry=76.921<!-- %2C-16.701%2C-109.056%2C72.161 --></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='no'>pub_status_cnty_shp</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>R.COVID.19</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/R.COVID.19/man/pub_hlth_status_by_cnty_shp.html'>pub_hlth_status_by_cnty_shp</a></span>()
-}</div></pre>
+    <pre class="examples"><div class='input'><span class='no'>pub_status_cnty_shp</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>R.COVID.19</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/R.COVID.19/man/pub_hlth_status_by_cnty_shp.html'>pub_hlth_status_by_cnty_shp</a></span>()</div><div class='output co'>#&gt; Reading layer `COVID19_Public_Health_Emergency_Status_by_County' from data source `C:\Users\marqu\OneDrive\Documents\GitHub\R.COVID.19\docs\reference\COVID19_Public_Health_Emergency_Status_by_County.shp' using driver `ESRI Shapefile'
+#&gt; Simple feature collection with 3152 features and 28 fields
+#&gt; geometry type:  MULTIPOLYGON
+#&gt; dimension:      XY
+#&gt; bbox:           xmin: -178.2176 ymin: -14.37427 xmax: 146.0827 ymax: 71.40624
+#&gt; CRS:            4326</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>pub_status_cnty_shp</span>)</div><div class='output co'>#&gt; Simple feature collection with 6 features and 28 fields
+#&gt; geometry type:  MULTIPOLYGON
+#&gt; dimension:      XY
+#&gt; bbox:           xmin: -80.83996 ymin: 34.55392 xmax: -76.02569 ymax: 36.55118
+#&gt; CRS:            4326
+#&gt;   objectid_1 objectid     name     state_name  fips   sqmi cnty_name county_st
+#&gt; 1       3001     2659  Sampson North Carolina 37163 947.21   Sampson        NC
+#&gt; 2       3002     2660 Scotland North Carolina 37165 320.25  Scotland        NC
+#&gt; 3       3003     2661   Stanly North Carolina 37167 404.28    Stanly        NC
+#&gt; 4       3004     2662   Stokes North Carolina 37169 455.72    Stokes        NC
+#&gt; 5       3005     2663  Tyrrell North Carolina 37177 390.17   Tyrrell        NC
+#&gt; 6       3006     2664    Union North Carolina 37179 639.47     Union        NC
+#&gt;       county_st_ ecode                                                 chapter
+#&gt; 1 North Carolina 33132              The ARC of the Sandhills of North Carolina
+#&gt; 2 North Carolina 33132              The ARC of the Sandhills of North Carolina
+#&gt; 3 North Carolina 33068 The ARC serving the Southern Piedmont of North Carolina
+#&gt; 4 North Carolina 33188    The ARC serving the Piedmont Triad of North Carolina
+#&gt; 5 North Carolina 33380                  The ARC of Northeastern North Carolina
+#&gt; 6 North Carolina 33068 The ARC serving the Southern Piedmont of North Carolina
+#&gt;   rcode                        region dcode              division time_zone
+#&gt; 1 33R16 Eastern North Carolina Region   D26 Mid-Atlantic Division   Eastern
+#&gt; 2 33R16 Eastern North Carolina Region   D26 Mid-Atlantic Division   Eastern
+#&gt; 3 33R08      Greater Carolinas Region   D26 Mid-Atlantic Division   Eastern
+#&gt; 4 33R08      Greater Carolinas Region   D26 Mid-Atlantic Division   Eastern
+#&gt; 5 33R16 Eastern North Carolina Region   D26 Mid-Atlantic Division   Eastern
+#&gt; 6 33R08      Greater Carolinas Region   D26 Mid-Atlantic Division   Eastern
+#&gt;   fema_regio                                             notes
+#&gt; 1         IV Governor issued statewide shelter in place orders
+#&gt; 2         IV Governor issued statewide shelter in place orders
+#&gt; 3         IV Governor issued statewide shelter in place orders
+#&gt; 4         IV Governor issued statewide shelter in place orders
+#&gt; 5         IV Governor issued statewide shelter in place orders
+#&gt; 6         IV Governor issued statewide shelter in place orders
+#&gt;                 last_updat                        local_heal  dro
+#&gt; 1 2020-03-28T00:57:05.000Z Govt Ordered Community Quarantine &lt;NA&gt;
+#&gt; 2 2020-03-28T00:57:05.000Z Govt Ordered Community Quarantine &lt;NA&gt;
+#&gt; 3 2020-03-28T00:57:05.000Z Govt Ordered Community Quarantine &lt;NA&gt;
+#&gt; 4 2020-03-28T00:57:05.000Z Govt Ordered Community Quarantine &lt;NA&gt;
+#&gt; 5 2020-03-28T00:57:05.000Z Govt Ordered Community Quarantine &lt;NA&gt;
+#&gt; 6 2020-03-28T00:57:05.000Z Govt Ordered Community Quarantine &lt;NA&gt;
+#&gt;                 created_da    created_us               last_edite    last_edi_1
+#&gt; 1 2020-04-02T16:09:30.670Z alow_rconline 2020-04-02T16:09:30.670Z alow_rconline
+#&gt; 2 2020-04-02T16:09:30.670Z alow_rconline 2020-04-02T16:09:30.670Z alow_rconline
+#&gt; 3 2020-04-02T16:09:30.670Z alow_rconline 2020-04-02T16:09:30.670Z alow_rconline
+#&gt; 4 2020-04-02T16:09:30.670Z alow_rconline 2020-04-02T16:09:30.670Z alow_rconline
+#&gt; 5 2020-04-02T16:09:30.670Z alow_rconline 2020-04-02T16:09:30.670Z alow_rconline
+#&gt; 6 2020-04-02T16:09:30.670Z alow_rconline 2020-04-02T16:09:30.670Z alow_rconline
+#&gt;                               globalid Shape__Are Shape__Len
+#&gt; 1 3dcfbfc7-0e3d-401b-88f7-5f7249ea89de 3640693856   279006.3
+#&gt; 2 a5b6e8f9-5901-4ea6-a409-bfac98b25c38 1203439364   147599.9
+#&gt; 3 f1893887-95e9-4bbc-a28d-d82826094823 1570936706   181414.4
+#&gt; 4 957a2f73-df85-4bb6-82b2-14182e4cd878 1906940465   174859.0
+#&gt; 5 d7ff6071-5990-4f92-8840-e79fc7eefd8b 1506027818   173913.2
+#&gt; 6 a3a88ae3-fb02-4f1f-b708-b6e5bba3a52f 2461669771   208739.1
+#&gt;                         geometry
+#&gt; 1 MULTIPOLYGON (((-78.11348 3...
+#&gt; 2 MULTIPOLYGON (((-79.45574 3...
+#&gt; 3 MULTIPOLYGON (((-80.07119 3...
+#&gt; 4 MULTIPOLYGON (((-80.02544 3...
+#&gt; 5 MULTIPOLYGON (((-76.16695 3...
+#&gt; 6 MULTIPOLYGON (((-80.83996 3...</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#value">Value</a></li>
+      <li><a href="#details">Details</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 

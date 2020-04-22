@@ -7,7 +7,7 @@
 us_states_daily()
 }
 \value{
-A datarame/tibble
+A dataframe/tibble
 }
 \description{
 This functions pulls death COVID-19 confirmed and death data
@@ -15,9 +15,15 @@ This functions pulls death COVID-19 confirmed and death data
   No data is stored within the package, so the data should continuously
   update over time as long as the links do not change.
 }
-\examples{
-\dontrun{
-confirmed <- R.COVID.19::us_states_daily()
+\details{
+Website:
+
+    - https://github.com/nytimes/covid-19-data
+
+    - https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv
 }
+\examples{
+confirmed_st_daily <- R.COVID.19::us_states_daily()
+head(confirmed_st_daily)
 
 }

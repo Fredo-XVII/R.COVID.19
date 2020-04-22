@@ -7,7 +7,7 @@
 global_recovered_daily()
 }
 \value{
-A datarame/tibble
+A dataframe/tibble
 }
 \description{
 This functions pulls global recovered COVID-19 data from John Hopkins
@@ -15,9 +15,15 @@ This functions pulls global recovered COVID-19 data from John Hopkins
   data is stored within the package, so the data should continuously update
   over time as long as the links do not change.
 }
-\examples{
-\dontrun{
-confirmed <- R.COVID.19::global_recovered_daily()
+\details{
+Website:
+
+   - https://github.com/CSSEGISandData/COVID-19
+
+   - https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv
 }
+\examples{
+recovered <- R.COVID.19::global_recovered_daily()
+head(recovered)
 
 }
