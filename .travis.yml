@@ -3,9 +3,11 @@
 language: R
 cache: packages
 
+# dependency for rgdal
 before_install:
+  - sudo apt update
   - sudo apt-get update
-  - sudo apt-get -y install libudunits2-dev #package units dependency
+  - sudo apt-get -y install libudunits2-dev libgdal-dev libgeos-dev libproj-dev libfontconfig1-dev #package units dependency
 
 r_packages:
   - covr
