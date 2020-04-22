@@ -7,12 +7,14 @@
 #'   data is stored within the package, so the data should continuously update
 #'   over time as long as the links do not change.
 #'
-#' @return A datarame/tibble
+#' @details
+#'   Website: https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv
+#'
+#' @return A dataframe/tibble
 #'
 #' @examples
-#' \dontrun{
-#' confirmed <- R.COVID.19::us_geo_confirmed_daily()
-#' }
+#' confirmed_daily <- R.COVID.19::us_geo_confirmed_daily()
+#' head(confirmed_daily)
 #'
 #' @importFrom  magrittr %>%
 #' @importFrom  tidyr pivot_longer
@@ -25,8 +27,8 @@
 
 us_geo_confirmed_daily <- function() {
   # Get confirmed cases
-  url_confirmed <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv"
-  covid19_confirm_wide <- readr::read_csv(url(url_confirmed))
+  url_confirmed <- url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv")
+  covid19_confirm_wide <- readr::read_csv(url_confirmed)
 
   # From wide to long
   covid19_df <- covid19_confirm_wide %>%
