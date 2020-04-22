@@ -9,7 +9,9 @@
 #'
 #' @details
 #'   Website:
+#'
 #'    - https://github.com/CSSEGISandData/COVID-19
+#'
 #'    - https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv
 #'
 #' @return A dataframe/tibble
