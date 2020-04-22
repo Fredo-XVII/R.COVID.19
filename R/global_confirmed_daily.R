@@ -8,7 +8,7 @@
 #'   over time as long as the links do not change.
 #'
 #' @details
-#'   Website: "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
+#'   Website: https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv
 #'
 #' @return A dataframe/tibble
 #'
