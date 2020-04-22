@@ -9,14 +9,15 @@ Authors@R:
            email = "alfredo.g.marquez@gmail.com",
            comment = c(ORCID = "0000-0001-7044-8167"))
 Date: 2020-04-01           
-URL: https://github.com/Fredo-XVII/R.COVID.19
+URL: [GitHub](https://github.com/Fredo-XVII/R.COVID.19), [GitPage](https://fredo-xvii.github.io/R.COVID.19/)
 BugReports: https://github.com/Fredo-XVII/R.COVID.19/issues
-Description: A light weight package that collects COVID-19 data from John Hopkins
-    University (JHU) and The New York Times (NYT) GitHub repositories.  The JHU 
-    provides global daily totals, and separate data for the US.  The NYT provides
-    daily data at the state and county levels for the US only.  Public health status
-    by county is provided by ESRI open data.  Other sources also included not listed 
-    here.  All the data is in a tidy format.
+Description: A light weight package that collects COVID-19 data from a variety 
+    of sources including John Hopkins University (JHU) and The New York Times 
+    (NYT) GitHub repositories.  The JHU provides global daily totals, and 
+    separate data for the US.  The NYT provides daily data at the state and 
+    county levels for the US only.  Public health status by county is provided 
+    by ESRI open data.  Other sources also included not listed 
+    here; please reference the package down site.  All the data is in a tidy format.
 License: CC0 
 Encoding: UTF-8
 LazyData: true

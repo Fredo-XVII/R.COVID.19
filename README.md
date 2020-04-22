@@ -30,6 +30,8 @@ having dates as columns in a wide dataset. The New York Times data was
 already in a tidy format. See package site for information of other
 functions and sources of data.
 
+**Package Site:** <https://fredo-xvii.github.io/R.COVID.19/>
+
 ## Installation
 
 You can install the released version of R.COVID.19 from
