@@ -23,3 +23,40 @@
 #' @importFrom  rlang .data
 #'
 #' @export
+
+library(readr)
+
+test_url <- url("https://covidtracking.com/api/v1/states/daily.csv")
+
+test_df <- readr::read_csv(test_url)
+
+head(test_df) %>% View()
+
+min(test_df$date)
+max(test_df$date)
+unique(test_df$state) %>% length()
+
+# Deprecated fields
+# The following fields are deprecated and are no longer being updated with new data.
+# 
+# /api/v1/states/current.json:
+#   
+#   positiveScore
+# negativeScore
+# negativeRegularScore
+# commercialScore
+# score
+# grade - Use dataQualityGrade instead
+# total
+# /api/v1/us/current.json
+# 
+# posNeg
+# total
+
+deprecated_cols <- c(positiveScore
+                     negativeScore
+                     negativeRegularScore
+                     commercialScore
+                     score
+                     grade - Use dataQualityGrade instead
+                     total)
