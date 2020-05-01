@@ -79,7 +79,11 @@ usethis::use_r("pub_hlth_status_by_cnty") # ESRI Open Data
 
 usethis::use_r("pub_hlth_status_by_cnty_shp") # ESRI Open Data
 
+usethis::use_r("pub_hlth_status_by_cnty_shp") # ESRI Open Data
+
 usethis::use_r("finra_shelter_in_place") # FINRA Shelter in Place Orders
+
+usethis::use_r("covtrck_states_testing") # covidtracking state testing
 
 #usethis::use_data_raw()
 

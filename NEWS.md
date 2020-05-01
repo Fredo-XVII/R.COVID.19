@@ -1,3 +1,6 @@
+# R.COVID.19 0.1.3
+* Added a function for testng by states on the covidtracking website: finra_shelter_in_place()
+
 # R.COVID.19 0.1.2
 * Added a function for shelter in place orders on FINRA website: finra_shelter_in_place()
 * Fixed minor comment edits and added @details to function documentation
