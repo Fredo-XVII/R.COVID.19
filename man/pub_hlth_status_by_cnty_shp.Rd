@@ -22,5 +22,4 @@ Website: https://coronavirus-disasterresponse.hub.arcgis.com/datasets/97792521be
 \examples{
 pub_status_cnty_shp <- R.COVID.19::pub_hlth_status_by_cnty_shp()
 head(pub_status_cnty_shp)
-
 }

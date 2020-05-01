@@ -41,6 +41,8 @@ usethis::use_cran_badge()
 
 # Add Packages
 
+## Imports
+
 usethis::use_package("magrittr", type = "Import")
 
 usethis::use_package( "tidyr", type = "Import")
@@ -49,15 +51,32 @@ usethis::use_package( "readr", type = "Import")
 
 usethis::use_package( "dplyr", type = "Import")
 
-usethis::use_package( "roxygen2", type = "Suggests")
-
 usethis::use_package( "rlang", type = "Import")
 
 usethis::use_package( "sf", type = "Import")
 
+usethis::use_package( "purrr", type = "Import")
+
+usethis::use_package( "rvest", type = "Import")
+
+usethis::use_package( "tibble", type = "Import")
+
+usethis::use_package( "xml2", type = "Import")
+
+usethis::use_package( "stringr", type = "Import")
+
+usethis::use_package( "tsibble", type = "Import")
+
+usethis::use_package( "lubridate", type = "Import")
+
+## Suggests
+
+usethis::use_package( "roxygen2", type = "Suggests")
+
 usethis::use_package( "kableExtra", type = "Suggests")
 
-usethis::use_package( "remotes", type = "Import") #appveyor build
+usethis::use_package( "remotes", type = "Suggests") #appveyor build
+
 
 # Add Functions
 

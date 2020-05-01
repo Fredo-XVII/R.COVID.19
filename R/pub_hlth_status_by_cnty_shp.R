@@ -14,9 +14,10 @@
 #' shapefiles corresponding to the counties to the current working directory.
 #'
 #' @examples
+#>' \dontrun{
 #' pub_status_cnty_shp <- R.COVID.19::pub_hlth_status_by_cnty_shp()
 #' head(pub_status_cnty_shp)
-#'
+#>' }
 #' @importFrom  sf st_read
 #' @importFrom utils download.file unzip
 #'
@@ -24,9 +25,12 @@
 
 #' @export
 pub_hlth_status_by_cnty_shp <- function() {
-  # Get data
+  # .Defunct(new = "None", package="None",
+  #          msg = "This link is no longer working, now is removed")
+  #Get data
   .get_shp()
-  get_shp <- sf::st_read("COVID19_Public_Health_Emergency_Status_by_County.shp")
+  #get_shp <- sf::st_read("COVID19_Public_Health_Emergency_Status_by_County.shp") # old name
+  get_shp <- sf::st_read("8acac48c-57be-4cc9-92a2-b932b279b46c2020329-1-gva0h9.tiu36.shp")
   return(invisible(get_shp))
 }
 

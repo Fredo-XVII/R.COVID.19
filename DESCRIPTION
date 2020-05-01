@@ -34,7 +34,9 @@ Imports:
     rvest,
     tibble,
     xml2,
-    stringr
+    stringr,
+    tsibble,
+    lubridate
 Suggests: 
     roxygen2,
     kableExtra,
