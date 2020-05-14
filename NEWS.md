@@ -1,3 +1,6 @@
+# R.COVID.19 0.1.4
+* Removed new text in date field in finra data: finra_shelter_in_place()
+
 # R.COVID.19 0.1.3
 * Added a function for testng by states on the covidtracking website: covtrck_states_testing()
 * Updated link for function pub_hlth_status_by_cnty_shp() because link is broken

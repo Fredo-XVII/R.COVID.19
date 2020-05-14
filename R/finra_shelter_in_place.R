@@ -30,15 +30,24 @@
 finra_shelter_in_place <- function() {
   # Get html file
   url_dates <- url("https://www.finra.org/rules-guidance/key-topics/covid-19/shelter-in-place")
-  webpage <- read_html(url_dates)
+  webpage <- xml2::read_html(url_dates)
   tbls <- rvest::html_nodes(webpage, "table")
   df <- rvest::html_table(tbls[1]) %>% map_df(.f = as.data.frame)
 
   # Clean Data
   names(df) <- c("state", "order", "order_beg_d", "order_end_org")
-  df$order_beg_d = as.Date(df$order_beg_d, format = '%m/%d/%Y')
+  df$order_beg_d <- as.Date(df$order_beg_d, format = '%m/%d/%Y')
   df$order_end_org <- ifelse(trimws(tolower(df$order_end_org)) == "none", NA, df$order_end_org)
-  df$order_end_org_1 = trimws(gsub("Extended to ", "", df$order_end_org))
+
+  # Remove text from dates
+  df$order_end_org_1 <- trimws(gsub("Extended to", "", df$order_end_org))
+  df$order_end_org_1 <- trimws(gsub('Rescinded April 24', "4/24/2020", df$order_end_org_1 ))
+  df$order_end_org_1 <- trimws(gsub("Order Rescinded", "", df$order_end_org_1 ))
+  df$order_end_org_1 <- trimws(gsub("Repealed", "", df$order_end_org_1 ))
+  df$order_end_org_1 <- trimws(gsub("Rescinded", "", df$order_end_org_1 ))
+  df$order_end_org_1 <- trimws(gsub('\"Stay-At-Home\" Expired', "", df$order_end_org_1 ))
+  df$order_end_org_1 <- trimws(gsub('\"Stay-at-Home\" Expired', "", df$order_end_org_1 ))
+  df$order_end_org_1 <- trimws(gsub('\"Work-or-Home\" Restriction Lifted', "", df$order_end_org_1 ))
 
   df <- df %>%
     dplyr::mutate(
