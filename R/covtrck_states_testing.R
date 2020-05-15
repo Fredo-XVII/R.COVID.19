@@ -60,6 +60,7 @@ covtrck_states_testing <- function() {
 
   # Create new variables and re-align variables
   test_df <- test_df %>%
+    dplyr::group_by(.data$fips) %>%
     replace(is.na(.), 0) %>%
     dplyr::mutate(pendingIncrease = tsibble::difference(.data$pending),
                   recoveredIncrease = tsibble::difference(.data$recovered),
@@ -75,7 +76,8 @@ covtrck_states_testing <- function() {
       # Death & Hospitalized
       .data$recovered, .data$recoveredIncrease, .data$death, .data$deathIncrease, .data$hospitalized, .data$hospitalizedIncrease,
       # everything else
-      dplyr::everything())
+      dplyr::everything()) %>%
+    replace(is.na(.), 0)
 
   return(invisible(test_df))
 

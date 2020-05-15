@@ -53,3 +53,5 @@ pub_status_cnty_shp <- R.COVID.19::pub_hlth_status_by_cnty_shp()
 
 stay_orders <- R.COVID.19::finra_shelter_in_place()
 
+tests <- R.COVID.19::covtrck_states_testing()
+
