@@ -61,6 +61,7 @@ covtrck_states_testing <- function() {
 
   # Create new variables and re-align variables
   test_df <- test_df %>%
+    dplyr::group_by(fips) %>%
     dplyr::mutate_if(is.numeric, tidyr::replace_na, 0) %>%
     dplyr::mutate(pendingIncrease = tsibble::difference(.data$pending),
                   recoveredIncrease = tsibble::difference(.data$recovered),
