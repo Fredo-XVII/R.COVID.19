@@ -1,6 +1,7 @@
 # R.COVID.19 0.1.4
 * Removed new text in date field in finra data: finra_shelter_in_place()
 * Added group_by() to test function: covtrck_states_testing()
+* Bug fix: covtrck_states_testing() - fixed data mis-match when converting NA to Zero.
 
 # R.COVID.19 0.1.3
 * Added a function for testng by states on the covidtracking website: covtrck_states_testing()

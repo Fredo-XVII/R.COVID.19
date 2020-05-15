@@ -39,6 +39,7 @@
 #' @import  dplyr
 #' @importFrom  readr read_csv
 #' @importFrom  rlang .data
+#' @importFrom  tidyr replace_na
 #' @importFrom utils globalVariables
 #'
 #' @export
@@ -56,16 +57,16 @@ covtrck_states_testing <- function() {
   # Convert to tsibble
   test_df <- test_df %>%
     dplyr::mutate(greg_d = lubridate::ymd(.data$date)) %>%
-    tsibble::as_tsibble(key = .data$state, index = .data$greg_d)
+    tsibble::as_tsibble(key = .data$fips, index = .data$greg_d)
 
   # Create new variables and re-align variables
   test_df <- test_df %>%
-    dplyr::group_by(.data$fips) %>%
-    replace(is.na(.), 0) %>%
+    dplyr::mutate_if(is.numeric, tidyr::replace_na, 0) %>%
     dplyr::mutate(pendingIncrease = tsibble::difference(.data$pending),
                   recoveredIncrease = tsibble::difference(.data$recovered),
                   total_tests = .data$positive + .data$negative + .data$pending,
                   total_tests_increase = tsibble::difference(.data$total_tests)) %>%
+    dplyr::mutate_if(is.numeric, tidyr::replace_na, 0) %>%
     dplyr::select(
       # Dates & Demo
       .data$greg_d,.data$date,.data$fips,.data$state,
@@ -76,8 +77,7 @@ covtrck_states_testing <- function() {
       # Death & Hospitalized
       .data$recovered, .data$recoveredIncrease, .data$death, .data$deathIncrease, .data$hospitalized, .data$hospitalizedIncrease,
       # everything else
-      dplyr::everything()) %>%
-    replace(is.na(.), 0)
+      dplyr::everything())
 
   return(invisible(test_df))
 
