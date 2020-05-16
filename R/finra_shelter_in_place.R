@@ -53,18 +53,19 @@ finra_shelter_in_place <- function() {
 
   df <- df %>%
     dplyr::mutate(
-      order_end_d = dplyr::case_when(
+      order_end_org_2 = dplyr::case_when(
         is.na(stringr::str_match(.data$order_end_org_1,"/")) ~
           as.Date(paste0(stringr::str_replace(order_end_org_1," ","/"),"/2020"), format = '%B/%d/%Y'),
         TRUE ~ as.Date(order_end_org_1,format = '%m/%d/%Y')
       )
     ) %>%
     dplyr::mutate(
-      order_end_d = case_when(lubridate::year(.data$order_end_d) != 2020 ~
-                                lubridate::ymd(2020,
-                                               lubridate::month(.data$order_end_d),
-                                               lubridate::day(.data$order_end_d)),
-                              TRUE ~ .data$order_end_d)
+      order_end_d = case_when(lubridate::year(.data$order_end_org_2) != 2020 ~ #TRUE ~ FALSE)
+                                 lubridate::ymd(paste('2020',
+                                                      lubridate::month(.data$order_end_org_2),
+                                                      lubridate::day(.data$order_end_org_2),
+                                                      sep = "-")),
+                               TRUE ~ .data$order_end_org_2)
     )
 
   # Add Variables
@@ -80,6 +81,7 @@ finra_shelter_in_place <- function() {
   # Remove unwanted variables
   df$order_end_org_0 <- NULL
   df$order_end_org_1 <- NULL
+  df$order_end_org_2 <- NULL
 
   return(invisible(tibble::as_tibble(df)))
 }

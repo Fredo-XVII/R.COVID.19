@@ -1,14 +1,15 @@
 # R.COVID.19 0.1.4
-* Removed new text in date field in finra data: finra_shelter_in_place()
-* Added group_by() to test function: covtrck_states_testing()
-* Bug fix: covtrck_states_testing() - fixed data mis-match when converting NA to Zero.
+* Removed new text in date field in finra data: `finra_shelter_in_place()`
+* Added group_by() to test function: `covtrck_states_testing()`
+* Bug fix: `covtrck_states_testing()` - fixed data mis-match when converting NA to Zero.
+* Added new variable `re-opening` to `covtrck_states_testing()`
 
 # R.COVID.19 0.1.3
-* Added a function for testng by states on the covidtracking website: covtrck_states_testing()
-* Updated link for function pub_hlth_status_by_cnty_shp() because link is broken
+* Added a function for testng by states on the covidtracking website: `covtrck_states_testing()`
+* Updated link for function `pub_hlth_status_by_cnty_shp()` because link is broken
 
 # R.COVID.19 0.1.2
-* Added a function for shelter in place orders on FINRA website: finra_shelter_in_place()
+* Added a function for shelter in place orders on FINRA website: `finra_shelter_in_place()`
 * Fixed minor comment edits and added @details to function documentation
 * Added pkgdown site
 

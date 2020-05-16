@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">R.COVID.19</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.4</span>
       </span>
     </div>
 
@@ -151,27 +151,32 @@
 #&gt; <span class='message'>cols(</span>
 #&gt; <span class='message'>  .default = col_double(),</span>
 #&gt; <span class='message'>  state = <span style='color: #BB0000;'>col_character()</span><span>,</span>
+#&gt; <span class='message'>  dataQualityGrade = </span><span style='color: #BB0000;'>col_character()</span><span>,</span>
+#&gt; <span class='message'>  lastUpdateEt = </span><span style='color: #BB0000;'>col_character()</span><span>,</span>
 #&gt; <span class='message'>  hash = </span><span style='color: #BB0000;'>col_character()</span><span>,</span>
 #&gt; <span class='message'>  dateChecked = </span><span style='color: #0000BB;'>col_datetime(format = "")</span><span>,</span>
 #&gt; <span class='message'>  fips = </span><span style='color: #BB0000;'>col_character()</span><span></span>
-#&gt; <span class='message'>)</span></div><div class='output co'>#&gt; <span class='message'>See spec(...) for full column specifications.</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>tests_daily</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tsibble: 6 x 28 [1D]</span><span>
-#&gt; </span><span style='color: #555555;'># Key:       state [1]</span><span>
+#&gt; <span class='message'>)</span></div><div class='output co'>#&gt; <span class='message'>See spec(...) for full column specifications.</span></div><div class='output co'>#&gt; <span class='message'>`mutate_if()` ignored the following grouping variables:</span>
+#&gt; <span class='message'>Column `fips`</span></div><div class='output co'>#&gt; <span class='message'>`mutate_if()` ignored the following grouping variables:</span>
+#&gt; <span class='message'>Column `fips`</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>tests_daily</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 6 x 30</span><span>
+#&gt; </span><span style='color: #555555;'># Groups:   fips [1]</span><span>
 #&gt;   greg_d       date fips  state total_tests positive negative pending
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> 2020-03-06 2.02</span><span style='color: #555555;'>e</span><span>7 02    AK              9        0        8       1
-#&gt; </span><span style='color: #555555;'>2</span><span> 2020-03-07 2.02</span><span style='color: #555555;'>e</span><span>7 02    AK             14        0       12       2
-#&gt; </span><span style='color: #555555;'>3</span><span> 2020-03-08 2.02</span><span style='color: #555555;'>e</span><span>7 02    AK             20        0       14       6
-#&gt; </span><span style='color: #555555;'>4</span><span> 2020-03-09 2.02</span><span style='color: #555555;'>e</span><span>7 02    AK             32        0       23       9
-#&gt; </span><span style='color: #555555;'>5</span><span> 2020-03-10 2.02</span><span style='color: #555555;'>e</span><span>7 02    AK             32        0       23       9
-#&gt; </span><span style='color: #555555;'>6</span><span> 2020-03-11 2.02</span><span style='color: #555555;'>e</span><span>7 02    AK             60        0       46      14
-#&gt; </span><span style='color: #555555;'># ... with 20 more variables: total_tests_increase </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,
+#&gt; </span><span style='color: #555555;'>1</span><span> 2020-03-07 2.02</span><span style='color: #555555;'>e</span><span>7 01    AL              0        0        0       0
+#&gt; </span><span style='color: #555555;'>2</span><span> 2020-03-08 2.02</span><span style='color: #555555;'>e</span><span>7 01    AL              0        0        0       0
+#&gt; </span><span style='color: #555555;'>3</span><span> 2020-03-09 2.02</span><span style='color: #555555;'>e</span><span>7 01    AL              0        0        0       0
+#&gt; </span><span style='color: #555555;'>4</span><span> 2020-03-10 2.02</span><span style='color: #555555;'>e</span><span>7 01    AL              0        0        0       0
+#&gt; </span><span style='color: #555555;'>5</span><span> 2020-03-11 2.02</span><span style='color: #555555;'>e</span><span>7 01    AL             10        0       10       0
+#&gt; </span><span style='color: #555555;'>6</span><span> 2020-03-12 2.02</span><span style='color: #555555;'>e</span><span>7 01    AL             10        0       10       0
+#&gt; </span><span style='color: #555555;'># ... with 22 more variables: total_tests_increase </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,
 #&gt; #   pendingIncrease </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, positiveIncrease </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, negativeIncrease </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,
 #&gt; #   totalTestResults </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, totalTestResultsIncrease </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, recovered </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,
 #&gt; #   recoveredIncrease </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, death </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, deathIncrease </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,
 #&gt; #   hospitalized </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, hospitalizedIncrease </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,
 #&gt; #   hospitalizedCurrently </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, hospitalizedCumulative </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,
 #&gt; #   inIcuCurrently </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, inIcuCumulative </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, onVentilatorCurrently </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,
-#&gt; #   onVentilatorCumulative </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, hash </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, dateChecked </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span></div><div class='input'>
+#&gt; #   onVentilatorCumulative </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, dataQualityGrade </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, lastUpdateEt </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,
+#&gt; #   hash </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, dateChecked </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span></div><div class='input'>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
