@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>COVID-19 Public Health Status by County shapefiles from ESRI — pub_hlth_status_by_cnty_shp • R.COVID.19</title>
+<title>COVID-19 Public Health Status by County shapefiles from ESRI - DEFUNCT — pub_hlth_status_by_cnty_shp • R.COVID.19</title>
 
 
 <!-- jquery -->
@@ -35,7 +35,7 @@
 
 
 
-<meta property="og:title" content="COVID-19 Public Health Status by County shapefiles from ESRI — pub_hlth_status_by_cnty_shp" />
+<meta property="og:title" content="COVID-19 Public Health Status by County shapefiles from ESRI - DEFUNCT — pub_hlth_status_by_cnty_shp" />
 <meta property="og:description" content="This functions pulls the public health status by county in the US as of the
   current date with the shapefiles, which are saved to the current working
   directory.  The data comes from ESRI open data website.  The data is 1 row
@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">R.COVID.19</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
       </span>
     </div>
 
@@ -111,7 +111,7 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>COVID-19 Public Health Status by County shapefiles from ESRI</h1>
+    <h1>COVID-19 Public Health Status by County shapefiles from ESRI - DEFUNCT</h1>
     <small class="dont-index">Source: <a href='https://github.com/Fredo-XVII/R.COVID.19/blob/master/R/pub_hlth_status_by_cnty_shp.R'><code>R/pub_hlth_status_by_cnty_shp.R</code></a></small>
     <div class="hidden name"><code>pub_hlth_status_by_cnty_shp.Rd</code></div>
     </div>
@@ -134,73 +134,12 @@ shapefiles corresponding to the counties to the current working directory.</p>
 
     <p>Website: https://coronavirus-disasterresponse.hub.arcgis.com/datasets/97792521be744711a291d10ecef33a61/data?geometry=76.921<!-- %2C-16.701%2C-109.056%2C72.161 --></p>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>pub_status_cnty_shp</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>R.COVID.19</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/R.COVID.19/man/pub_hlth_status_by_cnty_shp.html'>pub_hlth_status_by_cnty_shp</a></span>()</div><div class='output co'>#&gt; Reading layer `8acac48c-57be-4cc9-92a2-b932b279b46c2020329-1-gva0h9.tiu36' from data source `C:\Users\marqu\OneDrive\Documents\GitHub\R.COVID.19\docs\reference\8acac48c-57be-4cc9-92a2-b932b279b46c2020329-1-gva0h9.tiu36.shp' using driver `ESRI Shapefile'
-#&gt; Simple feature collection with 3152 features and 28 fields
-#&gt; geometry type:  MULTIPOLYGON
-#&gt; dimension:      XY
-#&gt; bbox:           xmin: -178.2176 ymin: -14.37427 xmax: 146.0827 ymax: 71.40624
-#&gt; CRS:            4326</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>pub_status_cnty_shp</span>)</div><div class='output co'>#&gt; Simple feature collection with 6 features and 28 fields
-#&gt; geometry type:  MULTIPOLYGON
-#&gt; dimension:      XY
-#&gt; bbox:           xmin: -178.2176 ymin: 47.24046 xmax: -96.83707 ymax: 61.49217
-#&gt; CRS:            4326
-#&gt;   objectid_1 objectid           name   state_name  fips    sqmi
-#&gt; 1          1        1 Aleutians East       Alaska 02013 7036.89
-#&gt; 2          2     1201         Traill North Dakota 38097  862.51
-#&gt; 3          3     1202          Walsh North Dakota 38099 1294.14
-#&gt; 4          4        2 Aleutians West       Alaska 02016 3597.77
-#&gt; 5          5     1203           Ward North Dakota 38101 2055.85
-#&gt; 6          6        3      Anchorage       Alaska 02020 1733.41
-#&gt;                    cnty_name county_st   county_st_ ecode
-#&gt; 1     Aleutians East Borough        AK       Alaska 02012
-#&gt; 2                     Traill        ND North Dakota 34118
-#&gt; 3                      Walsh        ND North Dakota 34118
-#&gt; 4 Aleutians West Census Area        AK       Alaska 02012
-#&gt; 5                       Ward        ND North Dakota 34204
-#&gt; 6     Anchorage Municipality        AK       Alaska 02012
-#&gt;                                                    chapter rcode         region
-#&gt; 1                                       ARC serving Alaska 02R04  Alaska Region
-#&gt; 2 ARC serving Eastern North Dakota and Northwest Minnesota 34R08 Dakotas Region
-#&gt; 3 ARC serving Eastern North Dakota and Northwest Minnesota 34R08 Dakotas Region
-#&gt; 4                                       ARC serving Alaska 02R04  Alaska Region
-#&gt; 5                         ARC serving Western North Dakota 34R08 Dakotas Region
-#&gt; 6                                       ARC serving Alaska 02R04  Alaska Region
-#&gt;   dcode               division time_zone fema_regio notes last_updat
-#&gt; 1   D21       Pacific Division    Alaska          X  &lt;NA&gt; 2020-03-28
-#&gt; 2   D23 North Central Division   Central       VIII  &lt;NA&gt; 2020-03-17
-#&gt; 3   D23 North Central Division   Central       VIII  &lt;NA&gt; 2020-03-17
-#&gt; 4   D21       Pacific Division    Alaska          X  &lt;NA&gt; 2020-03-28
-#&gt; 5   D23 North Central Division  Mountain       VIII  &lt;NA&gt; 2020-03-17
-#&gt; 6   D21       Pacific Division    Alaska          X  &lt;NA&gt; 2020-03-28
-#&gt;                          local_heal  dro created_da    created_us last_edite
-#&gt; 1 Govt Ordered Community Quarantine &lt;NA&gt; 2020-04-02 alow_rconline 2020-04-02
-#&gt; 2   Govt Directed Social Distancing &lt;NA&gt; 2020-04-02 alow_rconline 2020-04-02
-#&gt; 3   Govt Directed Social Distancing &lt;NA&gt; 2020-04-02 alow_rconline 2020-04-02
-#&gt; 4 Govt Ordered Community Quarantine &lt;NA&gt; 2020-04-02 alow_rconline 2020-04-02
-#&gt; 5   Govt Directed Social Distancing &lt;NA&gt; 2020-04-02 alow_rconline 2020-04-02
-#&gt; 6 Govt Ordered Community Quarantine &lt;NA&gt; 2020-04-02 alow_rconline 2020-04-02
-#&gt;      last_edi_1                             globalid  Shape__Are Shape__Len
-#&gt; 1 alow_rconline 60dcdba3-b671-4da9-84fc-9d7c40fda777 48862299113  3299974.8
-#&gt; 2 alow_rconline 80d1f2bc-c539-442a-b7f2-71cce0cd700b  4881825512   283774.5
-#&gt; 3 alow_rconline a11f6045-d962-4665-8e4a-c6ec14671f67  7683728314   411795.2
-#&gt; 4 alow_rconline 13288199-4d9d-493f-9e62-cc1856fde51a 18314912682  2455084.6
-#&gt; 5 alow_rconline e642e03e-fe01-4eab-a3f8-a2ab7e432b65 11921048653   596478.7
-#&gt; 6 alow_rconline e1dd184d-4804-482e-98ce-11bf1db7bdec 19718437876   604125.1
-#&gt;                         geometry
-#&gt; 1 MULTIPOLYGON (((-158.7984 5...
-#&gt; 2 MULTIPOLYGON (((-96.83707 4...
-#&gt; 3 MULTIPOLYGON (((-97.90248 4...
-#&gt; 4 MULTIPOLYGON (((-166.6452 5...
-#&gt; 5 MULTIPOLYGON (((-100.9647 4...
-#&gt; 6 MULTIPOLYGON (((-148.46 61....</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#value">Value</a></li>
       <li><a href="#details">Details</a></li>
-      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>

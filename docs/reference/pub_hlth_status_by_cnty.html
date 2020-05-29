@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>COVID-19 Public Health Status by County from ESRI — pub_hlth_status_by_cnty • R.COVID.19</title>
+<title>COVID-19 Public Health Status by County from ESRI - DEFUNCT — pub_hlth_status_by_cnty • R.COVID.19</title>
 
 
 <!-- jquery -->
@@ -35,7 +35,7 @@
 
 
 
-<meta property="og:title" content="COVID-19 Public Health Status by County from ESRI — pub_hlth_status_by_cnty" />
+<meta property="og:title" content="COVID-19 Public Health Status by County from ESRI - DEFUNCT — pub_hlth_status_by_cnty" />
 <meta property="og:description" content="This functions pulls the public health status by county in the US as of the
   current date.  The data comes from ESRI open data website.  The data is 1 row per
   county." />
@@ -71,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">R.COVID.19</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
       </span>
     </div>
 
@@ -110,7 +110,7 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>COVID-19 Public Health Status by County from ESRI</h1>
+    <h1>COVID-19 Public Health Status by County from ESRI - DEFUNCT</h1>
     <small class="dont-index">Source: <a href='https://github.com/Fredo-XVII/R.COVID.19/blob/master/R/pub_hlth_status_by_cnty.R'><code>R/pub_hlth_status_by_cnty.R</code></a></small>
     <div class="hidden name"><code>pub_hlth_status_by_cnty.Rd</code></div>
     </div>
@@ -131,39 +131,12 @@
 
     <p>Website: https://coronavirus-disasterresponse.hub.arcgis.com/datasets/97792521be744711a291d10ecef33a61/data?geometry=76.921<!-- %2C-16.701%2C-109.056%2C72.161 --></p>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>pub_status_cnty</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>R.COVID.19</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/R.COVID.19/man/pub_hlth_status_by_cnty.html'>pub_hlth_status_by_cnty</a></span>()</div><div class='output co'>#&gt; <span class='message'>Parsed with column specification:</span>
-#&gt; <span class='message'>cols(</span>
-#&gt; <span class='message'>  .default = col_character(),</span>
-#&gt; <span class='message'>  objectid_1 = <span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  objectid = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  sqmi = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  dro = </span><span style='color: #BBBB00;'>col_logical()</span><span>,</span>
-#&gt; <span class='message'>  Shape__Area = </span><span style='color: #00BB00;'>col_double()</span><span>,</span>
-#&gt; <span class='message'>  Shape__Length = </span><span style='color: #00BB00;'>col_double()</span><span></span>
-#&gt; <span class='message'>)</span></div><div class='output co'>#&gt; <span class='message'>See spec(...) for full column specifications.</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>pub_status_cnty</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 6 x 28</span><span>
-#&gt;   objectid_1 objectid name  state_name fips   sqmi cnty_name county_st
-#&gt;        </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'>1</span><span>          1        1 Aleu~ Alaska     02013 </span><span style='text-decoration: underline;'>7</span><span>037. Aleutian~ AK       
-#&gt; </span><span style='color: #555555;'>2</span><span>          2     </span><span style='text-decoration: underline;'>1</span><span>201 Trai~ North Dak~ 38097  863. Traill    ND       
-#&gt; </span><span style='color: #555555;'>3</span><span>          3     </span><span style='text-decoration: underline;'>1</span><span>202 Walsh North Dak~ 38099 </span><span style='text-decoration: underline;'>1</span><span>294. Walsh     ND       
-#&gt; </span><span style='color: #555555;'>4</span><span>          4        2 Aleu~ Alaska     02016 </span><span style='text-decoration: underline;'>3</span><span>598. Aleutian~ AK       
-#&gt; </span><span style='color: #555555;'>5</span><span>          5     </span><span style='text-decoration: underline;'>1</span><span>203 Ward  North Dak~ 38101 </span><span style='text-decoration: underline;'>2</span><span>056. Ward      ND       
-#&gt; </span><span style='color: #555555;'>6</span><span>          6        3 Anch~ Alaska     02020 </span><span style='text-decoration: underline;'>1</span><span>733. Anchorag~ AK       
-#&gt; </span><span style='color: #555555;'># ... with 20 more variables: county_st_long </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, ecode </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, chapter </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,
-#&gt; #   rcode </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, region </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, dcode </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, division </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, time_zone </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,
-#&gt; #   fema_region </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, notes </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, last_update </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, local_health_emg </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,
-#&gt; #   dro </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #555555;'>, created_date </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, created_user </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, last_edited_date </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,
-#&gt; #   last_edited_user </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, globalid </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, Shape__Area </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,
-#&gt; #   Shape__Length </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span></div><div class='input'>
-</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#value">Value</a></li>
       <li><a href="#details">Details</a></li>
-      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
