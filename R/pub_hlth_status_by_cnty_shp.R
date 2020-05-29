@@ -1,5 +1,5 @@
 # Functions Roxygen format
-#' @title COVID-19 Public Health Status by County shapefiles from ESRI
+#' @title COVID-19 Public Health Status by County shapefiles from ESRI - DEFUNCT
 #'
 #' @description
 #'   This functions pulls the public health status by county in the US as of the
@@ -13,32 +13,32 @@
 #' @return A dataframe/tibble.  This functions has side effects in that it downloads
 #' shapefiles corresponding to the counties to the current working directory.
 #'
-#' @examples
+#>' @examples
 #>' \dontrun{
-#' pub_status_cnty_shp <- R.COVID.19::pub_hlth_status_by_cnty_shp()
-#' head(pub_status_cnty_shp)
+#>' pub_status_cnty_shp <- R.COVID.19::pub_hlth_status_by_cnty_shp()
+#>' head(pub_status_cnty_shp)
 #>' }
-#' @importFrom  sf st_read
-#' @importFrom utils download.file unzip
+#>' @importFrom  sf st_read
+#>' @importFrom utils download.file unzip
 #'
 #'
 
 #' @export
 pub_hlth_status_by_cnty_shp <- function() {
-  # .Defunct(new = "None", package="None",
-  #          msg = "This link is no longer working, now is removed")
+   .Defunct(new = "None", package="None",
+            msg = "This link is no longer working, now is removed")
   #Get data
-  .get_shp()
+  #.get_shp()
   #get_shp <- sf::st_read("COVID19_Public_Health_Emergency_Status_by_County.shp") # old name
-  get_shp <- sf::st_read("8acac48c-57be-4cc9-92a2-b932b279b46c2020329-1-gva0h9.tiu36.shp")
-  return(invisible(get_shp))
+  # get_shp <- sf::st_read("8acac48c-57be-4cc9-92a2-b932b279b46c2020329-1-gva0h9.tiu36.shp")
+  # return(invisible(get_shp))
 }
 
-.get_shp <- function(){
-  u_shp <- "https://opendata.arcgis.com/datasets/97792521be744711a291d10ecef33a61_0.zip"
-  utils::download.file(u_shp, "pub_hlth_status_by_cnty.zip")
-  utils::unzip("pub_hlth_status_by_cnty.zip")
-}
+# .get_shp <- function(){
+#   u_shp <- "https://opendata.arcgis.com/datasets/97792521be744711a291d10ecef33a61_0.zip"
+#   utils::download.file(u_shp, "pub_hlth_status_by_cnty.zip")
+#   utils::unzip("pub_hlth_status_by_cnty.zip")
+# }
 
 
 

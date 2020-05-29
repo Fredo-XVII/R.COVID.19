@@ -1,3 +1,9 @@
+# R.COVID.19 0.1.5
+* Bug fixes: Public Status Data set from ESRI are now defunct because of broken links.
+* Functions affected:
+*   pub_hlth_status_by_cnty
+*   pub_hlth_status_by_cnty_shp
+
 # R.COVID.19 0.1.4
 * Removed new text in date field in finra data: `finra_shelter_in_place()`
 * Added group_by() to test function: `covtrck_states_testing()`

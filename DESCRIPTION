@@ -1,7 +1,7 @@
 Package: R.COVID.19
 Type: Package
 Title: COVID-19 Daily Global and US Counts
-Version: 0.1.4
+Version: 0.1.5
 Authors@R: 
     person(given = "Alfredo G",
            family = "Marquez",

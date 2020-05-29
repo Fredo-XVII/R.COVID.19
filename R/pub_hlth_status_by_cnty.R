@@ -1,5 +1,5 @@
 # Functions Roxygen format
-#' @title COVID-19 Public Health Status by County from ESRI
+#' @title COVID-19 Public Health Status by County from ESRI - DEFUNCT
 #'
 #' @description
 #'   This functions pulls the public health status by county in the US as of the
@@ -11,19 +11,21 @@
 #'
 #' @return A dataframe/tibble
 #'
-#' @examples
-#' pub_status_cnty <- R.COVID.19::pub_hlth_status_by_cnty()
-#' head(pub_status_cnty)
+#>' @examples
+#>' pub_status_cnty <- R.COVID.19::pub_hlth_status_by_cnty()
+#>' head(pub_status_cnty)
 #'
-#' @importFrom  magrittr %>%
-#' @importFrom  readr read_csv
+#>' @importFrom  magrittr %>%
+#>' @importFrom  readr read_csv
 #'
 #' @export
 
 
 pub_hlth_status_by_cnty <- function() {
+   .Defunct(new = "None", package="None",
+            msg = "This link is no longer working, now is removed")
   # Get data
-  url_csv <- url("https://opendata.arcgis.com/datasets/97792521be744711a291d10ecef33a61_0.csv")
-  csv_df <- readr::read_csv(url_csv)
-  return(invisible(csv_df))
+  # url_csv <- url("https://opendata.arcgis.com/datasets/97792521be744711a291d10ecef33a61_0.csv")
+  # csv_df <- readr::read_csv(url_csv)
+  # return(invisible(csv_df))
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/pub_hlth_status_by_cnty.R
 \name{pub_hlth_status_by_cnty}
 \alias{pub_hlth_status_by_cnty}
-\title{COVID-19 Public Health Status by County from ESRI}
+\title{COVID-19 Public Health Status by County from ESRI - DEFUNCT}
 \usage{
 pub_hlth_status_by_cnty()
 }
@@ -16,9 +16,4 @@ This functions pulls the public health status by county in the US as of the
 }
 \details{
 Website: https://coronavirus-disasterresponse.hub.arcgis.com/datasets/97792521be744711a291d10ecef33a61/data?geometry=76.921%2C-16.701%2C-109.056%2C72.161
-}
-\examples{
-pub_status_cnty <- R.COVID.19::pub_hlth_status_by_cnty()
-head(pub_status_cnty)
-
 }
