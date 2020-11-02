@@ -1,7 +1,7 @@
 Package: R.COVID.19
 Type: Package
 Title: COVID-19 Daily Global and US Counts
-Version: 0.1.5
+Version: 0.1.6
 Authors@R: 
     person(given = "Alfredo G",
            family = "Marquez",
@@ -29,7 +29,6 @@ Imports:
     dplyr,
     rlang,
     tidyr,
-    sf,
     purrr,
     rvest,
     tibble,
@@ -42,4 +41,4 @@ Suggests:
     kableExtra,
     covr,
     remotes
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1

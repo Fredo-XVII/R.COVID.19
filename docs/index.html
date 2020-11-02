@@ -6,10 +6,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>COVID-19 Daily Global and US Counts • R.COVID.19</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
+<script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="COVID-19 Daily Global and US Counts">
 <meta property="og:description" content="A light weight package that collects COVID-19 data from a variety 
     of sources including John Hopkins University (JHU) and The New York Times 
@@ -18,13 +19,12 @@
     county levels for the US only.  Public health status by county is provided 
     by ESRI open data.  Other sources also included not listed 
     here; please reference the package down site.  All the data is in a tidy format.">
-<meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -37,7 +37,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">R.COVID.19</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.6</span>
       </span>
     </div>
 
@@ -58,7 +58,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/Fredo-XVII/R.COVID.19">
+  <a href="https://github.com/Fredo-XVII/R.COVID.19/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -87,26 +87,32 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the released version of R.COVID.19 from <a href="https://CRAN.R-project.org">CRAN</a> with: (NOT ON CRAN)</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"R.COVID.19"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"R.COVID.19"</span>)
+</pre></div>
 <p>And the development version from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>)</a>
-<a class="sourceLine" id="cb2-2" title="2">devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"Fredo-XVII/R.COVID.19"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>)
+<span class="kw">devtools</span>::<span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span>(<span class="st">"Fredo-XVII/R.COVID.19"</span>)
+</pre></div>
 </div>
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
 <p><strong>Load libraries:</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(R.COVID<span class="fl">.19</span>)</a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dplyr)</a>
-<a class="sourceLine" id="cb3-3" title="3"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb3-4" title="4"><span class="co">#&gt; Attaching package: 'dplyr'</span></a>
-<a class="sourceLine" id="cb3-5" title="5"><span class="co">#&gt; The following objects are masked from 'package:stats':</span></a>
-<a class="sourceLine" id="cb3-6" title="6"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb3-7" title="7"><span class="co">#&gt;     filter, lag</span></a>
-<a class="sourceLine" id="cb3-8" title="8"><span class="co">#&gt; The following objects are masked from 'package:base':</span></a>
-<a class="sourceLine" id="cb3-9" title="9"><span class="co">#&gt; </span></a>
-<a class="sourceLine" id="cb3-10" title="10"><span class="co">#&gt;     intersect, setdiff, setequal, union</span></a>
-<a class="sourceLine" id="cb3-11" title="11"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(magrittr)</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/Fredo-XVII/R.COVID.19">R.COVID.19</a></span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://dplyr.tidyverse.org">dplyr</a></span>)
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Attaching package: 'dplyr'</span>
+<span class="co">#&gt; The following objects are masked from 'package:stats':</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;     filter, lag</span>
+<span class="co">#&gt; The following objects are masked from 'package:base':</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;     intersect, setdiff, setequal, union</span>
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw">magrittr</span>)
+</pre></div>
 <div id="covid-19-data-from-john-hopkins-university-data" class="section level3">
 <h3 class="hasAnchor">
 <a href="#covid-19-data-from-john-hopkins-university-data" class="anchor"></a>COVID-19 data from John Hopkins University Data</h3>
@@ -115,1287 +121,706 @@
 </li>
 </ul>
 <p><strong>Global COVID-19 Data:</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">confirmed &lt;-<span class="st"> </span>R.COVID<span class="fl">.19</span><span class="op">::</span><span class="kw"><a href="reference/global_confirmed_daily.html">global_confirmed_daily</a></span>()</a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="co">#&gt; Parsed with column specification:</span></a>
-<a class="sourceLine" id="cb4-3" title="3"><span class="co">#&gt; cols(</span></a>
-<a class="sourceLine" id="cb4-4" title="4"><span class="co">#&gt;   .default = col_double(),</span></a>
-<a class="sourceLine" id="cb4-5" title="5"><span class="co">#&gt;   `Province/State` = col_character(),</span></a>
-<a class="sourceLine" id="cb4-6" title="6"><span class="co">#&gt;   `Country/Region` = col_character()</span></a>
-<a class="sourceLine" id="cb4-7" title="7"><span class="co">#&gt; )</span></a>
-<a class="sourceLine" id="cb4-8" title="8"><span class="co">#&gt; See spec(...) for full column specifications.</span></a>
-<a class="sourceLine" id="cb4-9" title="9"></a>
-<a class="sourceLine" id="cb4-10" title="10">deaths &lt;-<span class="st"> </span>R.COVID<span class="fl">.19</span><span class="op">::</span><span class="kw"><a href="reference/global_deaths_daily.html">global_deaths_daily</a></span>()</a>
-<a class="sourceLine" id="cb4-11" title="11"><span class="co">#&gt; Parsed with column specification:</span></a>
-<a class="sourceLine" id="cb4-12" title="12"><span class="co">#&gt; cols(</span></a>
-<a class="sourceLine" id="cb4-13" title="13"><span class="co">#&gt;   .default = col_double(),</span></a>
-<a class="sourceLine" id="cb4-14" title="14"><span class="co">#&gt;   `Province/State` = col_character(),</span></a>
-<a class="sourceLine" id="cb4-15" title="15"><span class="co">#&gt;   `Country/Region` = col_character()</span></a>
-<a class="sourceLine" id="cb4-16" title="16"><span class="co">#&gt; )</span></a>
-<a class="sourceLine" id="cb4-17" title="17"><span class="co">#&gt; See spec(...) for full column specifications.</span></a>
-<a class="sourceLine" id="cb4-18" title="18"></a>
-<a class="sourceLine" id="cb4-19" title="19">recovered &lt;-<span class="st"> </span>R.COVID<span class="fl">.19</span><span class="op">::</span><span class="kw"><a href="reference/global_recovered_daily.html">global_recovered_daily</a></span>()</a>
-<a class="sourceLine" id="cb4-20" title="20"><span class="co">#&gt; Parsed with column specification:</span></a>
-<a class="sourceLine" id="cb4-21" title="21"><span class="co">#&gt; cols(</span></a>
-<a class="sourceLine" id="cb4-22" title="22"><span class="co">#&gt;   .default = col_double(),</span></a>
-<a class="sourceLine" id="cb4-23" title="23"><span class="co">#&gt;   `Province/State` = col_character(),</span></a>
-<a class="sourceLine" id="cb4-24" title="24"><span class="co">#&gt;   `Country/Region` = col_character()</span></a>
-<a class="sourceLine" id="cb4-25" title="25"><span class="co">#&gt; )</span></a>
-<a class="sourceLine" id="cb4-26" title="26"><span class="co">#&gt; See spec(...) for full column specifications.</span></a>
-<a class="sourceLine" id="cb4-27" title="27"></a>
-<a class="sourceLine" id="cb4-28" title="28">combo &lt;-<span class="st"> </span>confirmed <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb4-29" title="29"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(deaths) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb4-30" title="30"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(recovered) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb4-31" title="31"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(<span class="dt">mortality_rate =</span> <span class="kw"><a href="https://rdrr.io/r/base/Round.html">round</a></span>((.<span class="op">$</span>deaths_cases <span class="op">/</span><span class="st"> </span>.<span class="op">$</span>confirmed_cases)<span class="op">*</span><span class="dv">100</span>,<span class="dv">2</span>))</a>
-<a class="sourceLine" id="cb4-32" title="32"><span class="co">#&gt; Joining, by = c("Province/State", "Country/Region", "Lat", "Long", "greg_d")</span></a>
-<a class="sourceLine" id="cb4-33" title="33"><span class="co">#&gt; Joining, by = c("Province/State", "Country/Region", "Lat", "Long", "greg_d")</span></a>
-<a class="sourceLine" id="cb4-34" title="34"></a>
-<a class="sourceLine" id="cb4-35" title="35">knitr<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>(combo <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="st">`</span><span class="dt">Country/Region</span><span class="st">`</span> <span class="op">==</span><span class="st"> "US"</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/utils/head.html">tail</a></span>(<span class="dv">10</span>), <span class="dt">format =</span> <span class="st">"html"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb4-36" title="36"><span class="st">  </span>kableExtra<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span>(<span class="dt">bootstrap_options =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"striped"</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="kw">confirmed</span> <span class="op">&lt;-</span> <span class="kw">R.COVID.19</span>::<span class="fu"><a href="reference/global_confirmed_daily.html">global_confirmed_daily</a></span>()
+<span class="co">#&gt; Parsed with column specification:</span>
+<span class="co">#&gt; cols(</span>
+<span class="co">#&gt;   .default = col_double(),</span>
+<span class="co">#&gt;   `Province/State` = col_character(),</span>
+<span class="co">#&gt;   `Country/Region` = col_character()</span>
+<span class="co">#&gt; )</span>
+<span class="co">#&gt; See spec(...) for full column specifications.</span>
+
+<span class="kw">deaths</span> <span class="op">&lt;-</span> <span class="kw">R.COVID.19</span>::<span class="fu"><a href="reference/global_deaths_daily.html">global_deaths_daily</a></span>()
+<span class="co">#&gt; Parsed with column specification:</span>
+<span class="co">#&gt; cols(</span>
+<span class="co">#&gt;   .default = col_double(),</span>
+<span class="co">#&gt;   `Province/State` = col_character(),</span>
+<span class="co">#&gt;   `Country/Region` = col_character()</span>
+<span class="co">#&gt; )</span>
+<span class="co">#&gt; See spec(...) for full column specifications.</span>
+
+<span class="kw">recovered</span> <span class="op">&lt;-</span> <span class="kw">R.COVID.19</span>::<span class="fu"><a href="reference/global_recovered_daily.html">global_recovered_daily</a></span>()
+<span class="co">#&gt; Parsed with column specification:</span>
+<span class="co">#&gt; cols(</span>
+<span class="co">#&gt;   .default = col_double(),</span>
+<span class="co">#&gt;   `Province/State` = col_character(),</span>
+<span class="co">#&gt;   `Country/Region` = col_character()</span>
+<span class="co">#&gt; )</span>
+<span class="co">#&gt; See spec(...) for full column specifications.</span>
+
+<span class="kw">combo</span> <span class="op">&lt;-</span> <span class="kw">confirmed</span> <span class="op">%&gt;%</span> 
+  <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="kw">deaths</span>) <span class="op">%&gt;%</span>
+  <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="kw">recovered</span>) <span class="op">%&gt;%</span> 
+  <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(mortality_rate = <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span>((<span class="kw">.</span><span class="op">$</span><span class="kw">deaths_cases</span> <span class="op">/</span> <span class="kw">.</span><span class="op">$</span><span class="kw">confirmed_cases</span>)<span class="op">*</span><span class="fl">100</span>,<span class="fl">2</span>))
+<span class="co">#&gt; Joining, by = c("Province/State", "Country/Region", "Lat", "Long", "greg_d")</span>
+<span class="co">#&gt; Joining, by = c("Province/State", "Country/Region", "Lat", "Long", "greg_d")</span>
+
+<span class="kw">knitr</span>::<span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>(<span class="kw">combo</span> <span class="op">%&gt;%</span> <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="kw">`Country/Region`</span> <span class="op">==</span> <span class="st">"US"</span>) <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/utils/head.html">tail</a></span>(<span class="fl">10</span>), format = <span class="st">"html"</span>) <span class="op">%&gt;%</span> 
+  <span class="kw">kableExtra</span>::<span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span>(bootstrap_options = <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"striped"</span>))
+</pre></div>
 <table class="table table table-striped">
 <thead><tr>
 <th style="text-align:left;">
-
-Province/State
-
+<p>Province/State</p>
 </th>
-
 <th style="text-align:left;">
-
-Country/Region
-
+<p>Country/Region</p>
 </th>
-
 <th style="text-align:right;">
-
-Lat
-
+<p>Lat</p>
 </th>
-
 <th style="text-align:right;">
-
-Long
-
+<p>Long</p>
 </th>
-
 <th style="text-align:left;">
-
-greg\_d
-
+<p>greg_d</p>
 </th>
-
 <th style="text-align:right;">
-
-confirmed\_cases
-
+<p>confirmed_cases</p>
 </th>
-
 <th style="text-align:right;">
-
-deaths\_cases
-
+<p>deaths_cases</p>
 </th>
-
 <th style="text-align:right;">
-
-recovered\_cases
-
+<p>recovered_cases</p>
 </th>
-
 <th style="text-align:right;">
-
-mortality\_rate
-
+<p>mortality_rate</p>
 </th>
-
 </tr></thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-
-NA
-
+<p>NA</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-37.0902
-
+<p>37.0902</p>
 </td>
-
 <td style="text-align:right;">
-
-\-95.7129
-
+<p>-95.7129</p>
 </td>
-
 <td style="text-align:left;">
-
-5/4/20
-
+<p>5/4/20</p>
 </td>
-
 <td style="text-align:right;">
-
-1180375
-
+<p>1180375</p>
 </td>
-
 <td style="text-align:right;">
-
-68922
-
+<p>68922</p>
 </td>
-
 <td style="text-align:right;">
-
-187180
-
+<p>187180</p>
 </td>
-
 <td style="text-align:right;">
-
-5.84
-
+<p>5.84</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-NA
-
+<p>NA</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-37.0902
-
+<p>37.0902</p>
 </td>
-
 <td style="text-align:right;">
-
-\-95.7129
-
+<p>-95.7129</p>
 </td>
-
 <td style="text-align:left;">
-
-5/5/20
-
+<p>5/5/20</p>
 </td>
-
 <td style="text-align:right;">
-
-1204351
-
+<p>1204351</p>
 </td>
-
 <td style="text-align:right;">
-
-71064
-
+<p>71064</p>
 </td>
-
 <td style="text-align:right;">
-
-189791
-
+<p>189791</p>
 </td>
-
 <td style="text-align:right;">
-
-5.90
-
+<p>5.90</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-NA
-
+<p>NA</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-37.0902
-
+<p>37.0902</p>
 </td>
-
 <td style="text-align:right;">
-
-\-95.7129
-
+<p>-95.7129</p>
 </td>
-
 <td style="text-align:left;">
-
-5/6/20
-
+<p>5/6/20</p>
 </td>
-
 <td style="text-align:right;">
-
-1229331
-
+<p>1229331</p>
 </td>
-
 <td style="text-align:right;">
-
-73455
-
+<p>73455</p>
 </td>
-
 <td style="text-align:right;">
-
-189910
-
+<p>189910</p>
 </td>
-
 <td style="text-align:right;">
-
-5.98
-
+<p>5.98</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-NA
-
+<p>NA</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-37.0902
-
+<p>37.0902</p>
 </td>
-
 <td style="text-align:right;">
-
-\-95.7129
-
+<p>-95.7129</p>
 </td>
-
 <td style="text-align:left;">
-
-5/7/20
-
+<p>5/7/20</p>
 </td>
-
 <td style="text-align:right;">
-
-1257023
-
+<p>1257023</p>
 </td>
-
 <td style="text-align:right;">
-
-75662
-
+<p>75662</p>
 </td>
-
 <td style="text-align:right;">
-
-195036
-
+<p>195036</p>
 </td>
-
 <td style="text-align:right;">
-
-6.02
-
+<p>6.02</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-NA
-
+<p>NA</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-37.0902
-
+<p>37.0902</p>
 </td>
-
 <td style="text-align:right;">
-
-\-95.7129
-
+<p>-95.7129</p>
 </td>
-
 <td style="text-align:left;">
-
-5/8/20
-
+<p>5/8/20</p>
 </td>
-
 <td style="text-align:right;">
-
-1283929
-
+<p>1283929</p>
 </td>
-
 <td style="text-align:right;">
-
-77180
-
+<p>77180</p>
 </td>
-
 <td style="text-align:right;">
-
-198993
-
+<p>198993</p>
 </td>
-
 <td style="text-align:right;">
-
-6.01
-
+<p>6.01</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-NA
-
+<p>NA</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-37.0902
-
+<p>37.0902</p>
 </td>
-
 <td style="text-align:right;">
-
-\-95.7129
-
+<p>-95.7129</p>
 </td>
-
 <td style="text-align:left;">
-
-5/9/20
-
+<p>5/9/20</p>
 </td>
-
 <td style="text-align:right;">
-
-1309550
-
+<p>1309550</p>
 </td>
-
 <td style="text-align:right;">
-
-78795
-
+<p>78795</p>
 </td>
-
 <td style="text-align:right;">
-
-212534
-
+<p>212534</p>
 </td>
-
 <td style="text-align:right;">
-
-6.02
-
+<p>6.02</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-NA
-
+<p>NA</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-37.0902
-
+<p>37.0902</p>
 </td>
-
 <td style="text-align:right;">
-
-\-95.7129
-
+<p>-95.7129</p>
 </td>
-
 <td style="text-align:left;">
-
-5/10/20
-
+<p>5/10/20</p>
 </td>
-
 <td style="text-align:right;">
-
-1329260
-
+<p>1329260</p>
 </td>
-
 <td style="text-align:right;">
-
-79526
-
+<p>79526</p>
 </td>
-
 <td style="text-align:right;">
-
-216169
-
+<p>216169</p>
 </td>
-
 <td style="text-align:right;">
-
-5.98
-
+<p>5.98</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-NA
-
+<p>NA</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-37.0902
-
+<p>37.0902</p>
 </td>
-
 <td style="text-align:right;">
-
-\-95.7129
-
+<p>-95.7129</p>
 </td>
-
 <td style="text-align:left;">
-
-5/11/20
-
+<p>5/11/20</p>
 </td>
-
 <td style="text-align:right;">
-
-1347881
-
+<p>1347881</p>
 </td>
-
 <td style="text-align:right;">
-
-80682
-
+<p>80682</p>
 </td>
-
 <td style="text-align:right;">
-
-232733
-
+<p>232733</p>
 </td>
-
 <td style="text-align:right;">
-
-5.99
-
+<p>5.99</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-NA
-
+<p>NA</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-37.0902
-
+<p>37.0902</p>
 </td>
-
 <td style="text-align:right;">
-
-\-95.7129
-
+<p>-95.7129</p>
 </td>
-
 <td style="text-align:left;">
-
-5/12/20
-
+<p>5/12/20</p>
 </td>
-
 <td style="text-align:right;">
-
-1369376
-
+<p>1369376</p>
 </td>
-
 <td style="text-align:right;">
-
-82356
-
+<p>82356</p>
 </td>
-
 <td style="text-align:right;">
-
-230287
-
+<p>230287</p>
 </td>
-
 <td style="text-align:right;">
-
-6.01
-
+<p>6.01</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-NA
-
+<p>NA</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-37.0902
-
+<p>37.0902</p>
 </td>
-
 <td style="text-align:right;">
-
-\-95.7129
-
+<p>-95.7129</p>
 </td>
-
 <td style="text-align:left;">
-
-5/13/20
-
+<p>5/13/20</p>
 </td>
-
 <td style="text-align:right;">
-
-1390406
-
+<p>1390406</p>
 </td>
-
 <td style="text-align:right;">
-
-84119
-
+<p>84119</p>
 </td>
-
 <td style="text-align:right;">
-
-243430
-
+<p>243430</p>
 </td>
-
 <td style="text-align:right;">
-
-6.05
-
+<p>6.05</p>
 </td>
-
 </tr>
 </tbody>
 </table>
 <p><br></p>
 <p><strong>US COVID-19 Data with Geographic Data:</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">us_confirmed &lt;-<span class="st"> </span>R.COVID<span class="fl">.19</span><span class="op">::</span><span class="kw"><a href="reference/us_geo_confirmed_daily.html">us_geo_confirmed_daily</a></span>()</a>
-<a class="sourceLine" id="cb5-2" title="2"><span class="co">#&gt; Parsed with column specification:</span></a>
-<a class="sourceLine" id="cb5-3" title="3"><span class="co">#&gt; cols(</span></a>
-<a class="sourceLine" id="cb5-4" title="4"><span class="co">#&gt;   .default = col_double(),</span></a>
-<a class="sourceLine" id="cb5-5" title="5"><span class="co">#&gt;   iso2 = col_character(),</span></a>
-<a class="sourceLine" id="cb5-6" title="6"><span class="co">#&gt;   iso3 = col_character(),</span></a>
-<a class="sourceLine" id="cb5-7" title="7"><span class="co">#&gt;   Admin2 = col_character(),</span></a>
-<a class="sourceLine" id="cb5-8" title="8"><span class="co">#&gt;   Province_State = col_character(),</span></a>
-<a class="sourceLine" id="cb5-9" title="9"><span class="co">#&gt;   Country_Region = col_character(),</span></a>
-<a class="sourceLine" id="cb5-10" title="10"><span class="co">#&gt;   Combined_Key = col_character()</span></a>
-<a class="sourceLine" id="cb5-11" title="11"><span class="co">#&gt; )</span></a>
-<a class="sourceLine" id="cb5-12" title="12"><span class="co">#&gt; See spec(...) for full column specifications.</span></a>
-<a class="sourceLine" id="cb5-13" title="13"></a>
-<a class="sourceLine" id="cb5-14" title="14">us_deaths &lt;-<span class="st"> </span>R.COVID<span class="fl">.19</span><span class="op">::</span><span class="kw"><a href="reference/us_geo_deaths_daily.html">us_geo_deaths_daily</a></span>()</a>
-<a class="sourceLine" id="cb5-15" title="15"><span class="co">#&gt; Parsed with column specification:</span></a>
-<a class="sourceLine" id="cb5-16" title="16"><span class="co">#&gt; cols(</span></a>
-<a class="sourceLine" id="cb5-17" title="17"><span class="co">#&gt;   .default = col_double(),</span></a>
-<a class="sourceLine" id="cb5-18" title="18"><span class="co">#&gt;   iso2 = col_character(),</span></a>
-<a class="sourceLine" id="cb5-19" title="19"><span class="co">#&gt;   iso3 = col_character(),</span></a>
-<a class="sourceLine" id="cb5-20" title="20"><span class="co">#&gt;   Admin2 = col_character(),</span></a>
-<a class="sourceLine" id="cb5-21" title="21"><span class="co">#&gt;   Province_State = col_character(),</span></a>
-<a class="sourceLine" id="cb5-22" title="22"><span class="co">#&gt;   Country_Region = col_character(),</span></a>
-<a class="sourceLine" id="cb5-23" title="23"><span class="co">#&gt;   Combined_Key = col_character()</span></a>
-<a class="sourceLine" id="cb5-24" title="24"><span class="co">#&gt; )</span></a>
-<a class="sourceLine" id="cb5-25" title="25"><span class="co">#&gt; See spec(...) for full column specifications.</span></a>
-<a class="sourceLine" id="cb5-26" title="26"></a>
-<a class="sourceLine" id="cb5-27" title="27">combo &lt;-<span class="st"> </span>us_confirmed <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/join.html">left_join</a></span>(us_deaths) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-28" title="28"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(<span class="dt">mortality_rate =</span> <span class="kw"><a href="https://rdrr.io/r/base/Round.html">round</a></span>((.<span class="op">$</span>deaths_cases <span class="op">/</span><span class="st"> </span>.<span class="op">$</span>confirmed_cases)<span class="op">*</span><span class="dv">100</span>,<span class="dv">2</span>))</a>
-<a class="sourceLine" id="cb5-29" title="29"><span class="co">#&gt; Joining, by = c("UID", "iso2", "iso3", "code3", "FIPS", "Admin2", "Province_State", "Country_Region", "Lat", "Long_", "Combined_Key", "greg_d")</span></a>
-<a class="sourceLine" id="cb5-30" title="30"></a>
-<a class="sourceLine" id="cb5-31" title="31">knitr<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>(combo <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-32" title="32"><span class="st">               </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(Province_State <span class="op">==</span><span class="st"> "New York"</span>, Admin2 <span class="op">==</span><span class="st"> "New York"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-33" title="33"><span class="st">               </span><span class="kw"><a href="https://rdrr.io/r/utils/head.html">tail</a></span>(<span class="dv">5</span>), <span class="dt">format =</span> <span class="st">"html"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-34" title="34"><span class="st">  </span>kableExtra<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span>(<span class="dt">bootstrap_options =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"striped"</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="kw">us_confirmed</span> <span class="op">&lt;-</span> <span class="kw">R.COVID.19</span>::<span class="fu"><a href="reference/us_geo_confirmed_daily.html">us_geo_confirmed_daily</a></span>()
+<span class="co">#&gt; Parsed with column specification:</span>
+<span class="co">#&gt; cols(</span>
+<span class="co">#&gt;   .default = col_double(),</span>
+<span class="co">#&gt;   iso2 = col_character(),</span>
+<span class="co">#&gt;   iso3 = col_character(),</span>
+<span class="co">#&gt;   Admin2 = col_character(),</span>
+<span class="co">#&gt;   Province_State = col_character(),</span>
+<span class="co">#&gt;   Country_Region = col_character(),</span>
+<span class="co">#&gt;   Combined_Key = col_character()</span>
+<span class="co">#&gt; )</span>
+<span class="co">#&gt; See spec(...) for full column specifications.</span>
+
+<span class="kw">us_deaths</span> <span class="op">&lt;-</span> <span class="kw">R.COVID.19</span>::<span class="fu"><a href="reference/us_geo_deaths_daily.html">us_geo_deaths_daily</a></span>()
+<span class="co">#&gt; Parsed with column specification:</span>
+<span class="co">#&gt; cols(</span>
+<span class="co">#&gt;   .default = col_double(),</span>
+<span class="co">#&gt;   iso2 = col_character(),</span>
+<span class="co">#&gt;   iso3 = col_character(),</span>
+<span class="co">#&gt;   Admin2 = col_character(),</span>
+<span class="co">#&gt;   Province_State = col_character(),</span>
+<span class="co">#&gt;   Country_Region = col_character(),</span>
+<span class="co">#&gt;   Combined_Key = col_character()</span>
+<span class="co">#&gt; )</span>
+<span class="co">#&gt; See spec(...) for full column specifications.</span>
+
+<span class="kw">combo</span> <span class="op">&lt;-</span> <span class="kw">us_confirmed</span> <span class="op">%&gt;%</span> <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span>(<span class="kw">us_deaths</span>) <span class="op">%&gt;%</span> 
+  <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(mortality_rate = <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span>((<span class="kw">.</span><span class="op">$</span><span class="kw">deaths_cases</span> <span class="op">/</span> <span class="kw">.</span><span class="op">$</span><span class="kw">confirmed_cases</span>)<span class="op">*</span><span class="fl">100</span>,<span class="fl">2</span>))
+<span class="co">#&gt; Joining, by = c("UID", "iso2", "iso3", "code3", "FIPS", "Admin2", "Province_State", "Country_Region", "Lat", "Long_", "Combined_Key", "greg_d")</span>
+
+<span class="kw">knitr</span>::<span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>(<span class="kw">combo</span> <span class="op">%&gt;%</span> 
+               <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="kw">Province_State</span> <span class="op">==</span> <span class="st">"New York"</span>, <span class="kw">Admin2</span> <span class="op">==</span> <span class="st">"New York"</span>) <span class="op">%&gt;%</span> 
+               <span class="fu"><a href="https://rdrr.io/r/utils/head.html">tail</a></span>(<span class="fl">5</span>), format = <span class="st">"html"</span>) <span class="op">%&gt;%</span> 
+  <span class="kw">kableExtra</span>::<span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span>(bootstrap_options = <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"striped"</span>))
+</pre></div>
 <table class="table table table-striped">
 <thead><tr>
 <th style="text-align:right;">
-
-UID
-
+<p>UID</p>
 </th>
-
 <th style="text-align:left;">
-
-iso2
-
+<p>iso2</p>
 </th>
-
 <th style="text-align:left;">
-
-iso3
-
+<p>iso3</p>
 </th>
-
 <th style="text-align:right;">
-
-code3
-
+<p>code3</p>
 </th>
-
 <th style="text-align:right;">
-
-FIPS
-
+<p>FIPS</p>
 </th>
-
 <th style="text-align:left;">
-
-Admin2
-
+<p>Admin2</p>
 </th>
-
 <th style="text-align:left;">
-
-Province\_State
-
+<p>Province_State</p>
 </th>
-
 <th style="text-align:left;">
-
-Country\_Region
-
+<p>Country_Region</p>
 </th>
-
 <th style="text-align:right;">
-
-Lat
-
+<p>Lat</p>
 </th>
-
 <th style="text-align:right;">
-
-Long\_
-
+<p>Long_</p>
 </th>
-
 <th style="text-align:left;">
-
-Combined\_Key
-
+<p>Combined_Key</p>
 </th>
-
 <th style="text-align:left;">
-
-greg\_d
-
+<p>greg_d</p>
 </th>
-
 <th style="text-align:right;">
-
-confirmed\_cases
-
+<p>confirmed_cases</p>
 </th>
-
 <th style="text-align:right;">
-
-Population
-
+<p>Population</p>
 </th>
-
 <th style="text-align:right;">
-
-deaths\_cases
-
+<p>deaths_cases</p>
 </th>
-
 <th style="text-align:right;">
-
-mortality\_rate
-
+<p>mortality_rate</p>
 </th>
-
 </tr></thead>
 <tbody>
 <tr>
 <td style="text-align:right;">
-
-84036061
-
+<p>84036061</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:left;">
-
-USA
-
+<p>USA</p>
 </td>
-
 <td style="text-align:right;">
-
-840
-
+<p>840</p>
 </td>
-
 <td style="text-align:right;">
-
-36061
-
+<p>36061</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-40.76727
-
+<p>40.76727</p>
 </td>
-
 <td style="text-align:right;">
-
-\-73.97153
-
+<p>-73.97153</p>
 </td>
-
 <td style="text-align:left;">
-
-New York City, New York, US
-
+<p>New York City, New York, US</p>
 </td>
-
 <td style="text-align:left;">
-
-5/9/20
-
+<p>5/9/20</p>
 </td>
-
 <td style="text-align:right;">
-
-183289
-
+<p>183289</p>
 </td>
-
 <td style="text-align:right;">
-
-5803210
-
+<p>5803210</p>
 </td>
-
 <td style="text-align:right;">
-
-19818
-
+<p>19818</p>
 </td>
-
 <td style="text-align:right;">
-
-10.81
-
+<p>10.81</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:right;">
-
-84036061
-
+<p>84036061</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:left;">
-
-USA
-
+<p>USA</p>
 </td>
-
 <td style="text-align:right;">
-
-840
-
+<p>840</p>
 </td>
-
 <td style="text-align:right;">
-
-36061
-
+<p>36061</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-40.76727
-
+<p>40.76727</p>
 </td>
-
 <td style="text-align:right;">
-
-\-73.97153
-
+<p>-73.97153</p>
 </td>
-
 <td style="text-align:left;">
-
-New York City, New York, US
-
+<p>New York City, New York, US</p>
 </td>
-
 <td style="text-align:left;">
-
-5/10/20
-
+<p>5/10/20</p>
 </td>
-
 <td style="text-align:right;">
-
-184417
-
+<p>184417</p>
 </td>
-
 <td style="text-align:right;">
-
-5803210
-
+<p>5803210</p>
 </td>
-
 <td style="text-align:right;">
-
-19789
-
+<p>19789</p>
 </td>
-
 <td style="text-align:right;">
-
-10.73
-
+<p>10.73</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:right;">
-
-84036061
-
+<p>84036061</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:left;">
-
-USA
-
+<p>USA</p>
 </td>
-
 <td style="text-align:right;">
-
-840
-
+<p>840</p>
 </td>
-
 <td style="text-align:right;">
-
-36061
-
+<p>36061</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-40.76727
-
+<p>40.76727</p>
 </td>
-
 <td style="text-align:right;">
-
-\-73.97153
-
+<p>-73.97153</p>
 </td>
-
 <td style="text-align:left;">
-
-New York City, New York, US
-
+<p>New York City, New York, US</p>
 </td>
-
 <td style="text-align:left;">
-
-5/11/20
-
+<p>5/11/20</p>
 </td>
-
 <td style="text-align:right;">
-
-185357
-
+<p>185357</p>
 </td>
-
 <td style="text-align:right;">
-
-5803210
-
+<p>5803210</p>
 </td>
-
 <td style="text-align:right;">
-
-20056
-
+<p>20056</p>
 </td>
-
 <td style="text-align:right;">
-
-10.82
-
+<p>10.82</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:right;">
-
-84036061
-
+<p>84036061</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:left;">
-
-USA
-
+<p>USA</p>
 </td>
-
 <td style="text-align:right;">
-
-840
-
+<p>840</p>
 </td>
-
 <td style="text-align:right;">
-
-36061
-
+<p>36061</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-40.76727
-
+<p>40.76727</p>
 </td>
-
 <td style="text-align:right;">
-
-\-73.97153
-
+<p>-73.97153</p>
 </td>
-
 <td style="text-align:left;">
-
-New York City, New York, US
-
+<p>New York City, New York, US</p>
 </td>
-
 <td style="text-align:left;">
-
-5/12/20
-
+<p>5/12/20</p>
 </td>
-
 <td style="text-align:right;">
-
-186123
-
+<p>186123</p>
 </td>
-
 <td style="text-align:right;">
-
-5803210
-
+<p>5803210</p>
 </td>
-
 <td style="text-align:right;">
-
-20237
-
+<p>20237</p>
 </td>
-
 <td style="text-align:right;">
-
-10.87
-
+<p>10.87</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:right;">
-
-84036061
-
+<p>84036061</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:left;">
-
-USA
-
+<p>USA</p>
 </td>
-
 <td style="text-align:right;">
-
-840
-
+<p>840</p>
 </td>
-
 <td style="text-align:right;">
-
-36061
-
+<p>36061</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-US
-
+<p>US</p>
 </td>
-
 <td style="text-align:right;">
-
-40.76727
-
+<p>40.76727</p>
 </td>
-
 <td style="text-align:right;">
-
-\-73.97153
-
+<p>-73.97153</p>
 </td>
-
 <td style="text-align:left;">
-
-New York City, New York, US
-
+<p>New York City, New York, US</p>
 </td>
-
 <td style="text-align:left;">
-
-5/13/20
-
+<p>5/13/20</p>
 </td>
-
 <td style="text-align:right;">
-
-187250
-
+<p>187250</p>
 </td>
-
 <td style="text-align:right;">
-
-5803210
-
+<p>5803210</p>
 </td>
-
 <td style="text-align:right;">
-
-20316
-
+<p>20316</p>
 </td>
-
 <td style="text-align:right;">
-
-10.85
-
+<p>10.85</p>
 </td>
-
 </tr>
 </tbody>
 </table>
@@ -1410,940 +835,515 @@ New York City, New York, US
 </li>
 </ul>
 <p><strong>US COVID-19 County Data with Geographic Data:</strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">us_co_cases &lt;-<span class="st"> </span>R.COVID<span class="fl">.19</span><span class="op">::</span><span class="kw"><a href="reference/us_counties_daily.html">us_counties_daily</a></span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb6-2" title="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(<span class="dt">mortality_rate =</span> <span class="kw"><a href="https://rdrr.io/r/base/Round.html">round</a></span>((.<span class="op">$</span>deaths <span class="op">/</span><span class="st"> </span>.<span class="op">$</span>cases)<span class="op">*</span><span class="dv">100</span>,<span class="dv">2</span>))</a>
-<a class="sourceLine" id="cb6-3" title="3"><span class="co">#&gt; Parsed with column specification:</span></a>
-<a class="sourceLine" id="cb6-4" title="4"><span class="co">#&gt; cols(</span></a>
-<a class="sourceLine" id="cb6-5" title="5"><span class="co">#&gt;   date = col_date(format = ""),</span></a>
-<a class="sourceLine" id="cb6-6" title="6"><span class="co">#&gt;   county = col_character(),</span></a>
-<a class="sourceLine" id="cb6-7" title="7"><span class="co">#&gt;   state = col_character(),</span></a>
-<a class="sourceLine" id="cb6-8" title="8"><span class="co">#&gt;   fips = col_character(),</span></a>
-<a class="sourceLine" id="cb6-9" title="9"><span class="co">#&gt;   cases = col_double(),</span></a>
-<a class="sourceLine" id="cb6-10" title="10"><span class="co">#&gt;   deaths = col_double()</span></a>
-<a class="sourceLine" id="cb6-11" title="11"><span class="co">#&gt; )</span></a>
-<a class="sourceLine" id="cb6-12" title="12">knitr<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>(us_co_cases <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(state <span class="op">==</span><span class="st"> "New York"</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/utils/head.html">tail</a></span>(<span class="dv">10</span>), <span class="dt">format =</span> <span class="st">"html"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb6-13" title="13"><span class="st">  </span>kableExtra<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span>(<span class="dt">bootstrap_options =</span> <span class="st">"striped"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit">
+<span class="kw">us_co_cases</span> <span class="op">&lt;-</span> <span class="kw">R.COVID.19</span>::<span class="fu"><a href="reference/us_counties_daily.html">us_counties_daily</a></span>() <span class="op">%&gt;%</span> 
+  <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(mortality_rate = <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span>((<span class="kw">.</span><span class="op">$</span><span class="kw">deaths</span> <span class="op">/</span> <span class="kw">.</span><span class="op">$</span><span class="kw">cases</span>)<span class="op">*</span><span class="fl">100</span>,<span class="fl">2</span>))
+<span class="co">#&gt; Parsed with column specification:</span>
+<span class="co">#&gt; cols(</span>
+<span class="co">#&gt;   date = col_date(format = ""),</span>
+<span class="co">#&gt;   county = col_character(),</span>
+<span class="co">#&gt;   state = col_character(),</span>
+<span class="co">#&gt;   fips = col_character(),</span>
+<span class="co">#&gt;   cases = col_double(),</span>
+<span class="co">#&gt;   deaths = col_double()</span>
+<span class="co">#&gt; )</span>
+<span class="kw">knitr</span>::<span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>(<span class="kw">us_co_cases</span> <span class="op">%&gt;%</span> <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="kw">state</span> <span class="op">==</span> <span class="st">"New York"</span>) <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/utils/head.html">tail</a></span>(<span class="fl">10</span>), format = <span class="st">"html"</span>) <span class="op">%&gt;%</span> 
+  <span class="kw">kableExtra</span>::<span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span>(bootstrap_options = <span class="st">"striped"</span>)
+</pre></div>
 <table class="table table table-striped">
 <thead><tr>
 <th style="text-align:left;">
-
-date
-
+<p>date</p>
 </th>
-
 <th style="text-align:left;">
-
-county
-
+<p>county</p>
 </th>
-
 <th style="text-align:left;">
-
-state
-
+<p>state</p>
 </th>
-
 <th style="text-align:left;">
-
-fips
-
+<p>fips</p>
 </th>
-
 <th style="text-align:right;">
-
-cases
-
+<p>cases</p>
 </th>
-
 <th style="text-align:right;">
-
-deaths
-
+<p>deaths</p>
 </th>
-
 <th style="text-align:right;">
-
-mortality\_rate
-
+<p>mortality_rate</p>
 </th>
-
 </tr></thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-
-2020-05-03
-
+<p>2020-05-03</p>
 </td>
-
 <td style="text-align:left;">
-
-Yates
-
+<p>Yates</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36123
-
+<p>36123</p>
 </td>
-
 <td style="text-align:right;">
-
-19
-
+<p>19</p>
 </td>
-
 <td style="text-align:right;">
-
-1
-
+<p>1</p>
 </td>
-
 <td style="text-align:right;">
-
-5.26
-
+<p>5.26</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-04
-
+<p>2020-05-04</p>
 </td>
-
 <td style="text-align:left;">
-
-Yates
-
+<p>Yates</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36123
-
+<p>36123</p>
 </td>
-
 <td style="text-align:right;">
-
-19
-
+<p>19</p>
 </td>
-
 <td style="text-align:right;">
-
-1
-
+<p>1</p>
 </td>
-
 <td style="text-align:right;">
-
-5.26
-
+<p>5.26</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-05
-
+<p>2020-05-05</p>
 </td>
-
 <td style="text-align:left;">
-
-Yates
-
+<p>Yates</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36123
-
+<p>36123</p>
 </td>
-
 <td style="text-align:right;">
-
-19
-
+<p>19</p>
 </td>
-
 <td style="text-align:right;">
-
-2
-
+<p>2</p>
 </td>
-
 <td style="text-align:right;">
-
-10.53
-
+<p>10.53</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-06
-
+<p>2020-05-06</p>
 </td>
-
 <td style="text-align:left;">
-
-Yates
-
+<p>Yates</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36123
-
+<p>36123</p>
 </td>
-
 <td style="text-align:right;">
-
-19
-
+<p>19</p>
 </td>
-
 <td style="text-align:right;">
-
-3
-
+<p>3</p>
 </td>
-
 <td style="text-align:right;">
-
-15.79
-
+<p>15.79</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-07
-
+<p>2020-05-07</p>
 </td>
-
 <td style="text-align:left;">
-
-Yates
-
+<p>Yates</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36123
-
+<p>36123</p>
 </td>
-
 <td style="text-align:right;">
-
-19
-
+<p>19</p>
 </td>
-
 <td style="text-align:right;">
-
-3
-
+<p>3</p>
 </td>
-
 <td style="text-align:right;">
-
-15.79
-
+<p>15.79</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-08
-
+<p>2020-05-08</p>
 </td>
-
 <td style="text-align:left;">
-
-Yates
-
+<p>Yates</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36123
-
+<p>36123</p>
 </td>
-
 <td style="text-align:right;">
-
-20
-
+<p>20</p>
 </td>
-
 <td style="text-align:right;">
-
-3
-
+<p>3</p>
 </td>
-
 <td style="text-align:right;">
-
-15.00
-
+<p>15.00</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-09
-
+<p>2020-05-09</p>
 </td>
-
 <td style="text-align:left;">
-
-Yates
-
+<p>Yates</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36123
-
+<p>36123</p>
 </td>
-
 <td style="text-align:right;">
-
-20
-
+<p>20</p>
 </td>
-
 <td style="text-align:right;">
-
-3
-
+<p>3</p>
 </td>
-
 <td style="text-align:right;">
-
-15.00
-
+<p>15.00</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-10
-
+<p>2020-05-10</p>
 </td>
-
 <td style="text-align:left;">
-
-Yates
-
+<p>Yates</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36123
-
+<p>36123</p>
 </td>
-
 <td style="text-align:right;">
-
-21
-
+<p>21</p>
 </td>
-
 <td style="text-align:right;">
-
-3
-
+<p>3</p>
 </td>
-
 <td style="text-align:right;">
-
-14.29
-
+<p>14.29</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-11
-
+<p>2020-05-11</p>
 </td>
-
 <td style="text-align:left;">
-
-Yates
-
+<p>Yates</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36123
-
+<p>36123</p>
 </td>
-
 <td style="text-align:right;">
-
-21
-
+<p>21</p>
 </td>
-
 <td style="text-align:right;">
-
-4
-
+<p>4</p>
 </td>
-
 <td style="text-align:right;">
-
-19.05
-
+<p>19.05</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-12
-
+<p>2020-05-12</p>
 </td>
-
 <td style="text-align:left;">
-
-Yates
-
+<p>Yates</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36123
-
+<p>36123</p>
 </td>
-
 <td style="text-align:right;">
-
-21
-
+<p>21</p>
 </td>
-
 <td style="text-align:right;">
-
-4
-
+<p>4</p>
 </td>
-
 <td style="text-align:right;">
-
-19.05
-
+<p>19.05</p>
 </td>
-
 </tr>
 </tbody>
 </table>
 <p><br></p>
 <p><strong>US COVID-19 State Data with Geographic Data:</strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">us_st_cases &lt;-<span class="st"> </span>R.COVID<span class="fl">.19</span><span class="op">::</span><span class="kw"><a href="reference/us_states_daily.html">us_states_daily</a></span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb7-2" title="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(<span class="dt">mortality_rate =</span> <span class="kw"><a href="https://rdrr.io/r/base/Round.html">round</a></span>((.<span class="op">$</span>deaths <span class="op">/</span><span class="st"> </span>.<span class="op">$</span>cases)<span class="op">*</span><span class="dv">100</span>,<span class="dv">2</span>))</a>
-<a class="sourceLine" id="cb7-3" title="3"><span class="co">#&gt; Parsed with column specification:</span></a>
-<a class="sourceLine" id="cb7-4" title="4"><span class="co">#&gt; cols(</span></a>
-<a class="sourceLine" id="cb7-5" title="5"><span class="co">#&gt;   date = col_date(format = ""),</span></a>
-<a class="sourceLine" id="cb7-6" title="6"><span class="co">#&gt;   state = col_character(),</span></a>
-<a class="sourceLine" id="cb7-7" title="7"><span class="co">#&gt;   fips = col_character(),</span></a>
-<a class="sourceLine" id="cb7-8" title="8"><span class="co">#&gt;   cases = col_double(),</span></a>
-<a class="sourceLine" id="cb7-9" title="9"><span class="co">#&gt;   deaths = col_double()</span></a>
-<a class="sourceLine" id="cb7-10" title="10"><span class="co">#&gt; )</span></a>
-<a class="sourceLine" id="cb7-11" title="11">knitr<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>(us_st_cases <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(state <span class="op">==</span><span class="st"> "New York"</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/utils/head.html">tail</a></span>(<span class="dv">10</span>), <span class="dt">format =</span> <span class="st">"html"</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb7-12" title="12"><span class="st">  </span>kableExtra<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span>(<span class="dt">bootstrap_options =</span> <span class="st">"striped"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit">
+<span class="kw">us_st_cases</span> <span class="op">&lt;-</span> <span class="kw">R.COVID.19</span>::<span class="fu"><a href="reference/us_states_daily.html">us_states_daily</a></span>() <span class="op">%&gt;%</span> 
+  <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(mortality_rate = <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span>((<span class="kw">.</span><span class="op">$</span><span class="kw">deaths</span> <span class="op">/</span> <span class="kw">.</span><span class="op">$</span><span class="kw">cases</span>)<span class="op">*</span><span class="fl">100</span>,<span class="fl">2</span>))
+<span class="co">#&gt; Parsed with column specification:</span>
+<span class="co">#&gt; cols(</span>
+<span class="co">#&gt;   date = col_date(format = ""),</span>
+<span class="co">#&gt;   state = col_character(),</span>
+<span class="co">#&gt;   fips = col_character(),</span>
+<span class="co">#&gt;   cases = col_double(),</span>
+<span class="co">#&gt;   deaths = col_double()</span>
+<span class="co">#&gt; )</span>
+<span class="kw">knitr</span>::<span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>(<span class="kw">us_st_cases</span> <span class="op">%&gt;%</span> <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="kw">state</span> <span class="op">==</span> <span class="st">"New York"</span>) <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/utils/head.html">tail</a></span>(<span class="fl">10</span>), format = <span class="st">"html"</span>) <span class="op">%&gt;%</span> 
+  <span class="kw">kableExtra</span>::<span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span>(bootstrap_options = <span class="st">"striped"</span>)
+</pre></div>
 <table class="table table table-striped">
 <thead><tr>
 <th style="text-align:left;">
-
-date
-
+<p>date</p>
 </th>
-
 <th style="text-align:left;">
-
-state
-
+<p>state</p>
 </th>
-
 <th style="text-align:left;">
-
-fips
-
+<p>fips</p>
 </th>
-
 <th style="text-align:right;">
-
-cases
-
+<p>cases</p>
 </th>
-
 <th style="text-align:right;">
-
-deaths
-
+<p>deaths</p>
 </th>
-
 <th style="text-align:right;">
-
-mortality\_rate
-
+<p>mortality_rate</p>
 </th>
-
 </tr></thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-
-2020-05-03
-
+<p>2020-05-03</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36
-
+<p>36</p>
 </td>
-
 <td style="text-align:right;">
-
-321833
-
+<p>321833</p>
 </td>
-
 <td style="text-align:right;">
-
-24576
-
+<p>24576</p>
 </td>
-
 <td style="text-align:right;">
-
-7.64
-
+<p>7.64</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-04
-
+<p>2020-05-04</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36
-
+<p>36</p>
 </td>
-
 <td style="text-align:right;">
-
-324357
-
+<p>324357</p>
 </td>
-
 <td style="text-align:right;">
-
-24788
-
+<p>24788</p>
 </td>
-
 <td style="text-align:right;">
-
-7.64
-
+<p>7.64</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-05
-
+<p>2020-05-05</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36
-
+<p>36</p>
 </td>
-
 <td style="text-align:right;">
-
-326659
-
+<p>326659</p>
 </td>
-
 <td style="text-align:right;">
-
-25028
-
+<p>25028</p>
 </td>
-
 <td style="text-align:right;">
-
-7.66
-
+<p>7.66</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-06
-
+<p>2020-05-06</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36
-
+<p>36</p>
 </td>
-
 <td style="text-align:right;">
-
-329405
-
+<p>329405</p>
 </td>
-
 <td style="text-align:right;">
-
-25956
-
+<p>25956</p>
 </td>
-
 <td style="text-align:right;">
-
-7.88
-
+<p>7.88</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-07
-
+<p>2020-05-07</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36
-
+<p>36</p>
 </td>
-
 <td style="text-align:right;">
-
-332931
-
+<p>332931</p>
 </td>
-
 <td style="text-align:right;">
-
-26206
-
+<p>26206</p>
 </td>
-
 <td style="text-align:right;">
-
-7.87
-
+<p>7.87</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-08
-
+<p>2020-05-08</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36
-
+<p>36</p>
 </td>
-
 <td style="text-align:right;">
-
-335804
-
+<p>335804</p>
 </td>
-
 <td style="text-align:right;">
-
-26358
-
+<p>26358</p>
 </td>
-
 <td style="text-align:right;">
-
-7.85
-
+<p>7.85</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-09
-
+<p>2020-05-09</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36
-
+<p>36</p>
 </td>
-
 <td style="text-align:right;">
-
-338519
-
+<p>338519</p>
 </td>
-
 <td style="text-align:right;">
-
-26584
-
+<p>26584</p>
 </td>
-
 <td style="text-align:right;">
-
-7.85
-
+<p>7.85</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-10
-
+<p>2020-05-10</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36
-
+<p>36</p>
 </td>
-
 <td style="text-align:right;">
-
-340657
-
+<p>340657</p>
 </td>
-
 <td style="text-align:right;">
-
-26798
-
+<p>26798</p>
 </td>
-
 <td style="text-align:right;">
-
-7.87
-
+<p>7.87</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-11
-
+<p>2020-05-11</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36
-
+<p>36</p>
 </td>
-
 <td style="text-align:right;">
-
-342267
-
+<p>342267</p>
 </td>
-
 <td style="text-align:right;">
-
-27003
-
+<p>27003</p>
 </td>
-
 <td style="text-align:right;">
-
-7.89
-
+<p>7.89</p>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:left;">
-
-2020-05-12
-
+<p>2020-05-12</p>
 </td>
-
 <td style="text-align:left;">
-
-New York
-
+<p>New York</p>
 </td>
-
 <td style="text-align:left;">
-
-36
-
+<p>36</p>
 </td>
-
 <td style="text-align:right;">
-
-343705
-
+<p>343705</p>
 </td>
-
 <td style="text-align:right;">
-
-27284
-
+<p>27284</p>
 </td>
-
 <td style="text-align:right;">
-
-7.94
-
+<p>7.94</p>
 </td>
-
 </tr>
 </tbody>
 </table>
@@ -2352,11 +1352,11 @@ New York
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/Fredo-XVII/R.COVID.19">https://​github.com/​Fredo-XVII/​R.COVID.19</a>
+<li>Browse source code at <br><a href="https://github.com/Fredo-XVII/R.COVID.19/">https://​github.com/​Fredo-XVII/​R.COVID.19/​</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/Fredo-XVII/R.COVID.19/issues">https://​github.com/​Fredo-XVII/​R.COVID.19/​issues</a>
 </li>
@@ -2372,7 +1372,7 @@ New York
 <div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>Alfredo G Marquez <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-7044-8167" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID"></a> </li>
+<li>Alfredo G Marquez <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-7044-8167" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
@@ -2380,7 +1380,6 @@ New York
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://travis-ci.org/Fredo-XVII/R.COVID.19"><img src="https://travis-ci.org/Fredo-XVII/R.COVID.19.svg?branch=master" alt="Travis build status"></a></li>
-<li><a href="https://ci.appveyor.com/project/Fredo-XVII/R.COVID.19"><embed src="https://ci.appveyor.com/api/projects/status/github/Fredo-XVII/R.COVID.19?branch=master&amp;svg=true"></embed></a></li>
 </ul>
 </div>
 </div>
@@ -2392,7 +1391,7 @@ New York
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

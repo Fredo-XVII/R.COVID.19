@@ -12,9 +12,10 @@
 #' @return A dataframe/tibble
 #'
 #' @examples
+#' \dontrun{
 #' stay_orders <- R.COVID.19::finra_shelter_in_place()
 #' head(stay_orders)
-#'
+#' }
 #'
 #' @importFrom  magrittr %>%
 #' @importFrom  purrr map_df
@@ -32,7 +33,7 @@ finra_shelter_in_place <- function() {
   url_dates <- url("https://www.finra.org/rules-guidance/key-topics/covid-19/shelter-in-place")
   webpage <- xml2::read_html(url_dates)
   tbls <- rvest::html_nodes(webpage, "table")
-  df <- rvest::html_table(tbls[1]) %>% map_df(.f = as.data.frame)
+  df <- rvest::html_table(tbls[1]) %>% purrr::map_df(.f = as.data.frame)
 
   # Clean Data
   names(df) <- c("state", "order", "order_beg_d", "order_end_org")

@@ -1,3 +1,6 @@
+# R.COVID.19 0.1.6
+* Bug fixes: remove sf from Description files in order to remove units package.
+
 # R.COVID.19 0.1.5
 * Bug fixes: Public Status Data set from ESRI are now defunct because of broken links.
 * Functions affected:
