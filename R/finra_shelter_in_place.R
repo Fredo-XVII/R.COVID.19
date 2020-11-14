@@ -14,10 +14,10 @@
 #' @name finra_shelter_in_place
 #'
 #' @examples
-# \dontrun{
+#' \dontrun{
 #' stay_orders <- R.COVID.19::finra_shelter_in_place()
 #' head(stay_orders)
-# }
+#' }
 #'
 #' @importFrom  magrittr %>%
 #' @importFrom  purrr map_df flatten_chr map_chr

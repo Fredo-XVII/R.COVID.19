@@ -24,7 +24,9 @@ This functions pulls dates for shelter in place order by states with notes
 Website: https://www.finra.org/rules-guidance/key-topics/covid-19/shelter-in-place
 }
 \examples{
+\dontrun{
 stay_orders <- R.COVID.19::finra_shelter_in_place()
 head(stay_orders)
+}
 
 }
