@@ -1,7 +1,7 @@
 Package: R.COVID.19
 Type: Package
 Title: COVID-19 Daily Global and US Counts
-Version: 0.1.6
+Version: 0.1.7
 Authors@R: 
     person(given = "Alfredo G",
            family = "Marquez",
@@ -35,7 +35,8 @@ Imports:
     xml2,
     stringr,
     tsibble,
-    lubridate
+    lubridate,
+    gsubfn
 Suggests: 
     roxygen2,
     kableExtra,

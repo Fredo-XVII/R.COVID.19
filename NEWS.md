@@ -1,3 +1,7 @@
+# R.COVID.19 0.1.7
+* Bug fixes: improve date parsing for `finra_shelter_in_place()`.  Now there is
+no hard coding for dates found in strings. Simplified the function code.
+
 # R.COVID.19 0.1.6
 * Bug fixes: remove sf from Description files in order to remove units package.
 

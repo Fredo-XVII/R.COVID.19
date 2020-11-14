@@ -2,9 +2,15 @@
 % Please edit documentation in R/finra_shelter_in_place.R
 \name{finra_shelter_in_place}
 \alias{finra_shelter_in_place}
+\alias{find_date}
 \title{FINRA Shelter in Place Dates}
 \usage{
 finra_shelter_in_place()
+
+find_date(x)
+}
+\arguments{
+\item{x}{`string` character string that has date descriptions, such as Apr 24}
 }
 \value{
 A dataframe/tibble
@@ -18,9 +24,7 @@ This functions pulls dates for shelter in place order by states with notes
 Website: https://www.finra.org/rules-guidance/key-topics/covid-19/shelter-in-place
 }
 \examples{
-\dontrun{
 stay_orders <- R.COVID.19::finra_shelter_in_place()
 head(stay_orders)
-}
 
 }
