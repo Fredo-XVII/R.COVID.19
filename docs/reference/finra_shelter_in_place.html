@@ -126,7 +126,7 @@
 
     <pre class="usage"><span class='fu'>finra_shelter_in_place</span>()
 
-<span class='fu'>find_date</span>(<span class='kw'>x</span>)</pre>
+<span class='fu'>find_date</span>(<span class='no'>x</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -139,18 +139,17 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A dataframe/tibble</p>
+    <p>A dataframe/tibble.  A pre-saved copy is saved within the package,
+finra_sh_in_pl_df.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Website: https://www.finra.org/rules-guidance/key-topics/covid-19/shelter-in-place</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='kw'>stay_orders</span> <span class='op'>&lt;-</span> <span class='kw'>R.COVID.19</span>::<span class='fu'>finra_shelter_in_place</span>()
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='kw'>stay_orders</span>)
-}
-
-</div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='no'>stay_orders</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>R.COVID.19</span><span class='kw ns'>::</span><span class='fu'>finra_shelter_in_place</span>()
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>stay_orders</span>)
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -166,7 +165,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

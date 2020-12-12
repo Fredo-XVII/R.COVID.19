@@ -150,8 +150,7 @@
   total</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>tests_daily</span> <span class='op'>&lt;-</span> <span class='kw'>R.COVID.19</span>::<span class='fu'>covtrck_states_testing</span>()
-</div><div class='output co'>#&gt; <span class='message'>Parsed with column specification:</span>
+    <pre class="examples"><div class='input'><span class='no'>tests_daily</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>R.COVID.19</span><span class='kw ns'>::</span><span class='fu'>covtrck_states_testing</span>()</div><div class='output co'>#&gt; <span class='message'>Parsed with column specification:</span>
 #&gt; <span class='message'>cols(</span>
 #&gt; <span class='message'>  .default = col_double(),</span>
 #&gt; <span class='message'>  state = <span style='color: #BB0000;'>col_character()</span><span>,</span>
@@ -166,8 +165,7 @@
 #&gt; <span class='message'>  grade = </span><span style='color: #BBBB00;'>col_logical()</span><span></span>
 #&gt; <span class='message'>)</span></div><div class='output co'>#&gt; <span class='message'>See spec(...) for full column specifications.</span></div><div class='output co'>#&gt; <span class='message'>`mutate_if()` ignored the following grouping variables:</span>
 #&gt; <span class='message'>Column `fips`</span></div><div class='output co'>#&gt; <span class='message'>`mutate_if()` ignored the following grouping variables:</span>
-#&gt; <span class='message'>Column `fips`</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='kw'>tests_daily</span>)
-</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tsibble: 6 x 58 [1D]</span><span>
+#&gt; <span class='message'>Column `fips`</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>tests_daily</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tsibble: 6 x 58 [1D]</span><span>
 #&gt; </span><span style='color: #555555;'># Key:       fips [1]</span><span>
 #&gt; </span><span style='color: #555555;'># Groups:    fips [1]</span><span>
 #&gt;   greg_d       date fips  state total_tests positive negative pending
@@ -214,7 +212,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>
