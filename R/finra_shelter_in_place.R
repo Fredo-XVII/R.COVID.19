@@ -9,7 +9,8 @@
 #' @details
 #'   Website: https://www.finra.org/rules-guidance/key-topics/covid-19/shelter-in-place
 #'
-#' @return A dataframe/tibble
+#' @return A dataframe/tibble.  A pre-saved copy is saved within the package,
+#' finra_sh_in_pl_df.
 #'
 #' @name finra_shelter_in_place
 #'

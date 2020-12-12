@@ -1,6 +1,8 @@
 # R.COVID.19 0.1.7
 * Bug fixes: improve date parsing for `finra_shelter_in_place()`.  Now there is
 no hard coding for dates found in strings. Simplified the function code.
+* Created a copy of the finra shelter in place data within the package that can
+be loaded from within the package.
 * Rebuilt package down and updated supported function documents.
 
 # R.COVID.19 0.1.6

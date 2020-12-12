@@ -102,9 +102,12 @@ usethis::use_r("pub_hlth_status_by_cnty_shp") # ESRI Open Data
 
 usethis::use_r("finra_shelter_in_place") # FINRA Shelter in Place Orders
 
+usethis::use_r("finra_sh_in_pl_df") # FINRA Shelter in Place Orders dataframe
+
 usethis::use_r("covtrck_states_testing") # covidtracking state testing
 
 #usethis::use_data_raw()
+usethis::use_data(finra_sh_in_pl_df) # finra_sh_in_pl_df <- R.COVID.19::finra_shelter_in_place()
 
 # After adding roxygen2 params to function in R folder
 

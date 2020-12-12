@@ -13,7 +13,8 @@ find_date(x)
 \item{x}{`string` character string that has date descriptions, such as Apr 24}
 }
 \value{
-A dataframe/tibble
+A dataframe/tibble.  A pre-saved copy is saved within the package,
+finra_sh_in_pl_df.
 }
 \description{
 This functions pulls dates for shelter in place order by states with notes
