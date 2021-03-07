@@ -11,3 +11,4 @@
 ^\.Rhistory$
 ^CRAN-RELEASE$
 ^docs$
+^\.github$
