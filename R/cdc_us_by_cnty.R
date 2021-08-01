@@ -10,6 +10,8 @@
 #'
 #'     - CDC COVID Tracker: https://covid.cdc.gov/covid-data-tracker/#datatracker-home
 #'
+#'     - CDC State Site: https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-County/8xkx-amqh
+#'
 #'     - Data: https://data.cdc.gov/api/views/8xkx-amqh/rows.csv?accessType=DOWNLOAD
 #'
 #' @return A dataframe/tibble
