@@ -69,6 +69,8 @@ usethis::use_package( "tsibble", type = "Import")
 
 usethis::use_package( "lubridate", type = "Import")
 
+usethis::use_package( "vroom", type = "Import")
+
 ## Suggests
 
 usethis::use_package( "roxygen2", type = "Suggests")
@@ -105,6 +107,14 @@ usethis::use_r("finra_shelter_in_place") # FINRA Shelter in Place Orders
 usethis::use_r("finra_sh_in_pl_df") # FINRA Shelter in Place Orders dataframe
 
 usethis::use_r("covtrck_states_testing") # covidtracking state testing
+
+usethis::use_r("owid_us_by_state") # Our World in Data
+
+usethis::use_r("owid_us_by_cnty") # Our World in Data
+
+usethis::use_r("cdc_us_by_cnty") # Our World in Data
+
+usethis::use_r("cdc_us_by_state") # Our World in Data
 
 #usethis::use_data_raw()
 usethis::use_data(finra_sh_in_pl_df) # finra_sh_in_pl_df <- R.COVID.19::finra_shelter_in_place()

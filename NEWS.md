@@ -1,3 +1,9 @@
+# R.COVID.19 0.1.8
+* Enhancements:
+  * `cdc_vac_us_by_county()` - this functions pulls cdc data for vaccines by county.
+  * `cdc_vac_us_by_state()`- this functions pulls cdc data for vaccines by state.
+  * `owid_vac_us_by_state()` - this functions pulls Our World in Data data for vaccines by state.
+
 # R.COVID.19 0.1.7
 * Bug fixes: improve date parsing for `finra_shelter_in_place()`.  Now there is
 no hard coding for dates found in strings. Simplified the function code.
