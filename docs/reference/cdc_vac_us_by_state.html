@@ -134,10 +134,11 @@
 
     <p>Website:</p>
 <p>- CDC COVID Tracker: https://covid.cdc.gov/covid-data-tracker/#datatracker-home</p>
+<p>- CDC State Site: https://data.cdc.gov/Vaccinations/COVID-19-Vaccination-Trends-in-the-United-States-N/rh2h-3yt2</p>
 <p>- Data: https://data.cdc.gov/api/views/rh2h-3yt2/rows.csv?accessType=DOWNLOAD</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>vac_by_states</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>R.COVID.19</span><span class='kw ns'>::</span><span class='fu'>cdc_vac_us_by_state</span>()</div><div class='output co'>#&gt; <span class='message'><span style='font-weight: bold;'>Rows: </span><span style='color: #0000BB;'>28182</span><span> </span><span style='font-weight: bold;'>Columns: </span><span style='color: #0000BB;'>15</span><span></span></div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>--</span><span> </span><span style='font-weight: bold;'>Column specification</span><span> </span><span style='color: #00BBBB;'>-------------------------------------------------------------------</span><span></span>
+    <pre class="examples"><div class='input'><span class='no'>vac_by_states</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>R.COVID.19</span><span class='kw ns'>::</span><span class='fu'>cdc_vac_us_by_state</span>()</div><div class='output co'>#&gt; <span class='message'><span style='font-weight: bold;'>Rows: </span><span style='color: #0000BB;'>28304</span><span> </span><span style='font-weight: bold;'>Columns: </span><span style='color: #0000BB;'>15</span><span></span></div><div class='output co'>#&gt; <span class='message'></span><span style='color: #00BBBB;'>--</span><span> </span><span style='font-weight: bold;'>Column specification</span><span> </span><span style='color: #00BBBB;'>-------------------------------------------------------------------------</span><span></span>
 #&gt; <span class='message'></span><span style='font-weight: bold;'>Delimiter:</span><span> ","</span>
 #&gt; <span class='message'></span><span style='color: #BB0000;'>chr</span><span>  (3): Date, Location, date_type</span>
 #&gt; <span class='message'></span><span style='color: #00BB00;'>dbl</span><span> (12): MMWR_week, Administered_Daily, Administered_Cumulative, Administer...</span></div><div class='output co'>#&gt; <span class='message'></span>
@@ -146,10 +147,10 @@
 #&gt; <span class='message'></span><span style='color: #00BBBB;'>i</span><span> Specify the column types or set </span><span style='color: #000000;background-color: #BBBBBB;'>`show_col_types = FALSE`</span><span> to quiet this message.</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>vac_by_states</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 6 x 15</span><span>
 #&gt;   Date       MMWR_week State Administered_Da~ Administered_Cu~ Administered_7_~
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> 2020-12-13        51 AK                  31               31               31
-#&gt; </span><span style='color: #555555;'>2</span><span> 2020-12-13        51 AK                   0                0                0
-#&gt; </span><span style='color: #555555;'>3</span><span> 2020-12-14        51 AK                   0                0                0
-#&gt; </span><span style='color: #555555;'>4</span><span> 2020-12-14        51 AK                   1               32               16
+#&gt; </span><span style='color: #555555;'>1</span><span> 2020-12-13        51 AK                   0                0                0
+#&gt; </span><span style='color: #555555;'>2</span><span> 2020-12-13        51 AK                  31               31               31
+#&gt; </span><span style='color: #555555;'>3</span><span> 2020-12-14        51 AK                   1               32               16
+#&gt; </span><span style='color: #555555;'>4</span><span> 2020-12-14        51 AK                   0                0                0
 #&gt; </span><span style='color: #555555;'>5</span><span> 2020-12-15        51 AK                 128              160               53
 #&gt; </span><span style='color: #555555;'>6</span><span> 2020-12-15        51 AK                   0                0                0
 #&gt; </span><span style='color: #555555;'># ... with 9 more variables: Admin_Dose_1_Daily </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,</span><span>
