@@ -3,8 +3,8 @@
 #'
 #' @description
 #'   This functions pulls US testing counts of COVID-19 data from covidtracking.com.
-#'   The data is tidyed so that it is more user friendly.  No data is stored
-#'   within the package, so the data should continuously update over time as
+#'   The data is aggregated by FIPS and data, and is tidy so that it is more user friendly.
+#'   No data is stored within the package, so the data should continuously update over time as
 #'   long as the links do not change.
 #'
 #' @details
@@ -52,7 +52,7 @@ covtrck_states_testing <- function() {
 
   # Clean the data for users
   deprecated_cols <- c("total","posNeg")
-  test_df <- test_df %>% dplyr::select(-deprecated_cols)
+  test_df <- test_df %>% dplyr::select(-dplyr::all_of(deprecated_cols))
 
   # Convert to tsibble
   test_df <- test_df %>%
@@ -80,7 +80,7 @@ covtrck_states_testing <- function() {
       # everything else
       dplyr::everything())
 
-  return(invisible(test_df))
+  test_df
 
 }
 

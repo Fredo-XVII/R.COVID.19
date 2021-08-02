@@ -41,6 +41,6 @@ covid19_df <- covid19_deaths_wide %>%
     values_to = "deaths_cases"
   )
 
-  return(invisible(covid19_df))
+  covid19_df
 
 }

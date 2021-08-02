@@ -38,5 +38,5 @@ us_geo_confirmed_daily <- function() {
       values_to = "confirmed_cases"
     )
 
-  return(invisible(covid19_df))
+  covid19_df
 }

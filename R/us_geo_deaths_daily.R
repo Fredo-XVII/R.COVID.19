@@ -37,6 +37,6 @@ us_geo_deaths_daily <- function() {
       values_to = "deaths_cases"
     )
 
-  return(invisible(covid19_df))
+  covid19_df
 
 }

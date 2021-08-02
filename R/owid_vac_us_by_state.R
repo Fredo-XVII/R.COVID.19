@@ -32,5 +32,5 @@ owid_vac_us_by_state <- function() {
   vaccine_data <- readr::read_csv(url_states) %>%
     dplyr::arrange(.data$location,.data$date)
 
-  return(invisible(vaccine_data))
+  vaccine_data
 }

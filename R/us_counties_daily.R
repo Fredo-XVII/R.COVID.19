@@ -32,5 +32,5 @@ us_counties_daily <- function() {
   covid_df <- readr::read_csv(url_counties) %>%
     dplyr::arrange(.data$state,.data$county,.data$date)
 
-  return(invisible(covid_df))
+  covid_df
 }

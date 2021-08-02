@@ -42,5 +42,5 @@ covid19_df <- covid19_confirm_wide %>%
     values_to = "confirmed_cases"
   )
 
- return(invisible(covid19_df))
+ covid19_df
 }

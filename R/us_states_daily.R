@@ -32,5 +32,5 @@ us_states_daily <- function() {
   covid_data <- readr::read_csv(url_states) %>%
     dplyr::arrange(.data$state,.data$date)
 
-  return(invisible(covid_data))
+  covid_data
 }

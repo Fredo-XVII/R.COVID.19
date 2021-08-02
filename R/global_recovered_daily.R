@@ -42,5 +42,5 @@ global_recovered_daily <- function() {
       values_to = "recovered_cases"
     )
 
-  return(invisible(covid19_df))
+  covid19_df
 }
