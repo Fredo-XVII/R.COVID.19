@@ -1,5 +1,6 @@
 # R.COVID.19 0.1.9
 * Update for R 4.0.5
+* Remove code coverage.
 
 # R.COVID.19 0.1.8
 * Add Vaccine Data:
