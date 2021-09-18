@@ -1,3 +1,6 @@
+# R.COVID.19 0.1.9
+* Update for R 4.0.5
+
 # R.COVID.19 0.1.8
 * Add Vaccine Data:
   * `cdc_vac_us_by_county()` - this functions pulls cdc data for vaccines by county.
