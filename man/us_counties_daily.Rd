@@ -21,6 +21,8 @@ Website:
     - https://github.com/nytimes/covid-19-data
 
     - https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv
+
+    - https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties-2020.csv
 }
 \examples{
 confirmed_daily <- R.COVID.19::us_counties_daily()
