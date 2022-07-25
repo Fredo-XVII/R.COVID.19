@@ -23,8 +23,8 @@
 #'
 #' @importFrom readr read_csv
 #' @importFrom dplyr arrange
-#' @importFrom  rlang .data
-#' @importFrom  lubridate year
+#' @importFrom rlang .data
+#' @importFrom lubridate year
 #'
 #' @export
 

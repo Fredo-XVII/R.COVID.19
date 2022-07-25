@@ -16,7 +16,8 @@ This functions pulls US testing counts of COVID-19 data from covidtracking.com.
   long as the links do not change.
 }
 \details{
-Website: https://covidtracking.com/api
+Note: As of March 7, 2021, this data will not be updated.
+  Website: https://covidtracking.com/api
 
   Deprecated fields
   The following fields are deprecated and are no longer being updated with new data.
@@ -37,7 +38,9 @@ Website: https://covidtracking.com/api
   total
 }
 \examples{
+\dontrun{
 tests_daily <- R.COVID.19::covtrck_states_testing()
 head(tests_daily)
+}
 
 }

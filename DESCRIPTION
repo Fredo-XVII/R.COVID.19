@@ -1,7 +1,7 @@
 Package: R.COVID.19
 Type: Package
 Title: COVID-19 Daily Global and US Counts
-Version: 0.1.9
+Version: 0.2.0
 Authors@R: 
     person(given = "Alfredo G",
            family = "Marquez",
@@ -42,4 +42,4 @@ Suggests:
     roxygen2,
     kableExtra,
     remotes
-RoxygenNote: 7.2.0
+RoxygenNote: 7.1.1

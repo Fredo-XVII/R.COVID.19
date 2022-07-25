@@ -1,3 +1,7 @@
+# R.COVID.19 0.2.0
+* Bug fix:
+  - NY Times data was split because files were too big for GitHub.
+
 # R.COVID.19 0.1.9
 * Update for R 4.0.5
 * Remove code coverage.

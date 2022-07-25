@@ -8,6 +8,7 @@
 #'   long as the links do not change.
 #'
 #' @details
+#'   Note: As of March 7, 2021, this data will not be updated.
 #'   Website: https://covidtracking.com/api
 #'
 #'   Deprecated fields
@@ -31,15 +32,17 @@
 #' @return A tsibble/dataframe/tibble
 #'
 #' @examples
+#' \dontrun{
 #' tests_daily <- R.COVID.19::covtrck_states_testing()
 #' head(tests_daily)
+#' }
 #'
-#' @importFrom  magrittr %>%
-#' @importFrom  tsibble as_tsibble difference
-#' @import  dplyr
-#' @importFrom  readr read_csv
-#' @importFrom  rlang .data
-#' @importFrom  tidyr replace_na
+#' @importFrom magrittr %>%
+#' @importFrom tsibble as_tsibble difference
+#' @import dplyr
+#' @importFrom readr read_csv
+#' @importFrom rlang .data
+#' @importFrom tidyr replace_na
 #' @importFrom utils globalVariables
 #'
 #' @export
@@ -56,7 +59,8 @@ covtrck_states_testing <- function() {
 
   # Convert to tsibble
   test_df <- test_df %>%
-    dplyr::mutate(greg_d = lubridate::ymd(.data$date)) %>%
+    dplyr::filter(trimws(.data$date) <= '20210307') %>%
+    dplyr::mutate(greg_d = lubridate::ymd(trimws(.data$date))) %>%
     tsibble::as_tsibble(key = .data$fips, index = .data$greg_d)
 
   # Create new variables and re-align variables
