@@ -1,6 +1,6 @@
 # R.COVID.19 0.2.0
 * Bug fix:
-  - NY Times data was split because files were too big for GitHub.
+  - `us_counties_daily()` - NY Times data was split because files were too big for GitHub. Built function to account for many files of data.
 
 # R.COVID.19 0.1.9
 * Update for R 4.0.5
